@@ -3133,6 +3133,788 @@ const technicalExams = {
               correct: "a"
             }
           ]
-        }
+        },
+
+  exam9 = { 
+  title: "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP (Intermediate & Tricky)",
+  questions: [
+    {
+      id: 1,
+      question: "What is the size of a pointer in a 64-bit system?",
+      options: {
+        a: "4 bytes",
+        b: "8 bytes",
+        c: "Depends on the data type it points to",
+        d: "16 bytes"
+      },
+      correct: "b"
+    },
+    {
+      id: 2,
+      question: "C++ Code:\n\n```cpp\nint a = 5;\nint b = a++ + ++a;\ncout << a << ' ' << b;\n```\nWhat is the output?",
+      options: {
+        a: "7 12",
+        b: "7 11",
+        c: "Undefined behavior",
+        d: "6 11"
+      },
+      correct: "c"
+    },
+    {
+      id: 3,
+      question: "In SQL, which clause is used to filter rows after aggregation?",
+      options: {
+        a: "WHERE",
+        b: "HAVING",
+        c: "GROUP BY",
+        d: "ORDER BY"
+      },
+      correct: "b"
+    },
+    {
+      id: 4,
+      question: "HTML: Which tag is semantic and used to represent self-contained content that could be independently distributed?",
+      options: {
+        a: "<div>",
+        b: "<section>",
+        c: "<article>",
+        d: "<span>"
+      },
+      correct: "c"
+    },
+    {
+      id: 5,
+      question: "CSS: Which selector has the highest specificity?",
+      options: {
+        a: "div p",
+        b: ".class",
+        c: "#id",
+        d: "p:hover"
+      },
+      correct: "c"
+    },
+    {
+      id: 6,
+      question: "What will the following SQL return?\n\n```sql\nSELECT COUNT(*) FROM Employees WHERE Salary > ALL (SELECT Salary FROM Employees WHERE Department='HR');\n```",
+      options: {
+        a: "Number of employees with salary greater than all HR salaries",
+        b: "Number of HR employees with the highest salary",
+        c: "All employees in HR",
+        d: "Number of employees with salary less than HR salaries"
+      },
+      correct: "a"
+    },
+    {
+      id: 7,
+      question: "C++ Code:\n\n```cpp\nint x = 10;\nint *p = &x;\n(*p)++;\ncout << x;\n```\nOutput?",
+      options: {
+        a: "10",
+        b: "11",
+        c: "Garbage value",
+        d: "Compiler error"
+      },
+      correct: "b"
+    },
+    {
+      id: 8,
+      question: "Which SQL query deletes all rows but keeps the table structure?",
+      options: {
+        a: "DROP TABLE table_name;",
+        b: "DELETE FROM table_name;",
+        c: "TRUNCATE TABLE table_name;",
+        d: "REMOVE FROM table_name;"
+      },
+      correct: "c"
+    },
+    {
+      id: 9,
+      question: "HTML forms: Which attribute is required for the <form> tag to send data to a server?",
+      options: {
+        a: "method",
+        b: "action",
+        c: "enctype",
+        d: "name"
+      },
+      correct: "b"
+    },
+    {
+      id: 10,
+      question: "CSS positioning: Which value of position makes the element positioned relative to the browser window?",
+      options: {
+        a: "relative",
+        b: "absolute",
+        c: "fixed",
+        d: "sticky"
+      },
+      correct: "c"
+    },
+    {
+      id: 11,
+      question: "C++: Which of these correctly defines a pure virtual function?",
+      options: {
+        a: "virtual void func() = 0;",
+        b: "virtual void func();",
+        c: "pure virtual void func();",
+        d: "virtual pure void func() = 0;"
+      },
+      correct: "a"
+    },
+    {
+      id: 12,
+      question: "SQL: Identify the error in the query:\n\n```sql\nSELECT name, COUNT(*) FROM students WHERE age > 20 GROUP BY id;\n```",
+      options: {
+        a: "GROUP BY column should be 'name' not 'id'",
+        b: "COUNT(*) cannot be used with WHERE",
+        c: "Non-aggregated column 'name' not in GROUP BY",
+        d: "No error"
+      },
+      correct: "c"
+    },
+    {
+      id: 13,
+      question: "Flowchart:\n```\n [Start]\n    ↓\n Input X\n    ↓\n Is X%2==0?\n  Yes → Print 'Even'\n  No  → Print 'Odd'\n    ↓\n  [End]\n```\nWhat is output if X=7?",
+      options: {
+        a: "Even",
+        b: "Odd",
+        c: "7",
+        d: "Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 14,
+      question: "C++ Code:\n\n```cpp\n#include <iostream>\nusing namespace std;\nvoid func(int x = 5) { cout << x; }\nint main(){ func(); }\n```\nOutput?",
+      options: {
+        a: "5",
+        b: "0",
+        c: "Compiler error",
+        d: "Garbage value"
+      },
+      correct: "a"
+    },
+    {
+      id: 15,
+      question: "Which CSS property is used to change the stacking order of elements?",
+      options: {
+        a: "position",
+        b: "z-index",
+        c: "display",
+        d: "order"
+      },
+      correct: "b"
+    },
+    {
+      id: 16,
+      question: "OOP: Which principle hides the internal details and exposes only necessary functionalities?",
+      options: {
+        a: "Encapsulation",
+        b: "Inheritance",
+        c: "Polymorphism",
+        d: "Abstraction"
+      },
+      correct: "d"
+    },
+    {
+      id: 17,
+      question: "SQL: Which keyword is used to retrieve unique values from a column?",
+      options: {
+        a: "UNIQUE",
+        b: "DISTINCT",
+        c: "GROUP BY",
+        d: "FILTER"
+      },
+      correct: "b"
+    },
+    {
+      id: 18,
+      question: "C++ Code:\n\n```cpp\nint arr[] = {1,2,3};\ncout << 2[arr];\n```\nOutput?",
+      options: {
+        a: "1",
+        b: "2",
+        c: "3",
+        d: "Compiler error"
+      },
+      correct: "c"
+    },
+    {
+      id: 19,
+      question: "HTML: Which tag is used for marking up navigation links?",
+      options: {
+        a: "<header>",
+        b: "<nav>",
+        c: "<menu>",
+        d: "<aside>"
+      },
+      correct: "b"
+    },
+    {
+      id: 20,
+      question: "CSS: Which unit is relative to the width of the '0' character in the current font?",
+      options: {
+        a: "em",
+        b: "rem",
+        c: "ch",
+        d: "vw"
+      },
+      correct: "c"
+    },
+    {
+      id: 21,
+      question: "C++: Which of these is a correct way to prevent a class from being inherited?",
+      options: {
+        a: "Make constructor private",
+        b: "Use 'final' keyword after class name",
+        c: "Use 'sealed' keyword",
+        d: "Delete copy constructor"
+      },
+      correct: "b"
+    },
+    {
+      id: 22,
+      question: "SQL: Given tables Orders and Customers, find all customers with no orders.\n```sql\nSELECT c.CustomerName FROM Customers c\nLEFT JOIN Orders o ON c.CustomerID = o.CustomerID\nWHERE o.CustomerID IS NULL;\n```\nWhat does this return?",
+      options: {
+        a: "All customers who made at least one order",
+        b: "All customers with no orders",
+        c: "All orders with missing customers",
+        d: "All customers"
+      },
+      correct: "b"
+    },
+    {
+      id: 23,
+      question: "HTML: Which attribute is used to specify an alternate text for an image?",
+      options: {
+        a: "title",
+        b: "alt",
+        c: "src",
+        d: "desc"
+      },
+      correct: "b"
+    },
+    {
+      id: 24,
+      question: "C++: What will be the output?\n\n```cpp\nint i = 0;\ncout << i++ + ++i;\n```\n",
+      options: {
+        a: "2",
+        b: "3",
+        c: "Undefined behavior",
+        d: "Compiler error"
+      },
+      correct: "c"
+    },
+    {
+      id: 25,
+      question: "CSS: Which pseudo-class selects an element only if it is the only child of its parent?",
+      options: {
+        a: ":only-child",
+        b: ":first-child",
+        c: ":nth-child(1)",
+        d: ":last-child"
+      },
+      correct: "a"
+    },
+    {
+      id: 26,
+      question: "OOP: Which of the following allows a subclass to provide a specific implementation of a method already defined in its superclass?",
+      options: {
+        a: "Overloading",
+        b: "Overriding",
+        c: "Encapsulation",
+        d: "Constructor chaining"
+      },
+      correct: "b"
+    },
+    {
+      id: 27,
+      question: "SQL: Which operator is used to compare a value to a list of values?",
+      options: {
+        a: "LIKE",
+        b: "IN",
+        c: "ANY",
+        d: "ALL"
+      },
+      correct: "b"
+    },
+    {
+      id: 28,
+      question: "C++: Which of the following is true about 'this' pointer?",
+      options: {
+        a: "Points to the base class",
+        b: "Points to the current object",
+        c: "Points to the next object",
+        d: "Stores the class type"
+      },
+      correct: "b"
+    },
+    {
+      id: 29,
+      question: "HTML: Which element is used to group related options in a drop-down list?",
+      options: {
+        a: "<optgroup>",
+        b: "<option>",
+        c: "<fieldset>",
+        d: "<select>"
+      },
+      correct: "a"
+    },
+    {
+      id: 30,
+      question: "CSS: What does 'overflow: hidden' do?",
+      options: {
+        a: "Hides content that overflows without scrollbars",
+        b: "Adds scrollbars when content overflows",
+        c: "Makes content float outside container",
+        d: "Auto-resizes container"
+      },
+      correct: "a"
+    },
+    {
+      id: 31,
+      question: "C++: Which of these is NOT a valid storage class specifier?",
+      options: {
+        a: "auto",
+        b: "register",
+        c: "static",
+        d: "dynamic"
+      },
+      correct: "d"
+    },
+    {
+      id: 32,
+      question: "SQL: What will happen if you run this?\n\n```sql\nSELECT * FROM orders WHERE order_id = NULL;\n```",
+      options: {
+        a: "Returns matching rows",
+        b: "Returns all rows",
+        c: "Returns no rows",
+        d: "Error"
+      },
+      correct: "c"
+    },
+    {
+      id: 33,
+      question: "HTML: Which tag is used for emphasizing text with semantic meaning?",
+      options: {
+        a: "<b>",
+        b: "<i>",
+        c: "<em>",
+        d: "<u>"
+      },
+      correct: "c"
+    },
+    {
+      id: 34,
+      question: "CSS: Which media query targets screens less than or equal to 600px wide?",
+      options: {
+        a: "@media (min-width: 600px)",
+        b: "@media (max-width: 600px)",
+        c: "@media screen and (min-width: 600px)",
+        d: "@media screen and (width: 600px)"
+      },
+      correct: "b"
+    },
+    {
+      id: 35,
+      question: "OOP: Which type of inheritance can lead to the diamond problem in C++?",
+      options: {
+        a: "Single",
+        b: "Multiple",
+        c: "Multilevel",
+        d: "Hierarchical"
+      },
+      correct: "b"
+    }
+  ]
+},
+
+exam10: {
+  title: "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP (Intermediate & Tricky)",
+  questions: [
+    {
+      id: 1,
+      question: "What is the size of a pointer in a 64-bit system?",
+      options: {
+        a: "4 bytes",
+        b: "8 bytes",
+        c: "Depends on the data type it points to",
+        d: "16 bytes"
+      },
+      correct: "b"
+    },
+    {
+      id: 2,
+      question: "In C++, what is the output of the following code?\n```cpp\nint x = 5;\nint &ref = x;\nref = 10;\nstd::cout << x;\n```",
+      options: {
+        a: "5",
+        b: "10",
+        c: "Undefined",
+        d: "Compile error"
+      },
+      correct: "b"
+    },
+    {
+      id: 3,
+      question: "In SQL, which clause is used to filter groups after a GROUP BY operation?",
+      options: {
+        a: "WHERE",
+        b: "HAVING",
+        c: "FILTER",
+        d: "ORDER BY"
+      },
+      correct: "b"
+    },
+    {
+      id: 4,
+      question: "In HTML, which tag is used to define a navigation section?",
+      options: {
+        a: "<section>",
+        b: "<nav>",
+        c: "<header>",
+        d: "<aside>"
+      },
+      correct: "b"
+    },
+    {
+      id: 5,
+      question: "In CSS, which property is used to control the spacing between elements in a flex container?",
+      options: {
+        a: "margin",
+        b: "padding",
+        c: "gap",
+        d: "spacing"
+      },
+      correct: "c"
+    },
+    {
+      id: 6,
+      question: "In OOP, which principle ensures that a derived class can be used wherever a base class is expected?",
+      options: {
+        a: "Encapsulation",
+        b: "Abstraction",
+        c: "Inheritance",
+        d: "Polymorphism"
+      },
+      correct: "d"
+    },
+    {
+      id: 7,
+      question: "What is the output of this C code?\n```c\n#include <stdio.h>\nint main() {\n  int a = 10, b = 20;\n  printf(\"%d\", a + b++);\n  return 0;\n}\n```",
+      options: {
+        a: "30",
+        b: "31",
+        c: "20",
+        d: "21"
+      },
+      correct: "a"
+    },
+    {
+      id: 8,
+      question: "In SQL, what does the following query return?\n```sql\nSELECT COUNT(*) FROM employees WHERE salary > 50000;\n```",
+      options: {
+        a: "Total number of employees",
+        b: "Number of employees with salary greater than 50,000",
+        c: "Sum of salaries greater than 50,000",
+        d: "Average salary of employees"
+      },
+      correct: "b"
+    },
+    {
+      id: 9,
+      question: "In HTML, which attribute specifies the destination for a form submission?",
+      options: {
+        a: "method",
+        b: "action",
+        c: "target",
+        d: "submit"
+      },
+      correct: "b"
+    },
+    {
+      id: 10,
+      question: "In CSS, what does the `position: sticky` property do?",
+      options: {
+        a: "Fixes an element to the viewport",
+        b: "Keeps an element in flow but sticks at a threshold",
+        c: "Removes an element from the document flow",
+        d: "Aligns an element relative to its parent"
+      },
+      correct: "b"
+    },
+    {
+      id: 11,
+      question: "In C++, what is the default access specifier for members of a class?",
+      options: {
+        a: "public",
+        b: "private",
+        c: "protected",
+        d: "default"
+      },
+      correct: "b"
+    },
+    {
+      id: 12,
+      question: "In SQL, which join returns all rows from both tables, with NULLs where there is no match?",
+      options: {
+        a: "INNER JOIN",
+        b: "LEFT JOIN",
+        c: "RIGHT JOIN",
+        d: "FULL OUTER JOIN"
+      },
+      correct: "d"
+    },
+    {
+      id: 13,
+      question: "In HTML, which element is used for semantic grouping of content?",
+      options: {
+        a: "<div>",
+        b: "<span>",
+        c: "<article>",
+        d: "<group>"
+      },
+      correct: "c"
+    },
+    {
+      id: 14,
+      question: "In CSS, what is the effect of `display: none`?",
+      options: {
+        a: "Hides the element but retains space",
+        b: "Hides the element and removes it from the layout",
+        c: "Reduces element opacity to 0",
+        d: "Collapses the element’s margin"
+      },
+      correct: "b"
+    },
+    {
+      id: 15,
+      question: "In OOP, what is the purpose of a virtual function in C++?",
+      options: {
+        a: "To prevent function overriding",
+        b: "To allow function overriding in derived classes",
+        c: "To make a function static",
+        d: "To inline a function for performance"
+      },
+      correct: "b"
+    },
+    {
+      id: 16,
+      question: "What is the output of this C++ code?\n```cpp\n#include <iostream>\nclass A {\npublic:\n  virtual void show() { std::cout << \"A\"; }\n};\nclass B : public A {\npublic:\n  void show() { std::cout << \"B\"; }\n};\nint main() {\n  A *ptr = new B();\n  ptr->show();\n  delete ptr;\n  return 0;\n}\n```",
+      options: {
+        a: "A",
+        b: "B",
+        c: "Compile error",
+        d: "Runtime error"
+      },
+      correct: "b"
+    },
+    {
+      id: 17,
+      question: "In SQL, what is the correct syntax to update the salary of employees in the 'Sales' department to 60000?\n```sql\nUPDATE employees SET salary = 60000 WHERE department = 'Sales';\n```",
+      options: {
+        a: "Correct",
+        b: "Incorrect: Missing SET keyword",
+        c: "Incorrect: Missing WHERE clause",
+        d: "Incorrect: Missing table name"
+      },
+      correct: "a"
+    },
+    {
+      id: 18,
+      question: "In HTML, which input type is used for file uploads?",
+      options: {
+        a: "text",
+        b: "file",
+        c: "upload",
+        d: "submit"
+      },
+      correct: "b"
+    },
+    {
+      id: 19,
+      question: "In CSS, which selector targets an element with the id 'header'?",
+      options: {
+        a: ".header",
+        b: "#header",
+        c: "header",
+        d: "*header"
+      },
+      correct: "b"
+    },
+    {
+      id: 20,
+      question: "In C, what happens if you dereference a NULL pointer?",
+      options: {
+        a: "Returns 0",
+        b: "Undefined behavior",
+        c: "Compile error",
+        d: "Points to the first memory address"
+      },
+      correct: "b"
+    },
+    {
+      id: 21,
+      question: "In SQL, what does this query do?\n```sql\nSELECT department, AVG(salary) FROM employees GROUP BY department HAVING AVG(salary) > 50000;\n```",
+      options: {
+        a: "Lists departments with average salary greater than 50,000",
+        b: "Lists employees with salary greater than 50,000",
+        c: "Counts employees per department",
+        d: "Sums salaries per department"
+      },
+      correct: "a"
+    },
+    {
+      id: 22,
+      question: "In HTML, what is the purpose of the `<meta charset='UTF-8'>` tag?",
+      options: {
+        a: "Specifies the document’s language",
+        b: "Defines the character encoding",
+        c: "Sets the page’s font",
+        d: "Enables responsive design"
+      },
+      correct: "b"
+    },
+    {
+      id: 23,
+      question: "In CSS, what is the result of `z-index: -1` on an element?",
+      options: {
+        a: "Places it above all other elements",
+        b: "Places it below elements with default z-index",
+        c: "Hides the element",
+        d: "No effect"
+      },
+      correct: "b"
+    },
+    {
+      id: 24,
+      question: "In C++, what is the output of this code?\n```cpp\n#include <iostream>\nint main() {\n  int arr[3] = {1, 2, 3};\n  int *p = arr;\n  std::cout << *(p + 1);\n  return 0;\n}\n```",
+      options: {
+        a: "1",
+        b: "2",
+        c: "3",
+        d: "Undefined"
+      },
+      correct: "b"
+    },
+    {
+      id: 25,
+      question: "In OOP, what is a pure virtual function in C++?",
+      options: {
+        a: "A function with no implementation",
+        b: "A function that must be overridden",
+        c: "A function declared with `= 0`",
+        d: "All of the above"
+      },
+      correct: "d"
+    },
+    {
+      id: 26,
+      question: "In SQL, which query deletes all records from a table without dropping it?",
+      options: {
+        a: "DROP TABLE table_name;",
+        b: "DELETE FROM table_name;",
+        c: "TRUNCATE TABLE table_name;",
+        d: "Both b and c"
+      },
+      correct: "d"
+    },
+    {
+      id: 27,
+      question: "In HTML, which tag is used to embed an image?",
+      options: {
+        a: "<img>",
+        b: "<image>",
+        c: "<src>",
+        d: "<picture>"
+      },
+      correct: "a"
+    },
+    {
+      id: 28,
+      question: "In CSS, what does `box-sizing: border-box` do?",
+      options: {
+        a: "Excludes padding and border from element width",
+        b: "Includes padding and border in element width",
+        c: "Sets the box to a fixed size",
+        d: "Removes the box model"
+      },
+      correct: "b"
+    },
+    {
+      id: 29,
+      question: "In C++, what is the output of this code?\n```cpp\n#include <iostream>\nclass Base {\npublic:\n  void print() { std::cout << \"Base\"; }\n};\nclass Derived : public Base {\npublic:\n  void print() { std::cout << \"Derived\"; }\n};\nint main() {\n  Base b;\n  Derived d;\n  Base *ptr = &d;\n  ptr->print();\n  return 0;\n}\n```",
+      options: {
+        a: "Base",
+        b: "Derived",
+        c: "Compile error",
+        d: "Runtime error"
+      },
+      correct: "a"
+    },
+    {
+      id: 30,
+      question: "In SQL, what is the result of this query?\n```sql\nSELECT e1.name FROM employees e1 INNER JOIN employees e2 ON e1.manager_id = e2.id WHERE e2.name = 'John';\n```",
+      options: {
+        a: "Names of employees managed by John",
+        b: "Names of all employees",
+        c: "Names of managers",
+        d: "Names of employees with no manager"
+      },
+      correct: "a"
+    },
+    {
+      id: 31,
+      question: "In HTML, which attribute makes an input field mandatory?",
+      options: {
+        a: "required",
+        b: "mandatory",
+        c: "validate",
+        d: "must"
+      },
+      correct: "a"
+    },
+    {
+      id: 32,
+      question: "In CSS, what does the `@media` rule enable?",
+      options: {
+        a: "Animations",
+        b: "Responsive design",
+        c: "Font imports",
+        d: "Variable declarations"
+      },
+      correct: "b"
+    },
+    {
+      id: 33,
+      question: "In C++, what happens if a destructor is not declared as virtual in a base class?",
+      options: {
+        a: "Derived class destructor is not called when deleting through base pointer",
+        b: "Compile error",
+        c: "Runtime error",
+        d: "No effect"
+      },
+      correct: "a"
+    },
+    {
+      id: 34,
+      question: "In SQL, what is wrong with this query?\n```sql\nSELECT * FROM orders WHERE order_date = '2023-10-01' AND customer_id IN (SELECT customer_id FROM customers WHERE country = 'USA');\n```",
+      options: {
+        a: "Nothing, it is correct",
+        b: "Missing GROUP BY clause",
+        c: "Incorrect subquery syntax",
+        d: "Invalid date format"
+      },
+      correct: "a"
+    },
+    {
+      id: 35,
+      question: "In OOP, what is the output of this C++ code with multiple inheritance?\n```cpp\n#include <iostream>\nclass A {\npublic:\n  virtual void show() { std::cout << \"A\"; }\n};\nclass B {\npublic:\n  virtual void show() { std::cout << \"B\"; }\n};\nclass C : public A, public B {\npublic:\n  void show() { std::cout << \"C\"; }\n};\nint main() {\n  C obj;\n  A *a = &obj;\n  a->show();\n  return 0;\n}\n```",
+      options: {
+        a: "A",
+        b: "B",
+        c: "C",
+        d: "Compile error"
+      },
+      correct: "c"
+    }
+  ]
+},
         
       }  
