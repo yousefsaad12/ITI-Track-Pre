@@ -5802,4 +5802,415 @@ const technicalExams = {
       },
     ],
   },
+  exam15: {
+    title:
+      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP (Intermediate & Tricky)",
+    questions: [
+      {
+        id: 1,
+        question: "What is the size of a pointer in a 64-bit system?",
+        options: {
+          a: "4 bytes",
+          b: "8 bytes",
+          c: "Depends on the data type it points to",
+          d: "16 bytes",
+        },
+        correct: "b",
+      },
+      {
+        id: 2,
+        question: "Which HTML element is used for the most important heading?",
+        options: {
+          a: "<header>",
+          b: "<h6>",
+          c: "<h1>",
+          d: "<title>",
+        },
+        correct: "c",
+      },
+      {
+        id: 3,
+        question: "In CSS, which property is used to change the text color?",
+        options: {
+          a: "font-color",
+          b: "text-color",
+          c: "color",
+          d: "foreground-color",
+        },
+        correct: "c",
+      },
+      {
+        id: 4,
+        question:
+          "Which OOP principle allows a class to inherit properties from another class?",
+        options: {
+          a: "Encapsulation",
+          b: "Polymorphism",
+          c: "Abstraction",
+          d: "Inheritance",
+        },
+        correct: "d",
+      },
+      {
+        id: 5,
+        question:
+          "What does the following SQL query return?\nSELECT COUNT(*) FROM employees WHERE salary > 50000;",
+        options: {
+          a: "All employee records with salary > 50000",
+          b: "The number of employees with salary > 50000",
+          c: "The sum of salaries > 50000",
+          d: "Error - invalid syntax",
+        },
+        correct: "b",
+      },
+      {
+        id: 6,
+        question:
+          'What will be the output of this C code?\n\n```c\nint x = 5;\nint y = ++x + x++;\nprintf("%d", y);\n```',
+        options: {
+          a: "11",
+          b: "12",
+          c: "13",
+          d: "10",
+        },
+        correct: "b",
+      },
+      {
+        id: 7,
+        question: "In a flowchart, what does a diamond shape represent?",
+        options: {
+          a: "Process/Action",
+          b: "Start/End",
+          c: "Decision/Condition",
+          d: "Input/Output",
+        },
+        correct: "c",
+      },
+      {
+        id: 8,
+        question: "What is the correct pseudocode structure for a while loop?",
+        options: {
+          a: "WHILE condition DO statements END WHILE",
+          b: "FOR condition DO statements END FOR",
+          c: "IF condition THEN statements END IF",
+          d: "REPEAT statements UNTIL condition",
+        },
+        correct: "a",
+      },
+      {
+        id: 9,
+        question: "Which SQL JOIN returns all records from both tables?",
+        options: {
+          a: "INNER JOIN",
+          b: "LEFT JOIN",
+          c: "RIGHT JOIN",
+          d: "FULL OUTER JOIN",
+        },
+        correct: "d",
+      },
+      {
+        id: 10,
+        question:
+          'What will this C++ code output?\n\n```cpp\nint arr[] = {1, 2, 3, 4, 5};\nint *ptr = arr + 2;\nprintf("%d", *(ptr + 1));\n```',
+        options: {
+          a: "2",
+          b: "3",
+          c: "4",
+          d: "5",
+        },
+        correct: "c",
+      },
+      {
+        id: 11,
+        question: "Which CSS property is used to make text bold?",
+        options: {
+          a: "text-weight",
+          b: "font-weight",
+          c: "font-style",
+          d: "text-style",
+        },
+        correct: "b",
+      },
+      {
+        id: 12,
+        question: "In OOP, what does polymorphism allow?",
+        options: {
+          a: "Hiding internal implementation details",
+          b: "Creating multiple instances of a class",
+          c: "One interface to represent different underlying data types",
+          d: "Inheriting from multiple parent classes",
+        },
+        correct: "c",
+      },
+      {
+        id: 13,
+        question:
+          'What is the result of this C code?\n\n```c\nint a = 10, b = 20;\nint result = (a > b) ? a : b;\nprintf("%d", result);\n```',
+        options: {
+          a: "10",
+          b: "20",
+          c: "30",
+          d: "0",
+        },
+        correct: "b",
+      },
+      {
+        id: 14,
+        question:
+          "Which SQL clause is used to filter groups created by GROUP BY?",
+        options: {
+          a: "WHERE",
+          b: "FILTER",
+          c: "HAVING",
+          d: "GROUP_FILTER",
+        },
+        correct: "c",
+      },
+      {
+        id: 15,
+        question:
+          'What will this C code print?\n\n```c\nchar str[] = "Hello";\nprintf("%d", sizeof(str));\n```',
+        options: {
+          a: "5",
+          b: "6",
+          c: "4",
+          d: "8",
+        },
+        correct: "b",
+      },
+      {
+        id: 16,
+        question: "In a flowchart, what does a rectangle represent?",
+        options: {
+          a: "Decision",
+          b: "Process/Action",
+          c: "Start/End",
+          d: "Input/Output",
+        },
+        correct: "b",
+      },
+      {
+        id: 17,
+        question:
+          "What is the purpose of this pseudocode?\n\nSET sum = 0\nFOR i = 1 TO 10\n  SET sum = sum + i\nEND FOR\nOUTPUT sum",
+        options: {
+          a: "Calculate the average of numbers 1 to 10",
+          b: "Calculate the sum of numbers 1 to 10",
+          c: "Count from 1 to 10",
+          d: "Find the maximum of numbers 1 to 10",
+        },
+        correct: "b",
+      },
+      {
+        id: 18,
+        question:
+          "Which HTML attribute is used to specify an alternate text for an image?",
+        options: {
+          a: "title",
+          b: "alt",
+          c: "src",
+          d: "caption",
+        },
+        correct: "b",
+      },
+      {
+        id: 19,
+        question:
+          'What will this C++ code output?\n\n```cpp\nint x = 5;\nint &ref = x;\nref = 10;\nprintf("%d", x);\n```',
+        options: {
+          a: "5",
+          b: "10",
+          c: "15",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 20,
+        question: "Which SQL statement is used to add new records to a table?",
+        options: {
+          a: "ADD",
+          b: "INSERT",
+          c: "CREATE",
+          d: "UPDATE",
+        },
+        correct: "b",
+      },
+      {
+        id: 21,
+        question:
+          'What is the output of this C code?\n\n```c\nint i;\nfor(i = 0; i < 3; i++) {\n  if(i == 1) continue;\n  printf("%d ", i);\n}\n```',
+        options: {
+          a: "0 1 2",
+          b: "0 2",
+          c: "1 2",
+          d: "0 1",
+        },
+        correct: "b",
+      },
+      {
+        id: 22,
+        question:
+          "In CSS, which value of the 'position' property removes an element from the normal document flow?",
+        options: {
+          a: "static",
+          b: "relative",
+          c: "absolute",
+          d: "fixed",
+        },
+        correct: "c",
+      },
+      {
+        id: 23,
+        question: "What does encapsulation mean in OOP?",
+        options: {
+          a: "Creating multiple objects from one class",
+          b: "Hiding the internal state and requiring interaction through methods",
+          c: "Allowing one class to inherit from another",
+          d: "Using the same interface for different data types",
+        },
+        correct: "b",
+      },
+      {
+        id: 24,
+        question:
+          'What will this C code print?\n\n```c\nint arr[3] = {10, 20, 30};\nint *p = arr;\nprintf("%d", *(p + 1));\n```',
+        options: {
+          a: "10",
+          b: "20",
+          c: "30",
+          d: "Garbage value",
+        },
+        correct: "b",
+      },
+      {
+        id: 25,
+        question: "Which SQL query will return unique values from a column?",
+        options: {
+          a: "SELECT UNIQUE column_name FROM table",
+          b: "SELECT DISTINCT column_name FROM table",
+          c: "SELECT DIFFERENT column_name FROM table",
+          d: "SELECT SEPARATE column_name FROM table",
+        },
+        correct: "b",
+      },
+      {
+        id: 26,
+        question:
+          'What does this pseudocode do?\n\nINPUT number\nIF number MOD 2 = 0 THEN\n  OUTPUT "Even"\nELSE\n  OUTPUT "Odd"\nEND IF',
+        options: {
+          a: "Checks if a number is positive or negative",
+          b: "Checks if a number is even or odd",
+          c: "Calculates the square of a number",
+          d: "Finds the factorial of a number",
+        },
+        correct: "b",
+      },
+      {
+        id: 27,
+        question:
+          'What is the result of this C++ code?\n\n```cpp\nint a = 7;\nint b = 3;\nprintf("%.2f", (float)a / b);\n```',
+        options: {
+          a: "2.00",
+          b: "2.33",
+          c: "2.34",
+          d: "7.00",
+        },
+        correct: "b",
+      },
+      {
+        id: 28,
+        question: "Which CSS selector targets an element with id='header'?",
+        options: {
+          a: ".header",
+          b: "#header",
+          c: "header",
+          d: "*header",
+        },
+        correct: "b",
+      },
+      {
+        id: 29,
+        question:
+          "What will this SQL query return?\nSELECT * FROM products WHERE price BETWEEN 10 AND 50;",
+        options: {
+          a: "Products with price exactly 10 or 50",
+          b: "Products with price from 11 to 49",
+          c: "Products with price from 10 to 50 (inclusive)",
+          d: "Products with price greater than 10 and less than 50",
+        },
+        correct: "c",
+      },
+      {
+        id: 30,
+        question:
+          'What is the output of this C code?\n\n```c\nint x = 1;\nswitch(x) {\n  case 1: printf("A");\n  case 2: printf("B");\n  default: printf("C");\n}\n```',
+        options: {
+          a: "A",
+          b: "ABC",
+          c: "AB",
+          d: "C",
+        },
+        correct: "b",
+      },
+      {
+        id: 31,
+        question: "Which HTML tag is used to create a hyperlink?",
+        options: {
+          a: "<link>",
+          b: "<href>",
+          c: "<a>",
+          d: "<url>",
+        },
+        correct: "c",
+      },
+      {
+        id: 32,
+        question: "In OOP, what is an abstract class?",
+        options: {
+          a: "A class that cannot be instantiated directly",
+          b: "A class with no methods",
+          c: "A class that inherits from multiple parents",
+          d: "A class with only private members",
+        },
+        correct: "a",
+      },
+      {
+        id: 33,
+        question:
+          "What will this complex SQL query return?\nSELECT department, COUNT(*) as emp_count FROM employees GROUP BY department HAVING COUNT(*) > 5;",
+        options: {
+          a: "All departments with their employee counts",
+          b: "Departments with exactly 5 employees",
+          c: "Departments with more than 5 employees and their counts",
+          d: "The top 5 departments by employee count",
+        },
+        correct: "c",
+      },
+      {
+        id: 34,
+        question:
+          'What is the output of this tricky C++ code?\n\n```cpp\nint i = 0;\nprintf("%d %d %d", ++i, i++, i);\n```',
+        options: {
+          a: "1 0 2",
+          b: "1 1 2",
+          c: "2 1 2",
+          d: "Undefined behavior - compiler dependent",
+        },
+        correct: "d",
+      },
+      {
+        id: 35,
+        question:
+          "Which CSS property combination will center a div both horizontally and vertically using Flexbox?",
+        options: {
+          a: "display: flex; align-items: center; justify-content: center;",
+          b: "display: flex; text-align: center; vertical-align: middle;",
+          c: "position: relative; left: 50%; top: 50%;",
+          d: "margin: auto; padding: 50%;",
+        },
+        correct: "a",
+      },
+    ],
+  },
 };
