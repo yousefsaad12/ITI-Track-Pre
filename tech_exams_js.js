@@ -6213,4 +6213,1427 @@ const technicalExams = {
       },
     ],
   },
+
+  exam16: {
+    title:
+      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP (Intermediate to Advanced & Tricky)",
+    questions: [
+      // C/C++ Trace Code Questions (12 questions - increased from 10)
+      {
+        id: 1,
+        question:
+          "What is the output of this C++ code?\n```cpp\nint x = 5;\nint* ptr = &x;\n*ptr += 10;\ncout << x << endl;\n```",
+        options: {
+          a: "5",
+          b: "15",
+          c: "10",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 2,
+        question:
+          'What is the output of this C code?\n```c\nint arr[] = {1, 2, 3, 4, 5};\nint* p = arr + 2;\nprintf("%d %d", *p, *(p - 1));\n```',
+        options: {
+          a: "2 1",
+          b: "3 2",
+          c: "4 3",
+          d: "3 4",
+        },
+        correct: "b",
+      },
+      {
+        id: 3,
+        question:
+          'What is the output of this C++ code?\n```cpp\nclass Test {\npublic:\n    int x = 10;\n    void func() { cout << x << " "; }\n};\nTest* t = new Test();\nt->x = 20;\nt->func();\ndelete t;\n```',
+        options: {
+          a: "10",
+          b: "20",
+          c: "0",
+          d: "Garbage value",
+        },
+        correct: "b",
+      },
+      {
+        id: 4,
+        question:
+          'What is the output of this C code?\n```c\nvoid swap(int* a, int* b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}\nint main() {\n    int x = 5, y = 10;\n    swap(&x, &y);\n    printf("%d %d", x, y);\n}\n```',
+        options: {
+          a: "5 10",
+          b: "10 5",
+          c: "0 0",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 5,
+        question:
+          'What is the output of this C++ code?\n```cpp\nint arr[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};\nint* ptr = &arr[1][1];\ncout << *(ptr + 1) << " " << *(ptr - 1);\n```',
+        options: {
+          a: "6 4",
+          b: "5 5",
+          c: "4 6",
+          d: "2 8",
+        },
+        correct: "a",
+      },
+      {
+        id: 6,
+        question:
+          'What is the output of this C code?\n```c\nstruct Point {\n    int x, y;\n};\nstruct Point p = {10, 20};\nstruct Point* ptr = &p;\nptr->x += 5;\nprintf("%d %d", p.x, ptr->y);\n```',
+        options: {
+          a: "10 20",
+          b: "15 20",
+          c: "10 25",
+          d: "15 25",
+        },
+        correct: "b",
+      },
+      {
+        id: 7,
+        question:
+          'What is the output of this C++ code?\n```cpp\nclass Base {\npublic:\n    virtual void show() { cout << "Base "; }\n};\nclass Derived : public Base {\npublic:\n    void show() override { cout << "Derived "; }\n};\nBase* b = new Derived();\nb->show();\n```',
+        options: {
+          a: "Base",
+          b: "Derived",
+          c: "Base Derived",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 8,
+        question:
+          'What is the output of this C code?\n```c\nchar str[] = "Hello";\nchar* p1 = str;\nchar* p2 = str + 2;\nprintf("%c%c", *p2, *(p1 + 4));\n```',
+        options: {
+          a: "lo",
+          b: "ll",
+          c: "He",
+          d: "eo",
+        },
+        correct: "a",
+      },
+      {
+        id: 9,
+        question:
+          "What is the output of this C++ code?\n```cpp\nint factorial(int n) {\n    if(n <= 1) return 1;\n    return n * factorial(n-1);\n}\ncout << factorial(4);\n```",
+        options: {
+          a: "12",
+          b: "24",
+          c: "10",
+          d: "4",
+        },
+        correct: "b",
+      },
+      {
+        id: 10,
+        question:
+          'What is the output of this C code?\n```c\nint matrix[2][2] = {{1,2}, {3,4}};\nint (*ptr)[2] = matrix;\nprintf("%d", (*(ptr + 1))[1]);\n```',
+        options: {
+          a: "1",
+          b: "2",
+          c: "3",
+          d: "4",
+        },
+        correct: "d",
+      },
+      {
+        id: 11,
+        question:
+          'What is the output of this C++ code?\n```cpp\nclass A {\npublic:\n    A() { cout << "A "; }\n    ~A() { cout << "~A "; }\n};\nvoid func() {\n    A obj;\n}\nfunc();\ncout << "End";\n```',
+        options: {
+          a: "A End",
+          b: "A ~A End",
+          c: "~A A End",
+          d: "End A ~A",
+        },
+        correct: "b",
+      },
+      {
+        id: 12,
+        question:
+          'What is the output of this C code?\n```c\nint count = 0;\nvoid increment() {\n    static int x = 0;\n    x++;\n    count = x;\n}\nincrement();\nincrement();\nprintf("%d", count);\n```',
+        options: {
+          a: "0",
+          b: "1",
+          c: "2",
+          d: "Undefined",
+        },
+        correct: "c",
+      },
+
+      // SQL Code Analysis Questions (12 questions - increased from 10)
+      {
+        id: 13,
+        question:
+          "What is the result of this SQL query?\n```sql\nCREATE TABLE emp (id INT, salary INT, dept VARCHAR(10));\nINSERT INTO emp VALUES (1, 5000, 'IT'), (2, 6000, 'HR'), (3, 7000, 'IT');\nSELECT dept, AVG(salary) FROM emp GROUP BY dept HAVING AVG(salary) > 5500;\n```",
+        options: {
+          a: "IT 6000",
+          b: "HR 6000, IT 6000",
+          c: "IT 6000, HR 6000",
+          d: "No results",
+        },
+        correct: "a",
+      },
+      {
+        id: 14,
+        question:
+          "What does this query return?\n```sql\nSELECT e1.name FROM employees e1\nWHERE e1.salary > (SELECT AVG(e2.salary) FROM employees e2 WHERE e2.dept = e1.dept);\n```",
+        options: {
+          a: "All employee names",
+          b: "Employees with above-average salary in their department",
+          c: "Highest paid employee in each department",
+          d: "Employees with below-average salary",
+        },
+        correct: "b",
+      },
+      {
+        id: 15,
+        question:
+          "What is the output of this SQL?\n```sql\nCREATE TABLE nums (val INT);\nINSERT INTO nums VALUES (1), (2), (2), (3), (3), (3);\nSELECT val, COUNT(*) FROM nums GROUP BY val ORDER BY COUNT(*) DESC;\n```",
+        options: {
+          a: "3:3, 2:2, 1:1",
+          b: "1:1, 2:2, 3:3",
+          c: "3:1, 2:1, 1:1",
+          d: "Error",
+        },
+        correct: "a",
+      },
+      {
+        id: 16,
+        question:
+          "Find the error in this SQL:\n```sql\nSELECT name, MAX(salary) FROM employees\nWHERE department = 'IT'\nGROUP BY department;\n```",
+        options: {
+          a: "No error",
+          b: "name should be in GROUP BY",
+          c: "Cannot use WHERE with GROUP BY",
+          d: "MAX function syntax error",
+        },
+        correct: "b",
+      },
+      {
+        id: 17,
+        question:
+          "What does this query return?\n```sql\nSELECT * FROM orders o1\nWHERE EXISTS (SELECT 1 FROM customers c WHERE c.id = o1.customer_id AND c.city = 'NYC');\n```",
+        options: {
+          a: "All orders",
+          b: "Orders from NYC customers",
+          c: "Customers from NYC",
+          d: "Orders without customers",
+        },
+        correct: "b",
+      },
+      {
+        id: 18,
+        question:
+          "What is the result of this JOIN?\n```sql\nCREATE TABLE a (id INT, val VARCHAR(5));\nCREATE TABLE b (id INT, val VARCHAR(5));\nINSERT INTO a VALUES (1, 'X'), (2, 'Y');\nINSERT INTO b VALUES (2, 'P'), (3, 'Q');\nSELECT COUNT(*) FROM a FULL OUTER JOIN b ON a.id = b.id;\n```",
+        options: {
+          a: "1",
+          b: "2",
+          c: "3",
+          d: "4",
+        },
+        correct: "c",
+      },
+      {
+        id: 19,
+        question:
+          "What does this window function return?\n```sql\nSELECT name, salary, \n       ROW_NUMBER() OVER (ORDER BY salary DESC) as rank\nFROM employees;\n```",
+        options: {
+          a: "Employees with ranking by salary",
+          b: "Only highest paid employee",
+          c: "Duplicate salary ranks",
+          d: "Average salary ranking",
+        },
+        correct: "a",
+      },
+      {
+        id: 20,
+        question:
+          "What is the output of this CTE query?\n```sql\nWITH recursive_nums AS (\n    SELECT 1 as n\n    UNION ALL\n    SELECT n + 1 FROM recursive_nums WHERE n < 3\n)\nSELECT SUM(n) FROM recursive_nums;\n```",
+        options: {
+          a: "3",
+          b: "6",
+          c: "1",
+          d: "Error",
+        },
+        correct: "b",
+      },
+      {
+        id: 21,
+        question:
+          "What does this SQL code do?\n```sql\nUPDATE products SET price = price * 1.1\nWHERE category IN (\n    SELECT category FROM sales \n    GROUP BY category \n    HAVING SUM(quantity) > 1000\n);\n```",
+        options: {
+          a: "Increases all product prices",
+          b: "Increases prices for high-selling categories",
+          c: "Decreases prices by 10%",
+          d: "Deletes products",
+        },
+        correct: "b",
+      },
+      {
+        id: 22,
+        question:
+          "What is the result of this CASE statement?\n```sql\nSELECT name,\n    CASE \n        WHEN salary > 70000 THEN 'High'\n        WHEN salary > 50000 THEN 'Medium'\n        ELSE 'Low'\n    END as level\nFROM employees WHERE salary = 60000;\n```",
+        options: {
+          a: "High",
+          b: "Medium",
+          c: "Low",
+          d: "NULL",
+        },
+        correct: "b",
+      },
+      {
+        id: 23,
+        question:
+          "What does this query return?\n```sql\nSELECT DISTINCT c.name\nFROM customers c\nLEFT JOIN orders o ON c.id = o.customer_id\nWHERE o.customer_id IS NULL;\n```",
+        options: {
+          a: "All customers",
+          b: "Customers with orders",
+          c: "Customers without orders",
+          d: "All orders",
+        },
+        correct: "c",
+      },
+      {
+        id: 24,
+        question:
+          "What is the output of this SQL?\n```sql\nSELECT COALESCE(NULL, NULL, 'Hello', 'World');\n```",
+        options: {
+          a: "NULL",
+          b: "Hello",
+          c: "World",
+          d: "Hello World",
+        },
+        correct: "b",
+      },
+
+      // HTML/CSS Code Questions (8 questions - increased from 5)
+      {
+        id: 25,
+        question:
+          "What will this CSS code do?\n```css\n.container {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n```",
+        options: {
+          a: "Centers items vertically only",
+          b: "Distributes items with equal space between them, centered vertically",
+          c: "Aligns items to the left",
+          d: "Creates a grid layout",
+        },
+        correct: "b",
+      },
+      {
+        id: 26,
+        question:
+          'What does this HTML/CSS produce?\n```html\n<div class="box">Content</div>\n<style>\n.box {\n    width: 100px;\n    padding: 20px;\n    border: 5px solid black;\n    box-sizing: border-box;\n}\n</style>\n```\nWhat is the total width?',
+        options: {
+          a: "100px",
+          b: "150px",
+          c: "130px",
+          d: "120px",
+        },
+        correct: "a",
+      },
+      {
+        id: 27,
+        question:
+          "What will this CSS selector match?\n```css\nul li:nth-child(odd) {\n    background: gray;\n}\n```",
+        options: {
+          a: "All li elements",
+          b: "First li element only",
+          c: "Every odd-positioned li element",
+          d: "Last li element only",
+        },
+        correct: "c",
+      },
+      {
+        id: 28,
+        question:
+          "What does this CSS Grid code create?\n```css\n.grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 10px;\n}\n```",
+        options: {
+          a: "3 equal columns with 10px gaps",
+          b: "3 rows with 10px gaps",
+          c: "1 column repeated 3 times",
+          d: "Flexbox layout",
+        },
+        correct: "a",
+      },
+      {
+        id: 29,
+        question:
+          "What will this CSS animation do?\n```css\n@keyframes slide {\n    from { transform: translateX(0); }\n    to { transform: translateX(100px); }\n}\n.element {\n    animation: slide 2s infinite alternate;\n}\n```",
+        options: {
+          a: "Slides once and stops",
+          b: "Slides back and forth continuously",
+          c: "Rotates the element",
+          d: "Fades in and out",
+        },
+        correct: "b",
+      },
+      {
+        id: 30,
+        question:
+          "What does this CSS do?\n```css\n.overlay::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0,0,0,0.5);\n}\n```",
+        options: {
+          a: "Creates a border",
+          b: "Creates a semi-transparent overlay",
+          c: "Changes text color",
+          d: "Adds padding",
+        },
+        correct: "b",
+      },
+      {
+        id: 31,
+        question:
+          "What will this media query do?\n```css\n@media (max-width: 768px) {\n    .sidebar {\n        display: none;\n    }\n    .main {\n        width: 100%;\n    }\n}\n```",
+        options: {
+          a: "Hides sidebar on large screens",
+          b: "Hides sidebar on screens 768px and smaller",
+          c: "Shows sidebar only on mobile",
+          d: "Changes sidebar color",
+        },
+        correct: "b",
+      },
+      {
+        id: 32,
+        question:
+          "What does this JavaScript DOM code do?\n```javascript\ndocument.querySelectorAll('.item').forEach((item, index) => {\n    item.style.animationDelay = `${index * 0.1}s`;\n    item.classList.add('fade-in');\n});\n```",
+        options: {
+          a: "Removes all items",
+          b: "Adds staggered animation delays to items",
+          c: "Changes item colors",
+          d: "Counts the items",
+        },
+        correct: "b",
+      },
+
+      // OOP Code Questions (8 questions - increased from 7)
+      {
+        id: 33,
+        question:
+          'What is the output of this C++ code?\n```cpp\nclass Animal {\npublic:\n    virtual void sound() { cout << "Animal sound "; }\n};\nclass Dog : public Animal {\npublic:\n    void sound() override { cout << "Bark "; }\n};\nAnimal* a = new Dog();\na->sound();\n```',
+        options: {
+          a: "Animal sound",
+          b: "Bark",
+          c: "Animal sound Bark",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 34,
+        question:
+          'What will this Java code output?\n```java\nclass Parent {\n    public Parent() { System.out.print("Parent "); }\n}\nclass Child extends Parent {\n    public Child() { System.out.print("Child "); }\n}\nnew Child();\n```',
+        options: {
+          a: "Child",
+          b: "Parent",
+          c: "Parent Child",
+          d: "Child Parent",
+        },
+        correct: "c",
+      },
+      {
+        id: 35,
+        question:
+          "What does this C++ code demonstrate?\n```cpp\nclass Calculator {\npublic:\n    int add(int a, int b) { return a + b; }\n    double add(double a, double b) { return a + b; }\n    int add(int a, int b, int c) { return a + b + c; }\n};\n```",
+        options: {
+          a: "Method overriding",
+          b: "Method overloading",
+          c: "Inheritance",
+          d: "Abstraction",
+        },
+        correct: "b",
+      },
+      {
+        id: 36,
+        question:
+          "What is the output of this Python code?\n```python\nclass A:\n    def __init__(self):\n        self.x = 10\n    \nclass B(A):\n    def __init__(self):\n        super().__init__()\n        self.x = 20\n        \nobj = B()\nprint(obj.x)\n```",
+        options: {
+          a: "10",
+          b: "20",
+          c: "30",
+          d: "Error",
+        },
+        correct: "b",
+      },
+      {
+        id: 37,
+        question:
+          'What does this C++ abstract class code do?\n```cpp\nclass Shape {\npublic:\n    virtual double area() = 0;\n    void display() { cout << "Area: " << area(); }\n};\nclass Circle : public Shape {\n    double radius;\npublic:\n    Circle(double r) : radius(r) {}\n    double area() override { return 3.14 * radius * radius; }\n};\n```',
+        options: {
+          a: "Creates concrete Shape objects",
+          b: "Forces derived classes to implement area()",
+          c: "Prevents inheritance",
+          d: "Creates multiple inheritance",
+        },
+        correct: "b",
+      },
+      {
+        id: 38,
+        question:
+          'What is the output of this C++ code?\n```cpp\nclass Base {\npublic:\n    void show() { cout << "Base "; }\n};\nclass Derived : public Base {\npublic:\n    void show() { cout << "Derived "; }\n};\nBase b;\nDerived d;\nBase* ptr = &d;\nptr->show();\n```',
+        options: {
+          a: "Base",
+          b: "Derived",
+          c: "Base Derived",
+          d: "Compilation error",
+        },
+        correct: "a",
+      },
+      {
+        id: 39,
+        question:
+          'What does this composition example show?\n```cpp\nclass Engine {\npublic:\n    void start() { cout << "Engine started "; }\n};\nclass Car {\n    Engine engine;\npublic:\n    void startCar() { engine.start(); cout << "Car ready"; }\n};\n```',
+        options: {
+          a: "Inheritance relationship",
+          b: "Car HAS-A Engine relationship",
+          c: "Car IS-A Engine relationship",
+          d: "Multiple inheritance",
+        },
+        correct: "b",
+      },
+      {
+        id: 40,
+        question:
+          'What is the output of this singleton pattern?\n```cpp\nclass Singleton {\n    static Singleton* instance;\n    Singleton() { cout << "Created "; }\npublic:\n    static Singleton* getInstance() {\n        if(!instance) instance = new Singleton();\n        return instance;\n    }\n};\nSingleton* Singleton::instance = nullptr;\nSingleton::getInstance();\nSingleton::getInstance();\n```',
+        options: {
+          a: "Created Created",
+          b: "Created",
+          c: "No output",
+          d: "Error",
+        },
+        correct: "b",
+      },
+
+      // Algorithm Code Questions (5 questions - reduced from 8)
+      {
+        id: 41,
+        question:
+          "What does this sorting algorithm do?\n```cpp\nvoid sort(int arr[], int n) {\n    for(int i = 0; i < n-1; i++) {\n        int min_idx = i;\n        for(int j = i+1; j < n; j++) {\n            if(arr[j] < arr[min_idx]) \n                min_idx = j;\n        }\n        swap(arr[i], arr[min_idx]);\n    }\n}\n```",
+        options: {
+          a: "Bubble Sort",
+          b: "Selection Sort",
+          c: "Insertion Sort",
+          d: "Quick Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 42,
+        question:
+          "What is the output of this binary search?\n```cpp\nint arr[] = {1, 3, 5, 7, 9, 11};\nint binarySearch(int arr[], int n, int x) {\n    int left = 0, right = n-1;\n    while(left <= right) {\n        int mid = (left + right)/2;\n        if(arr[mid] == x) return mid;\n        else if(arr[mid] < x) left = mid + 1;\n        else right = mid - 1;\n    }\n    return -1;\n}\ncout << binarySearch(arr, 6, 7);\n```",
+        options: {
+          a: "2",
+          b: "3",
+          c: "7",
+          d: "-1",
+        },
+        correct: "b",
+      },
+      {
+        id: 43,
+        question:
+          "What does this recursive function return for fibonacci(5)?\n```cpp\nint fibonacci(int n) {\n    if(n <= 1) return n;\n    return fibonacci(n-1) + fibonacci(n-2);\n}\n```",
+        options: {
+          a: "3",
+          b: "5",
+          c: "8",
+          d: "13",
+        },
+        correct: "b",
+      },
+      {
+        id: 44,
+        question:
+          "What will this merge function produce?\n```cpp\nvoid merge(int arr[], int left, int mid, int right) {\n    // Merges arr[left...mid] and arr[mid+1...right]\n    // Left: [1,3,5], Right: [2,4,6]\n}\n// After merging:\n```",
+        options: {
+          a: "[1,3,5,2,4,6]",
+          b: "[1,2,3,4,5,6]",
+          c: "[2,4,6,1,3,5]",
+          d: "[6,5,4,3,2,1]",
+        },
+        correct: "b",
+      },
+      {
+        id: 45,
+        question:
+          'What does this graph traversal algorithm do?\n```cpp\nvoid traverse(vector<vector<int>>& graph, int start, vector<bool>& visited) {\n    visited[start] = true;\n    cout << start << " ";\n    for(int neighbor : graph[start]) {\n        if(!visited[neighbor]) {\n            traverse(graph, neighbor, visited);\n        }\n    }\n}\n```',
+        options: {
+          a: "Breadth-First Search",
+          b: "Depth-First Search",
+          c: "Dijkstra's Algorithm",
+          d: "Binary Search",
+        },
+        correct: "b",
+      },
+    ],
+  },
+
+  exam17: {
+    title:
+      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP (Intermediate to Advanced & Tricky)",
+    questions: [
+      // ---------------- C/C++ TRACE & OUTPUT QUESTIONS (10) ----------------
+      {
+        id: 1,
+        question:
+          "What will be the output of the following C++ code?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int x = 5;\n    cout << ++x * 2 << endl;\n    return 0;\n}\n```",
+        options: { a: "10", b: "12", c: "11", d: "Compilation error" },
+        correct: "b",
+      },
+      {
+        id: 2,
+        question:
+          'What will be printed?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int a = 3, b = 4;\n    int *p = &a;\n    *p += b;\n    cout << a << " " << b;\n}\n```',
+        options: { a: "7 4", b: "3 4", c: "7 7", d: "Error" },
+        correct: "a",
+      },
+      {
+        id: 3,
+        question:
+          "Predict the output:\n\n```cpp\n#include <iostream>\nusing namespace std;\nint fun(int n) {\n    if (n <= 1) return 1;\n    return n * fun(n - 1);\n}\nint main() {\n    cout << fun(4);\n}\n```",
+        options: { a: "4", b: "24", c: "10", d: "120" },
+        correct: "b",
+      },
+      {
+        id: 4,
+        question:
+          'What will be the output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int x = 10;\n    cout << x++ << " " << ++x;\n}\n```',
+        options: { a: "10 11", b: "10 12", c: "11 12", d: "11 11" },
+        correct: "b",
+      },
+      {
+        id: 5,
+        question:
+          "Output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nvoid test(int &x) {\n    x += 5;\n}\nint main() {\n    int a = 10;\n    test(a);\n    cout << a;\n}\n```",
+        options: { a: "10", b: "15", c: "5", d: "Error" },
+        correct: "b",
+      },
+      {
+        id: 6,
+        question:
+          "What is printed?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int arr[] = {1, 2, 3};\n    cout << *(arr + 2);\n}\n```",
+        options: { a: "1", b: "2", c: "3", d: "Garbage value" },
+        correct: "c",
+      },
+      {
+        id: 7,
+        question:
+          "Output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int i = 0;\n    while (i++ < 3) {\n        cout << i;\n    }\n}\n```",
+        options: { a: "012", b: "123", c: "0123", d: "Error" },
+        correct: "b",
+      },
+      {
+        id: 8,
+        question:
+          "Predict the output:\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    char c = 'A';\n    cout << (int)c << endl;\n}\n```",
+        options: { a: "A", b: "65", c: "97", d: "Compilation error" },
+        correct: "b",
+      },
+      {
+        id: 9,
+        question:
+          "What will this print?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int a = 5, b = 2;\n    float c = a / b;\n    cout << c;\n}\n```",
+        options: { a: "2", b: "2.0", c: "2.5", d: "Error" },
+        correct: "a",
+      },
+      {
+        id: 10,
+        question:
+          "What will happen?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    const int x = 10;\n    int *p = (int*)&x;\n    *p = 20;\n    cout << x << endl;\n}\n```",
+        options: {
+          a: "10",
+          b: "20",
+          c: "Undefined behavior",
+          d: "Compilation error",
+        },
+        correct: "c",
+      },
+
+      // ---------------- FLOWCHART (2) ----------------
+      {
+        id: 11,
+        question:
+          "Given the flowchart of a binary search algorithm (sorted array, mid calculation, if found return index else search halves), what is its worst-case time complexity?",
+        options: { a: "O(n)", b: "O(log n)", c: "O(n log n)", d: "O(1)" },
+        correct: "b",
+      },
+      {
+        id: 12,
+        question:
+          "A flowchart shows: Start → Compare adjacent array elements → Swap if needed → Repeat until no swaps. Which algorithm is this?",
+        options: {
+          a: "Insertion Sort",
+          b: "Bubble Sort",
+          c: "Selection Sort",
+          d: "Merge Sort",
+        },
+        correct: "b",
+      },
+
+      // ---------------- PSEUDOCODE LOGIC (3) ----------------
+      {
+        id: 13,
+        question:
+          "Pseudocode:\n```\ncount ← 0\nfor i ← 1 to 5\n    count ← count + i\nprint count\n```\nWhat is printed?",
+        options: { a: "15", b: "10", c: "5", d: "0" },
+        correct: "a",
+      },
+      {
+        id: 14,
+        question:
+          "Pseudocode:\n```\nset sum = 0\nfor each number in [2, 4, 6]\n    sum = sum + number^2\nprint sum\n```\nOutput?",
+        options: { a: "56", b: "36", c: "40", d: "44" },
+        correct: "a",
+      },
+      {
+        id: 15,
+        question:
+          "Pseudocode implements:\n```\nfor i ← 0 to n-1\n    for j ← 0 to n-i-1\n        if arr[j] > arr[j+1]\n            swap(arr[j], arr[j+1])\n```\nWhich algorithm?",
+        options: {
+          a: "Selection Sort",
+          b: "Bubble Sort",
+          c: "Merge Sort",
+          d: "Quick Sort",
+        },
+        correct: "b",
+      },
+
+      // ---------------- SQL (10) ----------------
+      {
+        id: 16,
+        question:
+          "Given table EMP(Name, Salary). What does this query output?\n\n```sql\nSELECT COUNT(*) FROM EMP WHERE Salary > 5000;\n```",
+        options: {
+          a: "Number of employees with salary > 5000",
+          b: "Sum of salaries",
+          c: "Error",
+          d: "All salaries",
+        },
+        correct: "a",
+      },
+      {
+        id: 17,
+        question: "What is the result of:\n```sql\nSELECT 10/4;\n```",
+        options: { a: "2", b: "2.5", c: "2.00", d: "Error" },
+        correct: "a",
+      },
+      {
+        id: 18,
+        question: "Which query updates salary to 6000 for employee 'John'?",
+        options: {
+          a: "UPDATE EMP SET Salary = 6000 WHERE Name = 'John';",
+          b: "MODIFY EMP Salary = 6000 WHERE Name = 'John';",
+          c: "CHANGE EMP SET Salary = 6000 WHERE Name = 'John';",
+          d: "SET EMP Salary = 6000 WHERE Name = 'John';",
+        },
+        correct: "a",
+      },
+      {
+        id: 19,
+        question:
+          "What will happen?\n```sql\nSELECT Name FROM EMP ORDER BY Salary DESC LIMIT 1;\n```",
+        options: {
+          a: "Shows employee with lowest salary",
+          b: "Highest salary employee",
+          c: "All employees",
+          d: "Error",
+        },
+        correct: "b",
+      },
+      {
+        id: 20,
+        question:
+          "Given:\n```\nEMP(Name, DeptID)\nDEPT(DeptID, DeptName)\n```\nWhich query lists all employee names and their department names?",
+        options: {
+          a: "SELECT Name, DeptName FROM EMP INNER JOIN DEPT ON EMP.DeptID = DEPT.DeptID;",
+          b: "SELECT Name, DeptName FROM EMP JOIN DEPT;",
+          c: "SELECT Name FROM EMP, DEPT;",
+          d: "SELECT * FROM EMP INNER JOIN DEPT;",
+        },
+        correct: "a",
+      },
+      {
+        id: 21,
+        question: "Which will delete all rows from EMP but keep structure?",
+        options: {
+          a: "DELETE FROM EMP;",
+          b: "DROP TABLE EMP;",
+          c: "TRUNCATE TABLE EMP;",
+          d: "REMOVE FROM EMP;",
+        },
+        correct: "c",
+      },
+      {
+        id: 22,
+        question: "What does GROUP BY do?",
+        options: {
+          a: "Sorts data",
+          b: "Aggregates rows with same values",
+          c: "Deletes duplicates",
+          d: "Limits output",
+        },
+        correct: "b",
+      },
+      {
+        id: 23,
+        question: "Which returns employees with salary between 3000 and 5000?",
+        options: {
+          a: "SELECT * FROM EMP WHERE Salary >= 3000 AND Salary <= 5000;",
+          b: "SELECT * FROM EMP WHERE Salary BETWEEN 3000 AND 5000;",
+          c: "Both a and b",
+          d: "None",
+        },
+        correct: "c",
+      },
+      {
+        id: 24,
+        question: "Which will fail?",
+        options: {
+          a: "SELECT * FROM EMP WHERE Name = NULL;",
+          b: "SELECT * FROM EMP WHERE Name IS NULL;",
+          c: "SELECT * FROM EMP;",
+          d: "SELECT Name FROM EMP;",
+        },
+        correct: "a",
+      },
+      {
+        id: 25,
+        question:
+          "Given:\n```sql\nSELECT COUNT(DISTINCT DeptID) FROM EMP;\n```\nWhat is returned?",
+        options: {
+          a: "Number of departments",
+          b: "Total employees",
+          c: "Error",
+          d: "DeptID values",
+        },
+        correct: "a",
+      },
+
+      // ---------------- HTML/CSS (5) ----------------
+      {
+        id: 26,
+        question:
+          "What will this HTML render?\n```html\n<p>Hello <b>World</b></p>\n```",
+        options: {
+          a: "Hello World (World in bold)",
+          b: "Hello World",
+          c: "Hello <b>World</b>",
+          d: "Error",
+        },
+        correct: "a",
+      },
+      {
+        id: 27,
+        question: "Given:\n```css\np { color: red; }\n```\nWhat is affected?",
+        options: {
+          a: "All paragraphs",
+          b: "All text",
+          c: "Only bold text",
+          d: "Nothing",
+        },
+        correct: "a",
+      },
+      {
+        id: 28,
+        question:
+          "What will happen?\n```html\n<img src='img.jpg' alt='Image not found'>\n```",
+        options: {
+          a: "Displays image",
+          b: "Shows 'Image not found' if missing",
+          c: "Nothing",
+          d: "Error",
+        },
+        correct: "b",
+      },
+      {
+        id: 29,
+        question: "Which is correct for a form input?",
+        options: {
+          a: "<input type='text' name='user'>",
+          b: "<input text='name' value='user'>",
+          c: "<textbox name='user'>",
+          d: "<input type='textbox' name='user'>",
+        },
+        correct: "a",
+      },
+      {
+        id: 30,
+        question: "Which selector targets only elements with class 'note'?",
+        options: { a: ".note", b: "#note", c: "note", d: "*note" },
+        correct: "a",
+      },
+
+      // ---------------- OOP (7) ----------------
+      {
+        id: 31,
+        question:
+          "Which principle hides internal details and exposes only functionality?",
+        options: {
+          a: "Abstraction",
+          b: "Encapsulation",
+          c: "Polymorphism",
+          d: "Inheritance",
+        },
+        correct: "b",
+      },
+      {
+        id: 32,
+        question:
+          "Which OOP feature allows multiple methods with the same name but different parameters?",
+        options: {
+          a: "Overriding",
+          b: "Overloading",
+          c: "Encapsulation",
+          d: "Inheritance",
+        },
+        correct: "b",
+      },
+      {
+        id: 33,
+        question:
+          'What is printed?\n\n```cpp\n#include <iostream>\nusing namespace std;\nclass Base {\npublic:\n    Base() { cout << "B"; }\n};\nclass Derived : public Base {\npublic:\n    Derived() { cout << "D"; }\n};\nint main() {\n    Derived obj;\n}\n```',
+        options: { a: "B", b: "BD", c: "DB", d: "D" },
+        correct: "b",
+      },
+      {
+        id: 34,
+        question: "Which relationship is 'is-a'?",
+        options: {
+          a: "Inheritance",
+          b: "Composition",
+          c: "Aggregation",
+          d: "Encapsulation",
+        },
+        correct: "a",
+      },
+      {
+        id: 35,
+        question:
+          'What is printed?\n\n```cpp\n#include <iostream>\nusing namespace std;\nclass A {\npublic:\n    virtual void show() { cout << "A"; }\n};\nclass B : public A {\npublic:\n    void show() { cout << "B"; }\n};\nint main() {\n    A* obj = new B();\n    obj->show();\n}\n```',
+        options: { a: "A", b: "B", c: "AB", d: "Error" },
+        correct: "b",
+      },
+      {
+        id: 36,
+        question:
+          "Which OOP principle allows using a base class pointer to refer to a derived object?",
+        options: {
+          a: "Encapsulation",
+          b: "Abstraction",
+          c: "Polymorphism",
+          d: "Inheritance",
+        },
+        correct: "c",
+      },
+      {
+        id: 37,
+        question:
+          "Which term describes creating a new class from an existing one?",
+        options: {
+          a: "Encapsulation",
+          b: "Abstraction",
+          c: "Inheritance",
+          d: "Overloading",
+        },
+        correct: "c",
+      },
+
+      // ---------------- ALGORITHMS - Searching & Sorting (8) ----------------
+      {
+        id: 38,
+        question: "Which search algorithm is fastest for a sorted array?",
+        options: {
+          a: "Linear Search",
+          b: "Binary Search",
+          c: "Jump Search",
+          d: "Exponential Search",
+        },
+        correct: "b",
+      },
+      {
+        id: 39,
+        question: "Which sorting algorithm is stable?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Heap Sort",
+          d: "Selection Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 40,
+        question: "What is the best case complexity of insertion sort?",
+        options: { a: "O(n^2)", b: "O(n log n)", c: "O(n)", d: "O(log n)" },
+        correct: "c",
+      },
+      {
+        id: 41,
+        question: "Binary search on n=32 takes at most how many comparisons?",
+        options: { a: "4", b: "5", c: "6", d: "32" },
+        correct: "c",
+      },
+      {
+        id: 42,
+        question: "Which is NOT adaptive?",
+        options: {
+          a: "Bubble Sort",
+          b: "Insertion Sort",
+          c: "Selection Sort",
+          d: "Tim Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 43,
+        question:
+          "Trace:\nArray = [10, 20, 5, 3], Bubble sort first pass result?",
+        options: {
+          a: "[10, 5, 3, 20]",
+          b: "[20, 10, 5, 3]",
+          c: "[3, 5, 10, 20]",
+          d: "[5, 3, 10, 20]",
+        },
+        correct: "a",
+      },
+      {
+        id: 44,
+        question:
+          "Given quicksort pivot=first element, Array=[4,1,3], first partition result?",
+        options: { a: "[1,3,4]", b: "[3,1,4]", c: "[1,4,3]", d: "[4,1,3]" },
+        correct: "a",
+      },
+      {
+        id: 45,
+        question:
+          "In merge sort, merging two sorted halves of total length n takes:",
+        options: { a: "O(n)", b: "O(log n)", c: "O(n log n)", d: "O(1)" },
+        correct: "a",
+      },
+    ],
+  },
+  exam18: {
+    title:
+      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP (Intermediate to Advanced & Tricky) - Version 2",
+    questions: [
+      // ---------------- C/C++ TRACE & OUTPUT QUESTIONS (10) ----------------
+      {
+        id: 1,
+        question:
+          "What will be the output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int x = 3;\n    cout << x++ + ++x;\n}\n```",
+        options: { a: "7", b: "8", c: "9", d: "Undefined behavior" },
+        correct: "d",
+      },
+      {
+        id: 2,
+        question:
+          "Predict the output:\n\n```cpp\n#include <iostream>\nusing namespace std;\nvoid change(int *p) {\n    *p = *p + 2;\n}\nint main() {\n    int a = 4;\n    change(&a);\n    cout << a;\n}\n```",
+        options: { a: "2", b: "4", c: "6", d: "Error" },
+        correct: "c",
+      },
+      {
+        id: 3,
+        question:
+          "Output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint fact(int n) {\n    return (n == 0) ? 1 : n * fact(n - 1);\n}\nint main() {\n    cout << fact(3);\n}\n```",
+        options: { a: "6", b: "9", c: "3", d: "0" },
+        correct: "a",
+      },
+      {
+        id: 4,
+        question:
+          "What will be printed?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int a = 2, b = 5;\n    cout << (a & b);\n}\n```",
+        options: { a: "0", b: "1", c: "2", d: "5" },
+        correct: "c",
+      },
+      {
+        id: 5,
+        question:
+          "Result?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    double x = 5 / 2;\n    cout << x;\n}\n```",
+        options: { a: "2", b: "2.0", c: "2.5", d: "2.50" },
+        correct: "a",
+      },
+      {
+        id: 6,
+        question:
+          "Predict output:\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int arr[] = {10, 20, 30};\n    cout << *(arr + 1);\n}\n```",
+        options: { a: "10", b: "20", c: "30", d: "Garbage" },
+        correct: "b",
+      },
+      {
+        id: 7,
+        question:
+          "What is printed?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    for(int i=1;i<5;i+=2) cout << i;\n}\n```",
+        options: { a: "13", b: "123", c: "135", d: "14" },
+        correct: "a",
+      },
+      {
+        id: 8,
+        question:
+          "Output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    char ch = 'z';\n    cout << (int)ch;\n}\n```",
+        options: { a: "90", b: "122", c: "97", d: "120" },
+        correct: "b",
+      },
+      {
+        id: 9,
+        question:
+          'What is printed?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int x = 7;\n    if(x % 2 == 0) cout << "Even";\n    else cout << "Odd";\n}\n```',
+        options: { a: "Even", b: "Odd", c: "Nothing", d: "Error" },
+        correct: "b",
+      },
+      {
+        id: 10,
+        question:
+          "What happens?\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    const int y = 5;\n    int *p = (int*)&y;\n    *p = 8;\n    cout << y;\n}\n```",
+        options: { a: "5", b: "8", c: "Undefined behavior", d: "Error" },
+        correct: "c",
+      },
+
+      // ---------------- FLOWCHART (2) ----------------
+      {
+        id: 11,
+        question:
+          "Flowchart: start → set low, high → repeat until low > high → mid = (low+high)/2 → compare → adjust → end. Which algorithm?",
+        options: {
+          a: "Binary Search",
+          b: "Merge Sort",
+          c: "Linear Search",
+          d: "Quick Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 12,
+        question:
+          "Flowchart shows: Find smallest element → swap with first → repeat for remaining. Which algorithm?",
+        options: {
+          a: "Selection Sort",
+          b: "Insertion Sort",
+          c: "Bubble Sort",
+          d: "Merge Sort",
+        },
+        correct: "a",
+      },
+
+      // ---------------- PSEUDOCODE (3) ----------------
+      {
+        id: 13,
+        question:
+          "Pseudocode:\n```\nsum = 1\nfor i = 1 to 3\n    sum = sum * i\nprint sum\n```\nOutput?",
+        options: { a: "3", b: "6", c: "9", d: "1" },
+        correct: "b",
+      },
+      {
+        id: 14,
+        question:
+          "Pseudocode:\n```\ncount=0\nfor i=2 to 4\n    count = count + i^2\nprint count\n```\nOutput?",
+        options: { a: "29", b: "30", c: "20", d: "25" },
+        correct: "a",
+      },
+      {
+        id: 15,
+        question:
+          "Pseudocode with nested loops decreasing from n to 1 swapping largest to end each pass. Which algorithm?",
+        options: {
+          a: "Selection Sort",
+          b: "Insertion Sort",
+          c: "Bubble Sort",
+          d: "Heap Sort",
+        },
+        correct: "a",
+      },
+
+      // ---------------- SQL (10) ----------------
+      {
+        id: 16,
+        question:
+          "Query:\n```sql\nSELECT COUNT(*) FROM Orders WHERE Amount < 100;\n```\nWhat is returned?",
+        options: {
+          a: "Count of orders with amount < 100",
+          b: "Sum of amounts",
+          c: "Error",
+          d: "All orders",
+        },
+        correct: "a",
+      },
+      {
+        id: 17,
+        question: "Result of:\n```sql\nSELECT 15/4;\n```",
+        options: { a: "3", b: "3.75", c: "4", d: "Error" },
+        correct: "a",
+      },
+      {
+        id: 18,
+        question: "Which updates 'Alice' age to 30?",
+        options: {
+          a: "UPDATE Users SET Age=30 WHERE Name='Alice';",
+          b: "MODIFY Users Age=30 WHERE Name='Alice';",
+          c: "CHANGE Users SET Age=30 WHERE Name='Alice';",
+          d: "SET Users Age=30 WHERE Name='Alice';",
+        },
+        correct: "a",
+      },
+      {
+        id: 19,
+        question:
+          "Query:\n```sql\nSELECT Name FROM Users ORDER BY Age ASC LIMIT 1;\n```\nOutput?",
+        options: {
+          a: "Oldest user",
+          b: "Youngest user",
+          c: "All users",
+          d: "Error",
+        },
+        correct: "b",
+      },
+      {
+        id: 20,
+        question:
+          "Tables:\n```\nStudent(ID, Name, DeptID)\nDept(DeptID, DeptName)\n```\nQuery to list student names and department names?",
+        options: {
+          a: "SELECT Name, DeptName FROM Student INNER JOIN Dept ON Student.DeptID=Dept.DeptID;",
+          b: "SELECT Name, DeptName FROM Student JOIN Dept;",
+          c: "SELECT * FROM Student, Dept;",
+          d: "SELECT DeptName FROM Dept;",
+        },
+        correct: "a",
+      },
+      {
+        id: 21,
+        question: "Which removes all rows but keeps table?",
+        options: {
+          a: "DELETE FROM TableName;",
+          b: "DROP TABLE TableName;",
+          c: "TRUNCATE TABLE TableName;",
+          d: "REMOVE FROM TableName;",
+        },
+        correct: "c",
+      },
+      {
+        id: 22,
+        question: "Purpose of HAVING clause?",
+        options: {
+          a: "Filter rows before grouping",
+          b: "Filter groups after aggregation",
+          c: "Sort data",
+          d: "Delete duplicates",
+        },
+        correct: "b",
+      },
+      {
+        id: 23,
+        question: "Which finds price between 50 and 100?",
+        options: {
+          a: "SELECT * FROM Items WHERE Price BETWEEN 50 AND 100;",
+          b: "SELECT * FROM Items WHERE Price >= 50 AND Price <= 100;",
+          c: "Both a and b",
+          d: "None",
+        },
+        correct: "c",
+      },
+      {
+        id: 24,
+        question: "Which is wrong for NULL check?",
+        options: {
+          a: "SELECT * FROM Table WHERE Col = NULL;",
+          b: "SELECT * FROM Table WHERE Col IS NULL;",
+          c: "SELECT * FROM Table WHERE Col IS NOT NULL;",
+          d: "SELECT COUNT(*) FROM Table;",
+        },
+        correct: "a",
+      },
+      {
+        id: 25,
+        question:
+          "Query:\n```sql\nSELECT COUNT(DISTINCT DeptID) FROM Student;\n```\nReturns?",
+        options: {
+          a: "Number of departments",
+          b: "Total students",
+          c: "DeptID values",
+          d: "Error",
+        },
+        correct: "a",
+      },
+
+      // ---------------- HTML/CSS (5) ----------------
+      {
+        id: 26,
+        question: "HTML:\n```html\n<p>Good <i>Morning</i></p>\n```\nOutput?",
+        options: {
+          a: "Good Morning (Morning in italics)",
+          b: "Good Morning",
+          c: "Good <i>Morning</i>",
+          d: "Error",
+        },
+        correct: "a",
+      },
+      {
+        id: 27,
+        question: "CSS:\n```css\nh1 { font-size: 20px; }\n```\nAffects?",
+        options: {
+          a: "All h1 headings",
+          b: "All text",
+          c: "Only first h1",
+          d: "None",
+        },
+        correct: "a",
+      },
+      {
+        id: 28,
+        question:
+          "HTML:\n```html\n<img src='logo.png' alt='Logo missing'>\n```\nIf file missing?",
+        options: {
+          a: "Shows alt text",
+          b: "Nothing",
+          c: "Error",
+          d: "Broken icon without text",
+        },
+        correct: "a",
+      },
+      {
+        id: 29,
+        question: "Valid HTML for email input?",
+        options: {
+          a: "<input type='email' name='userEmail'>",
+          b: "<input email='true' name='userEmail'>",
+          c: "<textbox type='email' name='userEmail'>",
+          d: "<input type='textbox' email>",
+        },
+        correct: "a",
+      },
+      {
+        id: 30,
+        question: "CSS selector for id='header'?",
+        options: { a: "#header", b: ".header", c: "header", d: "*header" },
+        correct: "a",
+      },
+
+      // ---------------- OOP (7) ----------------
+      {
+        id: 31,
+        question: "OOP principle to hide complexity?",
+        options: {
+          a: "Abstraction",
+          b: "Encapsulation",
+          c: "Inheritance",
+          d: "Polymorphism",
+        },
+        correct: "a",
+      },
+      {
+        id: 32,
+        question:
+          "Feature allowing subclass to provide specific implementation of base method?",
+        options: {
+          a: "Overloading",
+          b: "Overriding",
+          c: "Encapsulation",
+          d: "Abstraction",
+        },
+        correct: "b",
+      },
+      {
+        id: 33,
+        question:
+          'Code output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nclass A {\npublic: A(){cout<<"A";}\n};\nclass B: public A {\npublic: B(){cout<<"B";}\n};\nint main(){B obj;}\n```',
+        options: { a: "A", b: "AB", c: "BA", d: "B" },
+        correct: "b",
+      },
+      {
+        id: 34,
+        question: "'has-a' relationship is?",
+        options: {
+          a: "Inheritance",
+          b: "Composition",
+          c: "Polymorphism",
+          d: "Abstraction",
+        },
+        correct: "b",
+      },
+      {
+        id: 35,
+        question:
+          'Output?\n\n```cpp\n#include <iostream>\nusing namespace std;\nclass Base {\npublic: virtual void show(){cout<<"Base";}\n};\nclass Der: public Base {\npublic: void show(){cout<<"Der";}\n};\nint main(){Base* p=new Der();p->show();}\n```',
+        options: { a: "Base", b: "Der", c: "BaseDer", d: "Error" },
+        correct: "b",
+      },
+      {
+        id: 36,
+        question: "OOP concept: one interface, multiple implementations?",
+        options: {
+          a: "Polymorphism",
+          b: "Encapsulation",
+          c: "Abstraction",
+          d: "Inheritance",
+        },
+        correct: "a",
+      },
+      {
+        id: 37,
+        question: "Term for using existing class as base for new class?",
+        options: {
+          a: "Inheritance",
+          b: "Encapsulation",
+          c: "Overloading",
+          d: "Polymorphism",
+        },
+        correct: "a",
+      },
+
+      // ---------------- ALGORITHMS (8) ----------------
+      {
+        id: 38,
+        question: "Best search for unsorted small array?",
+        options: { a: "Binary", b: "Linear", c: "Jump", d: "Hash" },
+        correct: "b",
+      },
+      {
+        id: 39,
+        question: "Stable sort?",
+        options: { a: "Merge", b: "Heap", c: "Quick", d: "Selection" },
+        correct: "a",
+      },
+      {
+        id: 40,
+        question: "Worst case of bubble sort?",
+        options: { a: "O(n^2)", b: "O(n log n)", c: "O(n)", d: "O(log n)" },
+        correct: "a",
+      },
+      {
+        id: 41,
+        question: "Binary search n=64 max comparisons?",
+        options: { a: "6", b: "7", c: "8", d: "64" },
+        correct: "b",
+      },
+      {
+        id: 42,
+        question: "Non-adaptive sort?",
+        options: { a: "Insertion", b: "Selection", c: "Bubble", d: "Tim" },
+        correct: "b",
+      },
+      {
+        id: 43,
+        question: "Array=[4,3,2,1], bubble sort first pass?",
+        options: {
+          a: "[3,2,1,4]",
+          b: "[4,3,2,1]",
+          c: "[1,2,3,4]",
+          d: "[2,3,4,1]",
+        },
+        correct: "a",
+      },
+      {
+        id: 44,
+        question: "Quicksort pivot=last, Array=[5,2,7], first partition?",
+        options: { a: "[2,5,7]", b: "[5,7,2]", c: "[2,7,5]", d: "[7,5,2]" },
+        correct: "a",
+      },
+      {
+        id: 45,
+        question: "Merge of two sorted lists total length n is?",
+        options: { a: "O(n)", b: "O(n log n)", c: "O(log n)", d: "O(1)" },
+        correct: "a",
+      },
+    ],
+  },
 };
