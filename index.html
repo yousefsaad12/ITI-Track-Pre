@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Technical Mock Exams</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSC7R7LMKE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XSC7R7LMKE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-XSC7R7LMKE');
-</script>
+      gtag("config", "G-XSC7R7LMKE");
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -30,7 +36,9 @@
           </div>
         </div>
         <nav class="header-actions">
-          <button id="btnHome" class="btn btn-ghost" aria-label="Go to home">Home</button>
+          <button id="btnHome" class="btn btn-ghost" aria-label="Go to home">
+            Home
+          </button>
         </nav>
       </div>
     </header>
@@ -40,10 +48,18 @@
       <section id="homeView" class="view active" aria-labelledby="homeTitle">
         <div class="hero">
           <h2 id="homeTitle">Choose an exam to begin</h2>
-          <p>Choose from 5 comprehensive exams, each with 35 questions and a 30-minute timer. Your answers will be auto-submitted when the time is up.</p>
+          <p>
+            Choose from 5 comprehensive exams, each with 35 questions and a
+            30-minute timer. Your answers will be auto-submitted when the time
+            is up.
+          </p>
         </div>
         <div id="examList" class="exam-grid" role="list"></div>
-        <div id="loadError" class="notice notice-error hidden" role="alert"></div>
+        <div
+          id="loadError"
+          class="notice notice-error hidden"
+          role="alert"
+        ></div>
       </section>
 
       <!-- Exam View -->
@@ -68,11 +84,19 @@
             <div id="questionDots" class="dots"></div>
           </aside>
           <section class="question-panel">
-            <div id="questionContainer" class="question-card" aria-live="polite"></div>
+            <div
+              id="questionContainer"
+              class="question-card"
+              aria-live="polite"
+            ></div>
             <div class="question-actions">
-              <button id="btnPrev" class="btn" aria-label="Previous question">Previous</button>
+              <button id="btnPrev" class="btn" aria-label="Previous question">
+                Previous
+              </button>
               <div class="spacer"></div>
-              <button id="btnNext" class="btn" aria-label="Next question">Next</button>
+              <button id="btnNext" class="btn" aria-label="Next question">
+                Next
+              </button>
             </div>
           </section>
         </div>
@@ -95,14 +119,11 @@
     <footer class="site-footer">
       <div class="container">
         <p>Created by <strong>CodeCraft</strong>.</p>
-
       </div>
     </footer>
-    
+
     <!-- External JavaScript file for exam data -->
     <script src="tech_exams_js.js"></script>
     <script src="script.js"></script>
   </body>
-  </html>
-
-
+</html>
