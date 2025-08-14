@@ -3838,7 +3838,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
           c: "Merge Sort",
           d: "Quick Sort",
         },
-        correct: "d",
+        correct: "a",
       },
       {
         id: 49,
@@ -3861,6 +3861,1903 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
           b: "BFS",
           c: "Dijkstra's Algorithm",
           d: "Prim's Algorithm",
+        },
+        correct: "b",
+      },
+    ],
+  },
+
+  exam7: {
+    title:
+      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+    questions: [
+      // C/C++ Code-based Questions (6)
+      {
+        id: 1,
+        question: `What is the output of the following C++ code?
+\`\`\`cpp
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int *p = arr + 2;
+    int *q = arr + 4;
+    cout << q - p << " " << *(p + 1);
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "2 4",
+          b: "2 3",
+          c: "4 2",
+          d: "Compilation error",
+        },
+        correct: "a",
+      },
+      {
+        id: 2,
+        question: `What will be the output of this recursive function?
+\`\`\`cpp
+int mystery(int n) {
+    if (n <= 1) return 1;
+    return n * mystery(n - 2);
+}
+int main() {
+    cout << mystery(6);
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "48",
+          b: "720",
+          c: "24",
+          d: "6",
+        },
+        correct: "a",
+      },
+      {
+        id: 3,
+        question: `What is the output of the following code involving references?
+\`\`\`cpp
+void func(int &x, int y) {
+    x += 10;
+    y += 10;
+}
+int main() {
+    int a = 5, b = 5;
+    func(a, b);
+    cout << a << " " << b;
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "5 5",
+          b: "15 5",
+          c: "15 15",
+          d: "5 15",
+        },
+        correct: "b",
+      },
+      {
+        id: 4,
+        question: `What will this loop print?
+\`\`\`cpp
+for (int i = 0; i < 3; ++i) {
+    for (int j = i; j >= 0; --j) {
+        cout << i + j << " ";
+    }
+    cout << endl;
+}
+\`\`\``,
+        options: {
+          a: "0\n2 1\n4 3 2",
+          b: "0\n1 2\n2 3 4",
+          c: "0\n2 1\n4 3 2\n",
+          d: "Infinite loop",
+        },
+        correct: "c",
+      },
+      {
+        id: 5,
+        question: `What is the result of this expression due to operator precedence?
+\`\`\`cpp
+int a = 5, b = 3, c = 2;
+int result = a + b * c > 10 ? a : b;
+cout << result;
+\`\`\``,
+        options: {
+          a: "5",
+          b: "3",
+          c: "11",
+          d: "1",
+        },
+        correct: "b",
+      },
+      {
+        id: 6,
+        question: `Trace the function calls and determine the output:
+\`\`\`cpp
+int f(int x) {
+    cout << x << " ";
+    if (x > 0) return f(x - 2);
+    return 0;
+}
+int main() {
+    f(5);
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "5 3 1 -1",
+          b: "5 3 1",
+          c: "5 3 1 -1 -3",
+          d: "Stack overflow",
+        },
+        correct: "a",
+      },
+
+      // C/C++ Theory/Syntax Questions (6)
+      {
+        id: 7,
+        question: "What does the scope resolution operator `::` do in C++?",
+        options: {
+          a: "Access private members of a class",
+          b: "Access global variables when local variables have the same name",
+          c: "Create a pointer to member function",
+          d: "Define template specialization",
+        },
+        correct: "b",
+      },
+      {
+        id: 8,
+        question:
+          "What is the primary purpose of the `explicit` keyword in C++?",
+        options: {
+          a: "Make constructors virtual",
+          b: "Prevent implicit type conversions through constructors",
+          c: "Allow multiple inheritance",
+          d: "Enable operator overloading",
+        },
+        correct: "b",
+      },
+      {
+        id: 9,
+        question:
+          "What is the key difference between `struct` and `class` in C++?",
+        options: {
+          a: "struct cannot have constructors, class can",
+          b: "struct members are public by default, class members are private by default",
+          c: "struct cannot inherit, class can",
+          d: "struct is for C compatibility only",
+        },
+        correct: "b",
+      },
+      {
+        id: 10,
+        question: "What does the `mutable` keyword allow in C++?",
+        options: {
+          a: "Modify const objects",
+          b: "Change member variables in const member functions",
+          c: "Create virtual destructors",
+          d: "Enable multiple inheritance",
+        },
+        correct: "b",
+      },
+      {
+        id: 11,
+        question:
+          "Which of the following declarations is syntactically INVALID in C++?",
+        options: {
+          a: "int* const ptr = &x;",
+          b: "const int* ptr = &x;",
+          c: "int const* const ptr = &x;",
+          d: "const* int ptr = &x;",
+        },
+        correct: "d",
+      },
+      {
+        id: 12,
+        question: "What does the `volatile` keyword indicate to the compiler?",
+        options: {
+          a: "The variable can be modified by multiple threads",
+          b: "The variable's value may change unexpectedly",
+          c: "The variable should not be optimized",
+          d: "All of the above",
+        },
+        correct: "d",
+      },
+
+      // Pseudocode Questions (3)
+      {
+        id: 13,
+        question: `What is the output of this pseudocode?
+\`\`\`
+BEGIN
+    SET sum = 0
+    SET i = 1
+    WHILE i <= 5 DO
+        IF i MOD 2 = 0 THEN
+            SET sum = sum + i
+        END IF
+        SET i = i + 1
+    END WHILE
+    PRINT sum
+END
+\`\`\``,
+        options: {
+          a: "6",
+          b: "15",
+          c: "10",
+          d: "8",
+        },
+        correct: "a",
+      },
+      {
+        id: 14,
+        question: `What value will be printed by this pseudocode?
+\`\`\`
+BEGIN
+    SET x = 3
+    SET y = 0
+    FOR i FROM 1 TO x DO
+        SET y = y + i * 2
+    END FOR
+    PRINT y
+END
+\`\`\``,
+        options: {
+          a: "6",
+          b: "12",
+          c: "18",
+          d: "24",
+        },
+        correct: "b",
+      },
+      {
+        id: 15,
+        question: `Calculate the final value of 'result':
+\`\`\`
+BEGIN
+    SET result = 1
+    SET n = 4
+    REPEAT
+        SET result = result * n
+        SET n = n - 1
+    UNTIL n = 0
+    PRINT result
+END
+\`\`\``,
+        options: {
+          a: "24",
+          b: "12",
+          c: "6",
+          d: "4",
+        },
+        correct: "a",
+      },
+
+      // Flowchart Questions (2)
+      {
+        id: 16,
+        question:
+          "In a standard flowchart, which shape is used to represent a decision point?",
+        options: {
+          a: "Rectangle",
+          b: "Oval",
+          c: "Diamond",
+          d: "Parallelogram",
+        },
+        correct: "c",
+      },
+      {
+        id: 17,
+        question: "What does a parallelogram shape represent in a flowchart?",
+        options: {
+          a: "Process or calculation",
+          b: "Start or end point",
+          c: "Input or output operation",
+          d: "Decision point",
+        },
+        correct: "c",
+      },
+
+      // SQL Code-based Questions (6)
+      {
+        id: 18,
+        question: `Given tables: EMPLOYEES (id, name, dept_id, salary) and DEPARTMENTS (id, name). What will this query return?
+\`\`\`sql
+SELECT e.name, d.name 
+FROM EMPLOYEES e 
+RIGHT JOIN DEPARTMENTS d ON e.dept_id = d.id 
+WHERE e.salary > 50000;
+\`\`\``,
+        options: {
+          a: "All employees with salary > 50000 and their departments",
+          b: "All departments and their employees with salary > 50000",
+          c: "Only employees with salary > 50000, departments without such employees are excluded",
+          d: "All departments, but only employees with salary > 50000",
+        },
+        correct: "c",
+      },
+      {
+        id: 19,
+        question: `What is the output of this query on a table PRODUCTS (category, price)?
+\`\`\`sql
+SELECT category, COUNT(*), AVG(price)
+FROM PRODUCTS 
+WHERE price > 100
+GROUP BY category
+HAVING COUNT(*) > 2;
+\`\`\``,
+        options: {
+          a: "Categories with more than 2 products regardless of price",
+          b: "Categories with more than 2 products priced above 100",
+          c: "All categories with their count and average price",
+          d: "Categories with average price > 100 and more than 2 products",
+        },
+        correct: "b",
+      },
+      {
+        id: 20,
+        question: `Which of these subqueries will execute correctly?
+\`\`\`sql
+SELECT * FROM ORDERS 
+WHERE customer_id IN (
+    SELECT id FROM CUSTOMERS 
+    WHERE city = 'New York' AND status = 'Active'
+);
+\`\`\``,
+        options: {
+          a: "Always executes correctly",
+          b: "Fails if subquery returns NULL",
+          c: "Fails if subquery returns multiple columns",
+          d: "Fails if main query has no matching records",
+        },
+        correct: "a",
+      },
+      {
+        id: 21,
+        question: `What's wrong with this SQL query?
+\`\`\`sql
+SELECT name, salary, department
+FROM employees
+WHERE department = 'IT'
+GROUP BY department
+HAVING salary > 50000;
+\`\`\``,
+        options: {
+          a: "Cannot use WHERE and HAVING together",
+          b: "name and salary must be in GROUP BY or aggregate functions",
+          c: "HAVING should come before GROUP BY",
+          d: "Nothing is wrong",
+        },
+        correct: "b",
+      },
+      {
+        id: 22,
+        question: `Given table SALES (date, amount), what does this query return?
+\`\`\`sql
+SELECT date, amount,
+       amount - LAG(amount) OVER (ORDER BY date) as difference
+FROM SALES;
+\`\`\``,
+        options: {
+          a: "Each sale and its difference from the next sale",
+          b: "Each sale and its difference from the previous sale",
+          c: "Each sale and the total difference from first sale",
+          d: "Syntax error - invalid window function",
+        },
+        correct: "b",
+      },
+      {
+        id: 23,
+        question: `Which query correctly finds duplicate names in a USERS table?
+\`\`\`sql
+-- Option A
+SELECT name FROM USERS GROUP BY name HAVING COUNT(*) > 1;
+
+-- Option B  
+SELECT DISTINCT name FROM USERS WHERE name IN (
+    SELECT name FROM USERS GROUP BY name HAVING COUNT(*) > 1
+);
+\`\`\``,
+        options: {
+          a: "Only Option A is correct",
+          b: "Only Option B is correct",
+          c: "Both are correct but return different results",
+          d: "Both are correct and return identical results",
+        },
+        correct: "d",
+      },
+
+      // SQL Theory Questions (6)
+      {
+        id: 24,
+        question:
+          "What is the main difference between WHERE and HAVING clauses?",
+        options: {
+          a: "WHERE filters rows before grouping, HAVING filters groups after grouping",
+          b: "WHERE is for SELECT, HAVING is for UPDATE",
+          c: "WHERE uses column names, HAVING uses aggregate functions only",
+          d: "No significant difference",
+        },
+        correct: "a",
+      },
+      {
+        id: 25,
+        question:
+          "In a database transaction, what happens when ROLLBACK is executed?",
+        options: {
+          a: "Only the last statement is undone",
+          b: "All changes since the last COMMIT are undone",
+          c: "The entire database is restored to previous backup",
+          d: "Only INSERT statements are undone",
+        },
+        correct: "b",
+      },
+      {
+        id: 26,
+        question: "Which statements belong to DDL (Data Definition Language)?",
+        options: {
+          a: "SELECT, INSERT, UPDATE, DELETE",
+          b: "CREATE, ALTER, DROP, TRUNCATE",
+          c: "GRANT, REVOKE, COMMIT, ROLLBACK",
+          d: "BEGIN, END, IF, WHILE",
+        },
+        correct: "b",
+      },
+      {
+        id: 27,
+        question: "What is the primary purpose of database indexing?",
+        options: {
+          a: "Reduce storage space",
+          b: "Improve query performance for SELECT operations",
+          c: "Ensure data integrity",
+          d: "Enable foreign key relationships",
+        },
+        correct: "b",
+      },
+      {
+        id: 28,
+        question:
+          "Which factor does NOT typically improve SQL query performance?",
+        options: {
+          a: "Using appropriate indexes",
+          b: "Avoiding SELECT * statements",
+          c: "Using more JOINs instead of subqueries",
+          d: "Adding WHERE clauses to limit result sets",
+        },
+        correct: "c",
+      },
+      {
+        id: 29,
+        question:
+          "What is the ACID property 'Isolation' in database transactions?",
+        options: {
+          a: "Transactions are processed one at a time",
+          b: "Concurrent transactions don't interfere with each other",
+          c: "Data remains consistent after transaction completion",
+          d: "All operations in a transaction succeed or all fail",
+        },
+        correct: "b",
+      },
+
+      // HTML/CSS Code-based Questions (3)
+      {
+        id: 30,
+        question: `What will be the text color of the paragraph?
+\`\`\`html
+<div class="container" id="main">
+    <p class="text" id="para">Hello World</p>
+</div>
+\`\`\`
+\`\`\`css
+#main p { color: red; }
+.container .text { color: blue; }
+#para { color: green; }
+p.text { color: yellow; }
+\`\`\``,
+        options: {
+          a: "red",
+          b: "blue",
+          c: "green",
+          d: "yellow",
+        },
+        correct: "c",
+      },
+      {
+        id: 31,
+        question: `What will be the display behavior with this CSS?
+\`\`\`css
+@media screen and (max-width: 768px) {
+    .sidebar { display: none; }
+    .main { width: 100%; }
+}
+@media screen and (min-width: 769px) {
+    .sidebar { width: 25%; }
+    .main { width: 75%; }
+}
+\`\`\``,
+        options: {
+          a: "Sidebar always hidden",
+          b: "Sidebar visible on screens wider than 768px",
+          c: "Sidebar visible on screens 768px and narrower",
+          d: "Both rules apply simultaneously",
+        },
+        correct: "b",
+      },
+      {
+        id: 32,
+        question: `What is the rendered output of this HTML/CSS?
+\`\`\`html
+<div class="box">
+    <span>A</span><span>B</span><span>C</span>
+</div>
+\`\`\`
+\`\`\`css
+.box span {
+    display: inline-block;
+    width: 50px;
+    margin: 10px;
+}
+.box span:nth-child(2) {
+    margin-left: 0;
+}
+\`\`\``,
+        options: {
+          a: "A, B, C with equal spacing",
+          b: "A and B closer together, C normal spacing",
+          c: "B and C closer together, A normal spacing",
+          d: "All spans stacked vertically",
+        },
+        correct: "b",
+      },
+
+      // HTML/CSS Theory Questions (2)
+      {
+        id: 33,
+        question:
+          "Which HTML5 semantic element should be used for a standalone piece of content?",
+        options: {
+          a: "<section>",
+          b: "<article>",
+          c: "<aside>",
+          d: "<div>",
+        },
+        correct: "b",
+      },
+      {
+        id: 34,
+        question:
+          "In CSS specificity calculation, what has the highest priority?",
+        options: {
+          a: "Element selectors",
+          b: "Class selectors",
+          c: "ID selectors",
+          d: "Inline styles",
+        },
+        correct: "d",
+      },
+
+      // OOP Code-based Questions (4)
+      {
+        id: 35,
+        question: `What is the output of this C++ code?
+\`\`\`cpp
+class Base {
+public:
+    Base() { cout << "B"; }
+    ~Base() { cout << "~B"; }
+};
+class Derived : public Base {
+public:
+    Derived() { cout << "D"; }
+    ~Derived() { cout << "~D"; }
+};
+int main() {
+    Derived d;
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "BD~D~B",
+          b: "BD~B~D",
+          c: "DB~D~B",
+          d: "DB~B~D",
+        },
+        correct: "a",
+      },
+      {
+        id: 36,
+        question: `What will be printed by this virtual function example?
+\`\`\`cpp
+class Animal {
+public:
+    virtual void sound() { cout << "Animal sound"; }
+};
+class Dog : public Animal {
+public:
+    void sound() override { cout << "Woof"; }
+};
+int main() {
+    Animal* ptr = new Dog();
+    ptr->sound();
+    delete ptr;
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "Animal sound",
+          b: "Woof",
+          c: "Compilation error",
+          d: "Both sounds printed",
+        },
+        correct: "b",
+      },
+      {
+        id: 37,
+        question: `What is the result of this method overloading?
+\`\`\`cpp
+class Calculator {
+public:
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+};
+int main() {
+    Calculator calc;
+    cout << calc.add(5, 3) << " " << calc.add(5.5, 2.3);
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "8 7.8",
+          b: "8.0 7.8",
+          c: "8 7",
+          d: "Compilation error",
+        },
+        correct: "a",
+      },
+      {
+        id: 38,
+        question: `What happens with this multiple inheritance scenario?
+\`\`\`cpp
+class A {
+public:
+    void func() { cout << "A"; }
+};
+class B {
+public:
+    void func() { cout << "B"; }
+};
+class C : public A, public B {
+};
+int main() {
+    C obj;
+    obj.A::func();
+    return 0;
+}
+\`\`\``,
+        options: {
+          a: "Prints 'A'",
+          b: "Prints 'B'",
+          c: "Compilation error - ambiguous call",
+          d: "Prints 'AB'",
+        },
+        correct: "a",
+      },
+
+      // OOP Theory Questions (4)
+      {
+        id: 39,
+        question:
+          "Which OOP principle is primarily achieved through access modifiers (private, protected, public)?",
+        options: {
+          a: "Inheritance",
+          b: "Polymorphism",
+          c: "Encapsulation",
+          d: "Abstraction",
+        },
+        correct: "c",
+      },
+      {
+        id: 40,
+        question:
+          "What type of polymorphism is achieved through virtual functions in C++?",
+        options: {
+          a: "Compile-time polymorphism",
+          b: "Runtime polymorphism",
+          c: "Static polymorphism",
+          d: "Parametric polymorphism",
+        },
+        correct: "b",
+      },
+      {
+        id: 41,
+        question: "In object-oriented design, what is the 'IS-A' relationship?",
+        options: {
+          a: "Composition",
+          b: "Aggregation",
+          c: "Inheritance",
+          d: "Association",
+        },
+        correct: "c",
+      },
+      {
+        id: 42,
+        question:
+          "What is the main difference between abstract classes and interfaces?",
+        options: {
+          a: "Abstract classes can have constructors, interfaces cannot",
+          b: "Interfaces support multiple inheritance, abstract classes do not",
+          c: "Abstract classes can have implemented methods, interfaces cannot (traditionally)",
+          d: "No significant difference",
+        },
+        correct: "c",
+      },
+
+      // Algorithm Questions (8 remaining, need 2 more)
+      {
+        id: 43,
+        question: "What is the average time complexity of Quick Sort?",
+        options: {
+          a: "O(n)",
+          b: "O(n log n)",
+          c: "O(n²)",
+          d: "O(log n)",
+        },
+        correct: "b",
+      },
+      {
+        id: 44,
+        question: "Which sorting algorithm is stable?",
+        options: {
+          a: "Quick Sort",
+          b: "Selection Sort",
+          c: "Merge Sort",
+          d: "Heap Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 45,
+        question: "For a nearly sorted array, which algorithm performs best?",
+        options: {
+          a: "Bubble Sort",
+          b: "Quick Sort",
+          c: "Insertion Sort",
+          d: "Selection Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 46,
+        question: "What is the space complexity of Merge Sort?",
+        options: {
+          a: "O(1)",
+          b: "O(log n)",
+          c: "O(n)",
+          d: "O(n log n)",
+        },
+        correct: "c",
+      },
+      {
+        id: 47,
+        question: "Binary Search requires the array to be:",
+        options: {
+          a: "Randomly distributed",
+          b: "Sorted",
+          c: "Of even length",
+          d: "Containing unique elements only",
+        },
+        correct: "b",
+      },
+      {
+        id: 48,
+        question:
+          "Which algorithm is best for finding the shortest path in an unweighted graph?",
+        options: {
+          a: "DFS",
+          b: "BFS",
+          c: "Dijkstra's Algorithm",
+          d: "Prim's Algorithm",
+        },
+        correct: "b",
+      },
+      {
+        id: 49,
+        question: "What type of algorithm is Dijkstra's Algorithm?",
+        options: {
+          a: "Divide and Conquer",
+          b: "Dynamic Programming",
+          c: "Greedy Algorithm",
+          d: "Backtracking",
+        },
+        correct: "c",
+      },
+      {
+        id: 50,
+        question: "Prim's Algorithm is used for:",
+        options: {
+          a: "Finding shortest path between two nodes",
+          b: "Finding minimum spanning tree",
+          c: "Topological sorting",
+          d: "Graph coloring",
+        },
+        correct: "b",
+      },
+    ],
+  },
+
+  exam8: {
+    title:
+      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+    questions: [
+      // ======== C/C++ (12 questions) ========
+      {
+        id: 1,
+        question:
+          "What will be the output of the following C++ code?\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n    int x = 5;\n    int *p = &x;\n    *p = *p + 2;\n    cout << x;\n}\n```",
+        options: { a: "5", b: "7", c: "2", d: "Compilation Error" },
+        correct: "b",
+      },
+      {
+        id: 2,
+        question: "What does the C++ scope resolution operator `::` do?",
+        options: {
+          a: "Access members via pointer",
+          b: "Resolve ambiguity between local and global identifiers",
+          c: "Dereference a pointer",
+          d: "Create a reference variable",
+        },
+        correct: "b",
+      },
+      {
+        id: 3,
+        question:
+          "What will the following code output?\n```cpp\n#include <iostream>\nusing namespace std;\nint f(int n){\n    if(n <= 1) return 1;\n    return n * f(n-2);\n}\nint main(){\n    cout << f(5);\n}\n```",
+        options: { a: "15", b: "8", c: "10", d: "5" },
+        correct: "a",
+      },
+      {
+        id: 4,
+        question:
+          "Which keyword allows a non-member function to access private members of a class?",
+        options: { a: "public", b: "friend", c: "protected", d: "mutable" },
+        correct: "b",
+      },
+      {
+        id: 5,
+        question:
+          "Identify the output:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n    int arr[] = {1, 2, 3};\n    int *p = arr;\n    cout << *(p+1);\n}\n```",
+        options: { a: "1", b: "2", c: "3", d: "Garbage" },
+        correct: "b",
+      },
+      {
+        id: 6,
+        question:
+          "Which of the following operators cannot be overloaded in C++?",
+        options: {
+          a: "operator->",
+          b: "operator()",
+          c: "operator::",
+          d: "operator[]",
+        },
+        correct: "c",
+      },
+      {
+        id: 7,
+        question:
+          "What is the output?\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n    int x = 10;\n    const int &ref = x;\n    x = 20;\n    cout << ref;\n}\n```",
+        options: { a: "10", b: "20", c: "Compilation Error", d: "Undefined" },
+        correct: "b",
+      },
+      {
+        id: 8,
+        question: "In C++, the `mutable` keyword is primarily used for:",
+        options: {
+          a: "Allowing a member to be modified even if the object is const",
+          b: "Changing the type of a variable at runtime",
+          c: "Defining a variable with dynamic size",
+          d: "Preventing modification of a variable",
+        },
+        correct: "a",
+      },
+      {
+        id: 9,
+        question:
+          "What will happen if you access memory beyond the bounds of an array in C++?",
+        options: {
+          a: "Compilation Error",
+          b: "Segmentation fault or undefined behavior",
+          c: "Value will be 0",
+          d: "Array will resize automatically",
+        },
+        correct: "b",
+      },
+      {
+        id: 10,
+        question:
+          "Which preprocessor directive is used to prevent multiple inclusions of the same header file?",
+        options: {
+          a: "#include",
+          b: "#define",
+          c: "#ifndef / #define / #endif",
+          d: "#pragma once only",
+        },
+        correct: "c",
+      },
+      {
+        id: 11,
+        question:
+          "Output of:\n```cpp\n#include <iostream>\nusing namespace std;\nvoid f(int a, int b = 2, int c = 3){\n    cout << a << b << c;\n}\nint main(){\n    f(1,4);\n}\n```",
+        options: { a: "143", b: "124", c: "142", d: "134" },
+        correct: "a",
+      },
+      {
+        id: 12,
+        question:
+          "Which statement about `struct` and `class` in C++ is correct?",
+        options: {
+          a: "They are identical; no difference in C++",
+          b: "Members of a struct are private by default, class members are public",
+          c: "Struct members are public by default, class members are private",
+          d: "Struct cannot have member functions",
+        },
+        correct: "c",
+      },
+
+      // ======== Pseudocode & Flowchart (5 questions) ========
+      {
+        id: 13,
+        question:
+          "Given pseudocode:\n```\ncount ← 0\nfor i = 1 to 5 do\n   for j = i to 5 do\n      count ← count + 1\nprint count\n```\nWhat is the output?",
+        options: { a: "15", b: "10", c: "5", d: "20" },
+        correct: "a",
+      },
+      {
+        id: 14,
+        question:
+          "Pseudocode:\n```\nx ← 2\ny ← 0\nwhile x < 5 do\n   y ← y + x\n   x ← x + 1\nprint y\n```\nOutput?",
+        options: { a: "5", b: "6", c: "7", d: "8" },
+        correct: "c",
+      },
+      {
+        id: 15,
+        question: "In a flowchart, which shape represents a decision?",
+        options: {
+          a: "Oval",
+          b: "Diamond",
+          c: "Rectangle",
+          d: "Parallelogram",
+        },
+        correct: "b",
+      },
+      {
+        id: 16,
+        question: "Which flowchart symbol is used for input/output operations?",
+        options: {
+          a: "Oval",
+          b: "Diamond",
+          c: "Rectangle",
+          d: "Parallelogram",
+        },
+        correct: "d",
+      },
+      {
+        id: 17,
+        question:
+          "Pseudocode:\n```\nsum ← 0\nfor i = 1 to 3 do\n   sum ← sum + i*i\nprint sum\n```\nOutput?",
+        options: { a: "6", b: "9", c: "14", d: "12" },
+        correct: "c",
+      },
+
+      // ======== SQL (12 questions) ========
+      {
+        id: 18,
+        question:
+          "What will this SQL query return?\n```sql\nSELECT COUNT(*)\nFROM employees\nWHERE department_id = 10 AND salary > 5000;\n```",
+        options: {
+          a: "Number of employees in dept 10 earning over 5000",
+          b: "Total employees",
+          c: "Sum of salaries",
+          d: "Syntax error",
+        },
+        correct: "a",
+      },
+      {
+        id: 19,
+        question: "Which SQL keyword is used to sort results?",
+        options: { a: "SORT", b: "ORDER BY", c: "GROUP BY", d: "ALIGN" },
+        correct: "b",
+      },
+      {
+        id: 20,
+        question:
+          "What does the following query output?\n```sql\nSELECT department_id, COUNT(*)\nFROM employees\nGROUP BY department_id\nHAVING COUNT(*) > 5;\n```",
+        options: {
+          a: "All departments",
+          b: "Departments with more than 5 employees",
+          c: "Employees with ID > 5",
+          d: "Error",
+        },
+        correct: "b",
+      },
+      {
+        id: 21,
+        question:
+          "Which SQL command removes all rows from a table but keeps the structure?",
+        options: { a: "DELETE", b: "TRUNCATE", c: "DROP", d: "REMOVE" },
+        correct: "b",
+      },
+      {
+        id: 22,
+        question: "Difference between WHERE and HAVING?",
+        options: {
+          a: "WHERE filters rows before grouping; HAVING filters after grouping",
+          b: "HAVING filters rows before grouping; WHERE after",
+          c: "Both are identical",
+          d: "WHERE is for SELECT, HAVING is for UPDATE",
+        },
+        correct: "a",
+      },
+      {
+        id: 23,
+        question: "Which SQL command is DDL?",
+        options: { a: "INSERT", b: "UPDATE", c: "CREATE", d: "DELETE" },
+        correct: "c",
+      },
+      {
+        id: 24,
+        question:
+          "What will happen?\n```sql\nBEGIN;\nUPDATE accounts SET balance = balance - 100 WHERE id = 1;\nROLLBACK;\n```",
+        options: {
+          a: "Balance decreases by 100",
+          b: "No change to balance",
+          c: "Error",
+          d: "Partial update",
+        },
+        correct: "b",
+      },
+      {
+        id: 25,
+        question: "In indexing, what does a clustered index do?",
+        options: {
+          a: "Stores rows physically in the order of the index",
+          b: "Creates a separate index table",
+          c: "Always unique",
+          d: "Stores null values first",
+        },
+        correct: "a",
+      },
+      {
+        id: 26,
+        question: "Which join returns only matching rows from both tables?",
+        options: {
+          a: "LEFT JOIN",
+          b: "RIGHT JOIN",
+          c: "INNER JOIN",
+          d: "FULL JOIN",
+        },
+        correct: "c",
+      },
+      {
+        id: 27,
+        question: "What is the output?\n```sql\nSELECT 10/4;\n```",
+        options: { a: "2", b: "2.5", c: "Depends on SQL mode", d: "Error" },
+        correct: "c",
+      },
+      {
+        id: 28,
+        question:
+          "Which is faster for searching: indexed column or non-indexed column?",
+        options: {
+          a: "Indexed",
+          b: "Non-indexed",
+          c: "Same speed",
+          d: "Depends on server",
+        },
+        correct: "a",
+      },
+      {
+        id: 29,
+        question: "Which SQL keyword undoes a transaction?",
+        options: { a: "UNDO", b: "ROLLBACK", c: "REVERSE", d: "CANCEL" },
+        correct: "b",
+      },
+
+      // ======== HTML/CSS (5 questions) ========
+      {
+        id: 30,
+        question:
+          'What is the output of:\n```html\n<p style="color: red; color: blue;">Hello</p>\n```',
+        options: {
+          a: "Red text",
+          b: "Blue text",
+          c: "Browser error",
+          d: "Random",
+        },
+        correct: "b",
+      },
+      {
+        id: 31,
+        question: "Which HTML tag represents emphasized text?",
+        options: { a: "<strong>", b: "<em>", c: "<mark>", d: "<i>" },
+        correct: "b",
+      },
+      {
+        id: 32,
+        question: "In CSS, which selector has the highest specificity?",
+        options: { a: "p", b: ".class", c: "#id", d: "p > span" },
+        correct: "c",
+      },
+      {
+        id: 33,
+        question: "Which media query matches screens less than 600px wide?",
+        options: {
+          a: "@media(max-width: 600px)",
+          b: "@media(min-width: 600px)",
+          c: "@media-width: 600px",
+          d: "@media less 600px",
+        },
+        correct: "a",
+      },
+      {
+        id: 34,
+        question:
+          "Which HTML element improves accessibility by defining navigation links?",
+        options: { a: "<nav>", b: "<section>", c: "<header>", d: "<article>" },
+        correct: "a",
+      },
+
+      // ======== OOP (8 questions) ========
+      {
+        id: 35,
+        question:
+          'What is the output?\n```cpp\n#include <iostream>\nusing namespace std;\nclass A{\npublic: A(){cout << "A";}\n};\nclass B: public A{\npublic: B(){cout << "B";}\n};\nint main(){ B obj; }\n```',
+        options: { a: "B", b: "AB", c: "BA", d: "Compilation Error" },
+        correct: "b",
+      },
+      {
+        id: 36,
+        question:
+          "In OOP, which concept allows different classes to be treated as the same type through a common interface?",
+        options: {
+          a: "Encapsulation",
+          b: "Polymorphism",
+          c: "Abstraction",
+          d: "Inheritance",
+        },
+        correct: "b",
+      },
+      {
+        id: 37,
+        question:
+          'What will this code output?\n```cpp\n#include <iostream>\nusing namespace std;\nclass Base{\npublic: virtual void show(){cout << "Base";}\n};\nclass Derived: public Base{\npublic: void show(){cout << "Derived";}\n};\nint main(){ Base *b = new Derived(); b->show(); }\n```',
+        options: { a: "Base", b: "Derived", c: "Error", d: "Undefined" },
+        correct: "b",
+      },
+      {
+        id: 38,
+        question:
+          "Which OOP principle is violated if all data members of a class are public?",
+        options: {
+          a: "Encapsulation",
+          b: "Polymorphism",
+          c: "Abstraction",
+          d: "Inheritance",
+        },
+        correct: "a",
+      },
+      {
+        id: 39,
+        question: "In C++, which destructor call order is correct?",
+        options: {
+          a: "Base then Derived",
+          b: "Derived then Base",
+          c: "Random",
+          d: "Only Base",
+        },
+        correct: "b",
+      },
+      {
+        id: 40,
+        question:
+          "Which relationship best describes 'Car' inherits from 'Vehicle'?",
+        options: { a: "Has-a", b: "Is-a", c: "Part-of", d: "Contains" },
+        correct: "b",
+      },
+      {
+        id: 41,
+        question: "Overloading differs from overriding because:",
+        options: {
+          a: "Overloading changes method name",
+          b: "Overriding changes parameters",
+          c: "Overloading changes parameters, overriding changes implementation",
+          d: "Both are the same",
+        },
+        correct: "c",
+      },
+      {
+        id: 42,
+        question:
+          "Which concept hides implementation details and shows only the essential features?",
+        options: {
+          a: "Polymorphism",
+          b: "Abstraction",
+          c: "Encapsulation",
+          d: "Inheritance",
+        },
+        correct: "b",
+      },
+
+      // ======== Algorithms (10 questions) ========
+      {
+        id: 43,
+        question:
+          "Which sorting algorithm is stable and works in O(n log n) time in all cases?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Heap Sort",
+          d: "Selection Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 44,
+        question: "Best-case time complexity of Insertion Sort?",
+        options: { a: "O(n)", b: "O(n log n)", c: "O(n^2)", d: "O(log n)" },
+        correct: "a",
+      },
+      {
+        id: 45,
+        question:
+          "Which algorithm is best for finding shortest path in a graph with non-negative weights?",
+        options: { a: "Prim's", b: "DFS", c: "Dijkstra's", d: "BFS" },
+        correct: "c",
+      },
+      {
+        id: 46,
+        question:
+          "Given steps: 1) Choose pivot 2) Partition array 3) Recursively sort subarrays — which algorithm?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Selection Sort",
+          d: "Heap Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 47,
+        question:
+          "Which search algorithm works in O(log n) time only on sorted data?",
+        options: { a: "Linear Search", b: "Binary Search", c: "DFS", d: "BFS" },
+        correct: "b",
+      },
+      {
+        id: 48,
+        question:
+          "Which algorithm's time complexity is O(V^2) for adjacency matrix and better with a priority queue?",
+        options: { a: "Prim's", b: "BFS", c: "DFS", d: "Selection Sort" },
+        correct: "a",
+      },
+      {
+        id: 49,
+        question: "Bubble Sort is considered inefficient because:",
+        options: {
+          a: "It is unstable",
+          b: "It requires extra space",
+          c: "It has O(n^2) average and worst-case time complexity",
+          d: "It cannot sort integers",
+        },
+        correct: "c",
+      },
+      {
+        id: 50,
+        question:
+          "Which traversal algorithm uses a stack (implicit or explicit) and explores as far as possible along each branch?",
+        options: { a: "BFS", b: "DFS", c: "Dijkstra's", d: "Prim's" },
+        correct: "b",
+      },
+    ],
+  },
+
+  exam9: {
+    title: "C++ Object-Oriented Programming - Comprehensive Exam",
+    questions: [
+      {
+        id: 1,
+        question: "What is the implicit return type of constructor?",
+        options: {
+          a: "No return type",
+          b: "A class object in which it is defined",
+          c: "void",
+          d: "None",
+        },
+        correct: "b",
+      },
+      {
+        id: 2,
+        question: "When is the object created with a new keyword?",
+        options: {
+          a: "At run time",
+          b: "At compile time",
+          c: "Depends on the code",
+          d: "None",
+        },
+        correct: "a",
+      },
+      {
+        id: 3,
+        question: "Identify the incorrect constructor type.",
+        options: {
+          a: "Friend constructor",
+          b: "Default constructor",
+          c: "Parameterized constructor",
+          d: "Copy constructor",
+        },
+        correct: "a",
+      },
+      {
+        id: 4,
+        question: "Identify the scope resolution operator.",
+        options: {
+          a: "::",
+          b: "?:",
+          c: "->",
+          d: "None",
+        },
+        correct: "a",
+      },
+      {
+        id: 5,
+        question: "Choose the option below which is not a member of the class.",
+        options: {
+          a: "Friend function",
+          b: "Static function",
+          c: "Virtual function",
+          d: "Const function",
+        },
+        correct: "a",
+      },
+      {
+        id: 6,
+        question: "Total types of constructors in C++ are?",
+        options: {
+          a: "1",
+          b: "2",
+          c: "3",
+          d: "4",
+        },
+        correct: "c",
+      },
+      {
+        id: 7,
+        question:
+          "What is the number of parameters that a default constructor requires?",
+        options: {
+          a: "0",
+          b: "1",
+          c: "2",
+          d: "3",
+        },
+        correct: "a",
+      },
+      {
+        id: 8,
+        question:
+          "Data members and member functions of a class are private by default. True or False?",
+        options: {
+          a: "True",
+          b: "False",
+          c: "Depends on code",
+          d: "None",
+        },
+        correct: "a",
+      },
+      {
+        id: 9,
+        question:
+          "Under which pillar of OOPS do base class and derived class relationships come?",
+        options: {
+          a: "Polymorphism",
+          b: "Inheritance",
+          c: "Encapsulation",
+          d: "Abstraction",
+        },
+        correct: "b",
+      },
+      {
+        id: 10,
+        question:
+          "Which of the following functions can be inherited from the base class?",
+        options: {
+          a: "Constructor",
+          b: "Destructor",
+          c: "Static",
+          d: "None",
+        },
+        correct: "d",
+      },
+      {
+        id: 11,
+        question: "Which of the following is not a type of inheritance?",
+        options: {
+          a: "Multiple",
+          b: "Multilevel",
+          c: "Distributed",
+          d: "Hierarchical",
+        },
+        correct: "c",
+      },
+      {
+        id: 12,
+        question: "What is an object in C++?",
+        options: {
+          a: "It is a function of class",
+          b: "It is an instance of the class",
+          c: "It is the data type of class",
+          d: "It is part of the syntax of class",
+        },
+        correct: "b",
+      },
+      {
+        id: 13,
+        question: "Why is reusability a desirable feature?",
+        options: {
+          a: "Reduces compilation time",
+          b: "Decreases testing time",
+          c: "Lowers maintenance cost",
+          d: "None",
+        },
+        correct: "c",
+      },
+      {
+        id: 14,
+        question: "Identify the operators which cannot be overloaded.",
+        options: {
+          a: "?:",
+          b: ". (dot operator)",
+          c: "Both A and B",
+          d: "None of the above",
+        },
+        correct: "c",
+      },
+      {
+        id: 15,
+        question: "Another name of overloading is?",
+        options: {
+          a: "Pseudo polymorphism",
+          b: "Transient polymorphism",
+          c: "Virtual polymorphism",
+          d: "Ad-hoc polymorphism",
+        },
+        correct: "d",
+      },
+      {
+        id: 16,
+        question: "By default, fields in a structure of a C program are?",
+        options: {
+          a: "public",
+          b: "Private",
+          c: "protected",
+          d: "None",
+        },
+        correct: "a",
+      },
+      {
+        id: 17,
+        question:
+          "On what basis is it determined, when a variable comes into existence in memory?",
+        options: {
+          a: "Data type",
+          b: "Storage class",
+          c: "Scope",
+          d: "All of the above",
+        },
+        correct: "d",
+      },
+      {
+        id: 18,
+        question:
+          "Identify the feature using which, one object can interact with another object.",
+        options: {
+          a: "Message passing",
+          b: "Message reading",
+          c: "Data binding",
+          d: "Data transfer",
+        },
+        correct: "a",
+      },
+      {
+        id: 19,
+        question: "Total access specifiers in OOPS for C++ are?",
+        options: {
+          a: "1",
+          b: "2",
+          c: "3",
+          d: "4",
+        },
+        correct: "c",
+      },
+      {
+        id: 20,
+        question: "Choose the option below which can show polymorphism.",
+        options: {
+          a: "Overloading ||",
+          b: "Overloading <<",
+          c: "Overloading &&",
+          d: "Overloading +=",
+        },
+        correct: "b",
+      },
+      {
+        id: 21,
+        question: "Select the following which shows the correct constructor.",
+        options: {
+          a: "()class_name",
+          b: "-class_name",
+          c: "class_name()",
+          d: "~class_name(",
+        },
+        correct: "c",
+      },
+      {
+        id: 22,
+        question:
+          "To access data members of a class, which of the following is used?",
+        options: {
+          a: "Dot operator",
+          b: "Arrow operator",
+          c: "Dot or arrow operator, as required",
+          d: "Dot, arrow, or direct call",
+        },
+        correct: "c",
+      },
+      {
+        id: 23,
+        question:
+          "Identify the feature, which is used to reduce the use of nested classes.",
+        options: {
+          a: "Binding",
+          b: "Inheritance",
+          c: "Encapsulation",
+          d: "Abstraction",
+        },
+        correct: "b",
+      },
+      {
+        id: 24,
+        question:
+          "Choose the option below which is used to free the memory allocated for an object in C++.",
+        options: {
+          a: "Free()",
+          b: "unallocate()",
+          c: "delete",
+          d: "collect",
+        },
+        correct: "c",
+      },
+      {
+        id: 25,
+        question:
+          "Identify the option below which is not a property of the object.",
+        options: {
+          a: "Names",
+          b: "Attributes",
+          c: "Identity",
+          d: "Properties",
+        },
+        correct: "a",
+      },
+      {
+        id: 26,
+        question:
+          "What type of inheritance does single-level inheritance support?",
+        options: {
+          a: "Compile-time",
+          b: "Runtime inheritance",
+          c: "Multiple inheritances",
+          d: "Language independent",
+        },
+        correct: "b",
+      },
+      {
+        id: 27,
+        question:
+          "In which of the following is memory allocated for the objects?",
+        options: {
+          a: "RAM",
+          b: "ROM",
+          c: "Cache",
+          d: "HDD",
+        },
+        correct: "a",
+      },
+      {
+        id: 28,
+        question: "How do encapsulation and abstraction differ?",
+        options: {
+          a: "Hiding and binding",
+          b: "Binding and hiding",
+          c: "Hiding and hiding",
+          d: "None",
+        },
+        correct: "b",
+      },
+      {
+        id: 29,
+        question:
+          "Choose the option below which is shown by function overriding.",
+        options: {
+          a: "Abstraction",
+          b: "Encapsulation",
+          c: "Polymorphism",
+          d: "Inheritance",
+        },
+        correct: "c",
+      },
+      {
+        id: 30,
+        question:
+          "Choose the option below for which instance of the class cannot be created.",
+        options: {
+          a: "Anonymous class",
+          b: "Parent class",
+          c: "Nested class",
+          d: "Abstract class",
+        },
+        correct: "d",
+      },
+      {
+        id: 31,
+        question:
+          "Identify the feature which can be implemented using encapsulation.",
+        options: {
+          a: "Abstraction",
+          b: "Encapsulation",
+          c: "Polymorphism",
+          d: "Inheritance",
+        },
+        correct: "a",
+      },
+      {
+        id: 32,
+        question: "Why is a virtual function mainly used to achieve?",
+        options: {
+          a: "Function code polymorphism",
+          b: "Interpreter polymorphism",
+          c: "Compile-time polymorphism",
+          d: "Runtime polymorphism",
+        },
+        correct: "d",
+      },
+      {
+        id: 33,
+        question: "Virtual functions should be defined in?",
+        options: {
+          a: "Derived class",
+          b: "Base class",
+          c: "Both base and derived class",
+          d: "None",
+        },
+        correct: "b",
+      },
+      {
+        id: 34,
+        question: "Virtual function should be",
+        options: {
+          a: "public",
+          b: "Private",
+          c: "protected",
+          d: "default",
+        },
+        correct: "a",
+      },
+      {
+        id: 35,
+        question:
+          "Choose whether True or False: The constructor function can be constant.",
+        options: {
+          a: "True",
+          b: "False",
+          c: "Depends on implementation",
+          d: "None",
+        },
+        correct: "b",
+      },
+      {
+        id: 36,
+        question: "Dynamic memory allocation can be done using?",
+        options: {
+          a: "calloc()",
+          b: "malloc()",
+          c: "Both (a) and (b)",
+          d: "create()",
+        },
+        correct: "c",
+      },
+      {
+        id: 37,
+        question: "Total types of polymorphism in C++ are?",
+        options: {
+          a: "1",
+          b: "2",
+          c: "3",
+          d: "4",
+        },
+        correct: "b",
+      },
+      {
+        id: 38,
+        question: "Another name of the generic class is?",
+        options: {
+          a: "Template class",
+          b: "Final class",
+          c: "Abstract class",
+          d: "Efficient code",
+        },
+        correct: "a",
+      },
+      {
+        id: 39,
+        question:
+          "Choose the option below which overloads using the friend function.",
+        options: {
+          a: ">>",
+          b: "<<",
+          c: "Both >> and <<",
+          d: "None",
+        },
+        correct: "c",
+      },
+      {
+        id: 40,
+        question:
+          "Choose whether True or False: Object cannot be passed as a function.",
+        options: {
+          a: "True",
+          b: "False",
+          c: "Depends on implementation",
+          d: "None",
+        },
+        correct: "b",
+      },
+      {
+        id: 41,
+        question:
+          "Identify the pure object-oriented programming language among the following.",
+        options: {
+          a: "C++",
+          b: "SmallTalk",
+          c: "Java",
+          d: "Python",
+        },
+        correct: "b",
+      },
+      {
+        id: 42,
+        question: "Identify the abstract data type among the following.",
+        options: {
+          a: "double",
+          b: "int",
+          c: "class",
+          d: "string",
+        },
+        correct: "c",
+      },
+      {
+        id: 43,
+        question:
+          "What are the total catch blocks that can be used using a single Try block?",
+        options: {
+          a: "1",
+          b: "2",
+          c: "According to needs",
+          d: "Maximum 256",
+        },
+        correct: "c",
+      },
+      {
+        id: 44,
+        question:
+          "Choose the incorrect option below which is not a type of constructor.",
+        options: {
+          a: "Copy constructor",
+          b: "Friend constructor",
+          c: "Parameterized constructor",
+          d: "Default constructor",
+        },
+        correct: "b",
+      },
+      {
+        id: 45,
+        question: "Total instances of an abstract class that can be created?",
+        options: {
+          a: "0",
+          b: "1",
+          c: "4",
+          d: "8",
+        },
+        correct: "a",
+      },
+      {
+        id: 46,
+        question:
+          "Identify the option below which cannot be used with the term 'virtual'.",
+        options: {
+          a: "constructor",
+          b: "destructor",
+          c: "class",
+          d: "Member function",
+        },
+        correct: "a",
+      },
+      {
+        id: 47,
+        question:
+          "Which type of inheritance is implemented in the following code below? (Note: Code not provided in original)",
+        options: {
+          a: "Single inheritance",
+          b: "Multilevel inheritance",
+          c: "Hybrid inheritance",
+          d: "Multiple inheritances",
+        },
+        correct: "a",
+      },
+      {
+        id: 48,
+        question:
+          "Choose the option below which is used to implement late binding.",
+        options: {
+          a: "Friend function",
+          b: "Static function",
+          c: "Virtual function",
+          d: "Const function",
+        },
+        correct: "c",
+      },
+      {
+        id: 49,
+        question: "What is cout?",
+        options: {
+          a: "Operator",
+          b: "Object",
+          c: "Function",
+          d: "Macro",
+        },
+        correct: "b",
+      },
+      {
+        id: 50,
+        question:
+          "Choose the option below which describes the overloading of functions.",
+        options: {
+          a: "Ad-hoc polymorphism",
+          b: "Virtual polymorphism",
+          c: "Pseudo polymorphism",
+          d: "Transient polymorphism",
+        },
+        correct: "a",
+      },
+      {
+        id: 51,
+        question: "Who developed object-oriented programming?",
+        options: {
+          a: "Dennis Ritchie",
+          b: "Charles Babbage",
+          c: "Alan Kay",
+          d: "Andrea Ferro",
+        },
+        correct: "c",
+      },
+      {
+        id: 52,
+        question: "Which of the following is not an OOPS concept?",
+        options: {
+          a: "Inheritance",
+          b: "Compilation",
+          c: "Polymorphism",
+          d: "Encapsulation",
         },
         correct: "b",
       },
