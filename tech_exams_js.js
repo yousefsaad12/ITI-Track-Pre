@@ -2749,4 +2749,526 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
       },
     ],
   },
+
+  exam5: {
+    title:
+      "Technical Mock Exam - Algorithms (Sorting & Searching) - Intermediate to Advanced",
+    questions: [
+      {
+        id: 1,
+        question: "What is the average time complexity of Quick Sort?",
+        options: { a: "O(n log n)", b: "O(n^2)", c: "O(log n)", d: "O(n)" },
+        correct: "a",
+      },
+      {
+        id: 2,
+        question:
+          "In the worst case, what is the time complexity of Quick Sort?",
+        options: { a: "O(n log n)", b: "O(n^2)", c: "O(n)", d: "O(log n)" },
+        correct: "b",
+      },
+      {
+        id: 3,
+        question: "Which sorting algorithm is stable by default?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Selection Sort",
+          d: "Heap Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 4,
+        question: "Which algorithm uses a 'divide and conquer' approach?",
+        options: {
+          a: "Merge Sort",
+          b: "Bubble Sort",
+          c: "Insertion Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 5,
+        question:
+          "Which sorting algorithm works by repeatedly swapping adjacent elements if they are in the wrong order?",
+        options: {
+          a: "Selection Sort",
+          b: "Bubble Sort",
+          c: "Merge Sort",
+          d: "Quick Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 6,
+        question: "What is the best-case time complexity of Insertion Sort?",
+        options: { a: "O(n)", b: "O(n log n)", c: "O(n^2)", d: "O(log n)" },
+        correct: "a",
+      },
+      {
+        id: 7,
+        question:
+          "Which sorting algorithm has the same complexity for best, average, and worst cases?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Bubble Sort",
+          d: "Selection Sort",
+        },
+        correct: "d",
+      },
+      {
+        id: 8,
+        question: "Binary Search requires:",
+        options: {
+          a: "Sorted data",
+          b: "Unsorted data",
+          c: "Hashing",
+          d: "Tree structure",
+        },
+        correct: "a",
+      },
+      {
+        id: 9,
+        question: "What is the worst-case time complexity of Merge Sort?",
+        options: { a: "O(n log n)", b: "O(n^2)", c: "O(n)", d: "O(log n)" },
+        correct: "a",
+      },
+      {
+        id: 10,
+        question: "In Quick Sort, the choice of pivot affects:",
+        options: {
+          a: "Space complexity",
+          b: "Time complexity",
+          c: "Algorithm stability",
+          d: "Both space and stability",
+        },
+        correct: "b",
+      },
+      {
+        id: 11,
+        question:
+          "Which search algorithm is faster on average for a large sorted dataset?",
+        options: {
+          a: "Linear Search",
+          b: "Binary Search",
+          c: "Jump Search",
+          d: "Exponential Search",
+        },
+        correct: "b",
+      },
+      {
+        id: 12,
+        question: "Which sorting algorithm is in-place but not stable?",
+        options: {
+          a: "Selection Sort",
+          b: "Merge Sort",
+          c: "Insertion Sort",
+          d: "Bubble Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 13,
+        question:
+          "Which algorithm repeatedly finds the minimum element from the unsorted part and puts it at the beginning?",
+        options: {
+          a: "Selection Sort",
+          b: "Insertion Sort",
+          c: "Quick Sort",
+          d: "Bubble Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 14,
+        question: "What is the average time complexity of Binary Search?",
+        options: { a: "O(n)", b: "O(log n)", c: "O(n log n)", d: "O(1)" },
+        correct: "b",
+      },
+      {
+        id: 15,
+        question: "Merge Sort's extra space complexity is:",
+        options: { a: "O(1)", b: "O(log n)", c: "O(n)", d: "O(n^2)" },
+        correct: "c",
+      },
+      {
+        id: 16,
+        question:
+          "Which sorting algorithm can be efficiently implemented recursively?",
+        options: {
+          a: "Merge Sort",
+          b: "Bubble Sort",
+          c: "Selection Sort",
+          d: "Insertion Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 17,
+        question:
+          "Which sorting algorithm's performance degrades significantly if the data is already sorted and a bad pivot is chosen?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Bubble Sort",
+          d: "Insertion Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 18,
+        question: "Which sorting algorithm is best for nearly sorted data?",
+        options: {
+          a: "Quick Sort",
+          b: "Insertion Sort",
+          c: "Merge Sort",
+          d: "Selection Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 19,
+        question: "Linear Search best-case complexity occurs when:",
+        options: {
+          a: "Element is at the start",
+          b: "Element is at the end",
+          c: "Element is not found",
+          d: "Data is sorted",
+        },
+        correct: "a",
+      },
+      {
+        id: 20,
+        question: "Quick Sort is generally faster than Merge Sort because:",
+        options: {
+          a: "It uses less space",
+          b: "It is stable",
+          c: "It avoids recursion",
+          d: "It sorts in multiple passes",
+        },
+        correct: "a",
+      },
+      {
+        id: 21,
+        question:
+          "Which sorting algorithm is the simplest to implement but inefficient for large datasets?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Bubble Sort",
+          d: "Heap Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 22,
+        question:
+          "Which algorithm compares each element with all other elements to find its correct position?",
+        options: {
+          a: "Selection Sort",
+          b: "Insertion Sort",
+          c: "Bubble Sort",
+          d: "Quick Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 23,
+        question: "What is the worst-case time complexity of Binary Search?",
+        options: { a: "O(log n)", b: "O(n)", c: "O(n log n)", d: "O(1)" },
+        correct: "a",
+      },
+      {
+        id: 24,
+        question: "Which sorting algorithm is NOT based on comparisons?",
+        options: {
+          a: "Counting Sort",
+          b: "Merge Sort",
+          c: "Quick Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 25,
+        question: "Which algorithm requires O(n^2) swaps in the worst case?",
+        options: {
+          a: "Bubble Sort",
+          b: "Insertion Sort",
+          c: "Selection Sort",
+          d: "Quick Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 26,
+        question:
+          "Which sorting algorithm divides the array into sorted and unsorted regions?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Insertion Sort",
+          d: "Heap Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 27,
+        question: "Which algorithm has the best average time complexity?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Insertion Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 28,
+        question: "In Binary Search, the search space is reduced by:",
+        options: {
+          a: "One element",
+          b: "Half",
+          c: "Two-thirds",
+          d: "One-quarter",
+        },
+        correct: "b",
+      },
+      {
+        id: 29,
+        question: "Which sorting algorithm's best case is O(n log n)?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Heap Sort",
+          d: "All of the above",
+        },
+        correct: "d",
+      },
+      {
+        id: 30,
+        question:
+          "Which algorithm has the smallest constant factors for large datasets?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Selection Sort",
+          d: "Insertion Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 31,
+        question: "Which algorithm uses repeated merging of sorted sublists?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Bubble Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 32,
+        question: "What is the worst-case time complexity of Linear Search?",
+        options: { a: "O(n)", b: "O(log n)", c: "O(n log n)", d: "O(1)" },
+        correct: "a",
+      },
+      {
+        id: 33,
+        question:
+          "Which sorting algorithm is often taught first due to its simplicity?",
+        options: {
+          a: "Quick Sort",
+          b: "Bubble Sort",
+          c: "Merge Sort",
+          d: "Heap Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 34,
+        question: "Which algorithm uses a pivot to partition the array?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Heap Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 35,
+        question:
+          "In Merge Sort, merging two sorted lists of sizes m and n takes:",
+        options: { a: "O(m + n)", b: "O(mn)", c: "O(log(m+n))", d: "O(1)" },
+        correct: "a",
+      },
+      {
+        id: 36,
+        question: "Which algorithm performs best for small datasets?",
+        options: {
+          a: "Insertion Sort",
+          b: "Quick Sort",
+          c: "Merge Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 37,
+        question: "Binary Search cannot be applied on:",
+        options: {
+          a: "Linked List without random access",
+          b: "Sorted Array",
+          c: "Balanced BST",
+          d: "Sorted Linked List with index access",
+        },
+        correct: "a",
+      },
+      {
+        id: 38,
+        question: "Which sorting algorithm is adaptive by nature?",
+        options: {
+          a: "Insertion Sort",
+          b: "Selection Sort",
+          c: "Merge Sort",
+          d: "Quick Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 39,
+        question:
+          "Which algorithm is best suited when memory space is limited?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Counting Sort",
+          d: "Radix Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 40,
+        question:
+          "In Bubble Sort, the number of comparisons in the worst case for n elements is:",
+        options: { a: "O(n^2)", b: "O(n log n)", c: "O(n)", d: "O(log n)" },
+        correct: "a",
+      },
+      {
+        id: 41,
+        question:
+          "Which sorting algorithm has the lowest number of swaps in the worst case?",
+        options: {
+          a: "Selection Sort",
+          b: "Insertion Sort",
+          c: "Bubble Sort",
+          d: "Quick Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 42,
+        question: "Which search algorithm works in O(1) in the best case?",
+        options: {
+          a: "Linear Search",
+          b: "Binary Search",
+          c: "Both",
+          d: "None",
+        },
+        correct: "c",
+      },
+      {
+        id: 43,
+        question: "Which algorithm is easiest to parallelize?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Bubble Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 44,
+        question:
+          "Which sorting algorithm is guaranteed O(n log n) in all cases?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Insertion Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 45,
+        question: "What is the space complexity of Binary Search?",
+        options: { a: "O(1)", b: "O(log n)", c: "O(n)", d: "O(n^2)" },
+        correct: "a",
+      },
+      {
+        id: 46,
+        question:
+          "Which algorithm is often the fastest in practice for most inputs?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Selection Sort",
+          d: "Bubble Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 47,
+        question:
+          "Which sorting algorithm can be implemented without recursion and still maintain efficiency?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Heap Sort",
+          d: "Bubble Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 48,
+        question: "In Quick Sort, the ideal pivot is:",
+        options: {
+          a: "Smallest element",
+          b: "Largest element",
+          c: "Median",
+          d: "Random element",
+        },
+        correct: "c",
+      },
+      {
+        id: 49,
+        question:
+          "Which algorithm scans from left to right, inserting each element into its correct position in a sorted portion?",
+        options: {
+          a: "Insertion Sort",
+          b: "Selection Sort",
+          c: "Bubble Sort",
+          d: "Merge Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 50,
+        question: "Linear Search is preferable over Binary Search when:",
+        options: {
+          a: "Data is small",
+          b: "Data is sorted",
+          c: "Data is large",
+          d: "Search is frequent",
+        },
+        correct: "a",
+      },
+    ],
+  },
 };
