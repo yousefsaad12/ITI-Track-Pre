@@ -5763,4 +5763,592 @@ int main() {
       },
     ],
   },
+
+  exam10: {
+    title:
+      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+    questions: [
+      {
+        id: 1,
+        question:
+          "What is the output of the following C++ code snippet involving pointers?\n```cpp\nint x = 10;\nint* p = &x;\nint** q = &p;\n**q = 20;\ncout << x;\n```",
+        options: {
+          a: "10",
+          b: "20",
+          c: "Address of x",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 2,
+        question:
+          "Trace the function calls in this recursive C++ code and determine the output.\n```cpp\nvoid func(int n) {\n  if (n <= 0) return;\n  cout << n << ' ';\n  func(n-2);\n  cout << n << ' ';\n}\nint main() { func(4); }\n```",
+        options: {
+          a: "4 2 4",
+          b: "4 2 0 2 4",
+          c: "4 2 2 4",
+          d: "4 3 2 1 1 2 3 4",
+        },
+        correct: "c",
+      },
+      {
+        id: 3,
+        question:
+          "What does this C++ code output, considering references?\n```cpp\nint a = 5;\nint& b = a;\nb++;\ncout << a;\n```",
+        options: {
+          a: "5",
+          b: "6",
+          c: "Undefined behavior",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 4,
+        question:
+          'Evaluate the loop in this C code and find the final value of i.\n```cpp\nint i = 0;\nwhile (i < 5) {\n  i++;\n  if (i % 2 == 0) continue;\n  printf("%d ", i);\n}\nprintf("%d", i);\n```',
+        options: {
+          a: "5",
+          b: "1355",
+          c: "1 3 5 5",
+          d: "0 1 2 3 4 5",
+        },
+        correct: "c",
+      },
+      {
+        id: 5,
+        question:
+          "Determine the result based on operator precedence in C++.\n```cpp\nint x = 10 * 5 + 3 / 2 - 1;\ncout << x;\n```",
+        options: {
+          a: "50",
+          b: "51",
+          c: "49",
+          d: "25",
+        },
+        correct: "c",
+      },
+      {
+        id: 6,
+        question:
+          "Trace the function calls and output in this C++ code.\n```cpp\nint func(int& x) { return ++x; }\nint main() {\n  int a = 1;\n  cout << func(a) << a;\n}\n```",
+        options: {
+          a: "11",
+          b: "22",
+          c: "12",
+          d: "21",
+        },
+        correct: "b",
+      },
+      {
+        id: 7,
+        question: "What is the purpose of the '::' operator in C++?",
+        options: {
+          a: "Member access for pointers",
+          b: "Scope resolution",
+          c: "Ternary conditional",
+          d: "Dereference",
+        },
+        correct: "b",
+      },
+      {
+        id: 8,
+        question: "Explain the use of the 'friend' keyword in C++ classes.",
+        options: {
+          a: "Makes a class inherit from another",
+          b: "Allows a function or class to access private members",
+          c: "Prevents copying of objects",
+          d: "Marks a variable as changeable in const objects",
+        },
+        correct: "b",
+      },
+      {
+        id: 9,
+        question:
+          "What is the difference in default access specifier between 'struct' and 'class' in C++?",
+        options: {
+          a: "struct: private, class: public",
+          b: "struct: public, class: private",
+          c: "Both public",
+          d: "Both private",
+        },
+        correct: "b",
+      },
+      {
+        id: 10,
+        question:
+          "Is this C++ declaration valid? 'const volatile int* const p;'",
+        options: {
+          a: "Invalid, conflicting qualifiers",
+          b: "Valid, pointer to const volatile int, pointer itself const",
+          c: "Invalid, volatile not allowed with const",
+          d: "Valid, but pointer is volatile",
+        },
+        correct: "b",
+      },
+      {
+        id: 11,
+        question: "What does the syntax 'operator+' indicate in a C++ class?",
+        options: {
+          a: "Scope resolution for +",
+          b: "Overloading the + operator",
+          c: "Unary + operator",
+          d: "Preprocessor directive",
+        },
+        correct: "b",
+      },
+      {
+        id: 12,
+        question:
+          "Where must preprocessor directives like #define be placed in C++ code?",
+        options: {
+          a: "Inside functions only",
+          b: "Anywhere, but before use",
+          c: "At the top of the file, before any code",
+          d: "After includes, before main",
+        },
+        correct: "c",
+      },
+      {
+        id: 13,
+        question:
+          "Calculate the output of this pseudocode loop.\nPseudocode:\nSET sum = 0\nFOR i FROM 1 TO 5\n  IF i MOD 2 == 0 THEN\n    sum = sum + i\n  ELSE\n    sum = sum - i\n  END IF\nEND FOR\nDISPLAY sum",
+        options: {
+          a: "3",
+          b: "-3",
+          c: "0",
+          d: "15",
+        },
+        correct: "b",
+      },
+      {
+        id: 14,
+        question:
+          "Determine the result after executing this conditional pseudocode.\nPseudocode:\nSET x = 10\nIF x > 5 AND x < 15 THEN\n  x = x * 2\nELSE IF x >= 15 THEN\n  x = x / 2\nELSE\n  x = 0\nEND IF\nDISPLAY x",
+        options: {
+          a: "20",
+          b: "5",
+          c: "0",
+          d: "10",
+        },
+        correct: "a",
+      },
+      {
+        id: 15,
+        question:
+          "What is the final value in this nested loop pseudocode?\nPseudocode:\nSET count = 0\nWHILE count < 3\n  FOR j FROM 1 TO 2\n    count = count + j\n  END FOR\nEND WHILE\nDISPLAY count",
+        options: {
+          a: "6",
+          b: "9",
+          c: "3",
+          d: "0",
+        },
+        correct: "b",
+      },
+      {
+        id: 16,
+        question:
+          "In standard flowchart notation, which shape is used for a decision step?",
+        options: {
+          a: "Oval",
+          b: "Rectangle",
+          c: "Diamond",
+          d: "Parallelogram",
+        },
+        correct: "c",
+      },
+      {
+        id: 17,
+        question: "What does a parallelogram shape represent in a flowchart?",
+        options: {
+          a: "Start/End",
+          b: "Process",
+          c: "Decision",
+          d: "Input/Output",
+        },
+        correct: "d",
+      },
+      {
+        id: 18,
+        question:
+          "Assuming a table 'employees' with columns id, name, salary, dept_id. What is the output of this SQL query?\n```sql\nSELECT dept_id, AVG(salary) FROM employees GROUP BY dept_id HAVING AVG(salary) > 50000;\n```",
+        options: {
+          a: "All departments with average salary > 50000",
+          b: "All employees with salary > 50000",
+          c: "Error, no alias for AVG",
+          d: "Departments ordered by salary",
+        },
+        correct: "a",
+      },
+      {
+        id: 19,
+        question:
+          "Given tables 'orders' (order_id, customer_id) and 'customers' (id, name). What does this join query return?\n```sql\nSELECT name FROM customers LEFT JOIN orders ON customers.id = orders.customer_id WHERE order_id IS NULL;\n```",
+        options: {
+          a: "Customers with orders",
+          b: "Customers without orders",
+          c: "All customers",
+          d: "All orders",
+        },
+        correct: "b",
+      },
+      {
+        id: 20,
+        question:
+          "What is the result of this subquery in SQL?\n```sql\nSELECT name FROM products WHERE price > (SELECT AVG(price) FROM products);\n```",
+        options: {
+          a: "Products below average price",
+          b: "Products above average price",
+          c: "All products",
+          d: "Error, subquery invalid",
+        },
+        correct: "b",
+      },
+      {
+        id: 21,
+        question:
+          "Is this SQL query correct for finding max salary per department?\n```sql\nSELECT dept, MAX(salary) FROM emp GROUP BY dept;\n```",
+        options: {
+          a: "Yes, correct",
+          b: "No, needs HAVING",
+          c: "No, GROUP BY invalid",
+          d: "No, must use ORDER BY",
+        },
+        correct: "a",
+      },
+      {
+        id: 22,
+        question:
+          "Evaluate this tricky WHERE condition.\n```sql\nSELECT * FROM users WHERE age BETWEEN 20 AND 30 AND NOT (status = 'active' OR role = 'admin');\n```",
+        options: {
+          a: "Users 20-30, inactive non-admins",
+          b: "Users 20-30, active or admins",
+          c: "All users 20-30",
+          d: "Users outside 20-30",
+        },
+        correct: "a",
+      },
+      {
+        id: 23,
+        question:
+          "What does this query output?\n```sql\nSELECT COUNT(DISTINCT user_id) FROM logs WHERE date >= '2023-01-01';\n```",
+        options: {
+          a: "Total logs since date",
+          b: "Unique users since date",
+          c: "All users",
+          d: "Error, no GROUP BY",
+        },
+        correct: "b",
+      },
+      {
+        id: 24,
+        question: "What is the difference between WHERE and HAVING in SQL?",
+        options: {
+          a: "WHERE for aggregates, HAVING for rows",
+          b: "WHERE filters rows before grouping, HAVING after",
+          c: "Both same",
+          d: "HAVING only for JOINs",
+        },
+        correct: "b",
+      },
+      {
+        id: 25,
+        question: "In SQL transactions, what does COMMIT do?",
+        options: {
+          a: "Undoes changes",
+          b: "Saves changes permanently",
+          c: "Starts a transaction",
+          d: "Locks the table",
+        },
+        correct: "b",
+      },
+      {
+        id: 26,
+        question: "Classify: ALTER TABLE is which type of SQL command?",
+        options: {
+          a: "DML",
+          b: "DDL",
+          c: "DCL",
+          d: "TCL",
+        },
+        correct: "b",
+      },
+      {
+        id: 27,
+        question: "What is the primary purpose of indexing in databases?",
+        options: {
+          a: "To enforce uniqueness",
+          b: "To speed up data retrieval",
+          c: "To store data",
+          d: "To join tables",
+        },
+        correct: "b",
+      },
+      {
+        id: 28,
+        question: "For query optimization, why avoid SELECT *?",
+        options: {
+          a: "Returns too few rows",
+          b: "Inefficient, fetches unnecessary data",
+          c: "Syntax error",
+          d: "Only for aggregates",
+        },
+        correct: "b",
+      },
+      {
+        id: 29,
+        question: "What does ROLLBACK do in transactions?",
+        options: {
+          a: "Commits changes",
+          b: "Undoes changes since last commit",
+          c: "Starts new transaction",
+          d: "Locks rows",
+        },
+        correct: "b",
+      },
+      {
+        id: 30,
+        question:
+          'What is the rendered output of this HTML/CSS code?\n```html\n<div class="box">Text</div>\n```\n```css\n.box { width: 100px; height: 100px; background: red; }\n@media (max-width: 600px) { .box { background: blue; } }\n``` Assuming viewport width 500px.',
+        options: {
+          a: "Red box",
+          b: "Blue box",
+          c: "No box",
+          d: "Green box",
+        },
+        correct: "b",
+      },
+      {
+        id: 31,
+        question:
+          'Resolve the specificity conflict in this CSS.\n```css\n#id { color: red; }\n.class { color: blue; }\ndiv { color: green; }\n``` For <div id="id" class="class">Text</div>',
+        options: {
+          a: "Red",
+          b: "Blue",
+          c: "Green",
+          d: "Black",
+        },
+        correct: "a",
+      },
+      {
+        id: 32,
+        question:
+          'What is the output of this HTML code?\n```html\n<p>Before <span style="display: none;">Hidden</span> After</p>\n```',
+        options: {
+          a: "Before Hidden After",
+          b: "Before After",
+          c: "Hidden",
+          d: "Error",
+        },
+        correct: "b",
+      },
+      {
+        id: 33,
+        question:
+          "What is the purpose of semantic tags like <article> in HTML?",
+        options: {
+          a: "Styling only",
+          b: "Improve accessibility and SEO",
+          c: "Scripting",
+          d: "Form validation",
+        },
+        correct: "b",
+      },
+      {
+        id: 34,
+        question: "In CSS, what determines selector precedence?",
+        options: {
+          a: "Order in file",
+          b: "Specificity rules (ID > class > element)",
+          c: "Alphabetical",
+          d: "Random",
+        },
+        correct: "b",
+      },
+      {
+        id: 35,
+        question:
+          'In this C++ code, what is the order of constructor calls?\n```cpp\nclass Base { public: Base() { cout << "Base"; } };\nclass Derived : public Base { public: Derived() { cout << "Derived"; } };\nDerived d;\n```',
+        options: {
+          a: "DerivedBase",
+          b: "BaseDerived",
+          c: "Derived",
+          d: "Base",
+        },
+        correct: "b",
+      },
+      {
+        id: 36,
+        question:
+          'Trace the virtual function call in C++.\n```cpp\nclass A { public: virtual void f() { cout << "A"; } };\nclass B : public A { public: void f() { cout << "B"; } };\nA* p = new B();\np->f();\n```',
+        options: {
+          a: "A",
+          b: "B",
+          c: "AB",
+          d: "Compilation error",
+        },
+        correct: "b",
+      },
+      {
+        id: 37,
+        question:
+          'What happens in this method overriding code?\n```cpp\nclass Parent { public: void show() { cout << "Parent"; } };\nclass Child : public Parent { public: void show() { cout << "Child"; } };\nParent* ptr = new Child();\nptr->show();\n```',
+        options: {
+          a: "Child",
+          b: "Parent",
+          c: "Error",
+          d: "ParentChild",
+        },
+        correct: "b",
+      },
+      {
+        id: 38,
+        question:
+          'In multiple inheritance, what is the output?\n```cpp\nclass A { public: A() { cout << "A"; } };\nclass B { public: B() { cout << "B"; } };\nclass C : public A, public B { public: C() { cout << "C"; } };\nC obj;\n```',
+        options: {
+          a: "ABC",
+          b: "CAB",
+          c: "CBA",
+          d: "ACB",
+        },
+        correct: "a",
+      },
+      {
+        id: 39,
+        question: "What is encapsulation in OOP?",
+        options: {
+          a: "Hiding internal details, exposing interface",
+          b: "Reusing code through classes",
+          c: "Multiple forms of objects",
+          d: "Hiding base class",
+        },
+        correct: "a",
+      },
+      {
+        id: 40,
+        question: "Define polymorphism in OOP.",
+        options: {
+          a: "Data hiding",
+          b: "Ability to take multiple forms",
+          c: "Class relationships",
+          d: "Abstract classes",
+        },
+        correct: "b",
+      },
+      {
+        id: 41,
+        question: "What is abstraction in OOP?",
+        options: {
+          a: "Showing only essential features",
+          b: "Inheriting properties",
+          c: "Overloading methods",
+          d: "Multiple inheritance",
+        },
+        correct: "a",
+      },
+      {
+        id: 42,
+        question: "In OOP, what is a 'has-a' relationship?",
+        options: {
+          a: "Inheritance",
+          b: "Composition",
+          c: "Polymorphism",
+          d: "Encapsulation",
+        },
+        correct: "b",
+      },
+      {
+        id: 43,
+        question: "What is the time complexity of Quick Sort in average case?",
+        options: {
+          a: "O(n^2)",
+          b: "O(n log n)",
+          c: "O(n)",
+          d: "O(log n)",
+        },
+        correct: "b",
+      },
+      {
+        id: 44,
+        question:
+          "Which sorting algorithm is stable: Bubble Sort or Selection Sort?",
+        options: {
+          a: "Both stable",
+          b: "Bubble stable, Selection not",
+          c: "Selection stable, Bubble not",
+          d: "Both not stable",
+        },
+        correct: "b",
+      },
+      {
+        id: 45,
+        question:
+          "For searching in a sorted array, which is better: Binary or Linear Search?",
+        options: {
+          a: "Linear, O(n)",
+          b: "Binary, O(log n)",
+          c: "Same",
+          d: "Depends on size",
+        },
+        correct: "b",
+      },
+      {
+        id: 46,
+        question: "Identify the algorithm: Divide array, sort halves, merge.",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Insertion Sort",
+          d: "Bubble Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 47,
+        question: "What is the space complexity of DFS?",
+        options: {
+          a: "O(1)",
+          b: "O(n)",
+          c: "O(log n)",
+          d: "O(n^2)",
+        },
+        correct: "b",
+      },
+      {
+        id: 48,
+        question:
+          "Which algorithm for shortest path in weighted graph: BFS or Dijkstra?",
+        options: {
+          a: "BFS for weighted",
+          b: "Dijkstra for weighted",
+          c: "Both same",
+          d: "DFS",
+        },
+        correct: "b",
+      },
+      {
+        id: 49,
+        question: "Is Insertion Sort adaptive?",
+        options: {
+          a: "No",
+          b: "Yes, better for nearly sorted",
+          c: "Only for small n",
+          d: "Worse for sorted",
+        },
+        correct: "b",
+      },
+      {
+        id: 50,
+        question:
+          "For minimum spanning tree, compare Prim's and Kruskal's: which handles disconnected graphs better?",
+        options: {
+          a: "Prim's, starts from vertex",
+          b: "Kruskal's, can handle disconnected",
+          c: "Both same",
+          d: "Neither",
+        },
+        correct: "b",
+      },
+    ],
+  },
 };
