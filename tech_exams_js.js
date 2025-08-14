@@ -3022,9 +3022,9 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
           a: "Quick Sort",
           b: "Merge Sort",
           c: "Insertion Sort",
-          d: "Selection Sort",
+          d: "Both a & b",
         },
-        correct: "a",
+        correct: "d",
       },
       {
         id: 28,
@@ -3268,6 +3268,601 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
           d: "Search is frequent",
         },
         correct: "a",
+      },
+    ],
+  },
+
+  exam6: {
+    title:
+      "Technical Mock Exam - Algorithms (Intermediate to Advanced & Tricky)",
+    questions: [
+      {
+        id: 1,
+        question:
+          "Which sorting algorithm uses the 'divide-and-conquer' paradigm and achieves O(n log n) time complexity in all cases?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Selection Sort",
+          d: "Insertion Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 2,
+        question:
+          "In Quick Sort, which case results in the worst time complexity of O(n²)?",
+        options: {
+          a: "Array is already sorted and pivot is always chosen as the first element",
+          b: "Array is random and pivot is median",
+          c: "Array contains all unique elements",
+          d: "Pivot is chosen randomly",
+        },
+        correct: "a",
+      },
+      {
+        id: 3,
+        question: "Which algorithm guarantees stability in sorting?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Selection Sort",
+          d: "Heap Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 4,
+        question:
+          "Which search algorithm can work efficiently only on sorted datasets?",
+        options: {
+          a: "DFS",
+          b: "Binary Search",
+          c: "Linear Search",
+          d: "BFS",
+        },
+        correct: "b",
+      },
+      {
+        id: 5,
+        question:
+          "You have a large dataset that doesn't fit entirely into memory. Which sorting algorithm is most suitable?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Insertion Sort",
+          d: "Bubble Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 6,
+        question:
+          "In BFS, the typical data structure used to track the next node to visit is:",
+        options: {
+          a: "Stack",
+          b: "Queue",
+          c: "Priority Queue",
+          d: "Hash Table",
+        },
+        correct: "b",
+      },
+      {
+        id: 7,
+        question:
+          "Which sorting algorithm makes the fewest swaps in its worst case?",
+        options: {
+          a: "Selection Sort",
+          b: "Quick Sort",
+          c: "Bubble Sort",
+          d: "Insertion Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 8,
+        question:
+          "In Dijkstra's Algorithm, what is the primary data structure used for selecting the next node with the minimum distance?",
+        options: {
+          a: "Stack",
+          b: "Queue",
+          c: "Priority Queue (Min Heap)",
+          d: "Hash Map",
+        },
+        correct: "c",
+      },
+      {
+        id: 9,
+        question:
+          "Which algorithm is most likely represented by this pseudocode: 'for i from 0 to n-1, find the minimum element in the remaining array and swap it with the current index'?",
+        options: {
+          a: "Selection Sort",
+          b: "Insertion Sort",
+          c: "Bubble Sort",
+          d: "Merge Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 10,
+        question:
+          "Which graph traversal guarantees finding the shortest path in an unweighted graph?",
+        options: {
+          a: "DFS",
+          b: "BFS",
+          c: "Prim's",
+          d: "Dijkstra's",
+        },
+        correct: "b",
+      },
+      {
+        id: 11,
+        question:
+          "If you want to sort nearly sorted data with minimal complexity, which algorithm is preferable?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Insertion Sort",
+          d: "Selection Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 12,
+        question: "Prim's Algorithm is primarily used for:",
+        options: {
+          a: "Finding shortest paths",
+          b: "Finding minimum spanning tree",
+          c: "Sorting vertices",
+          d: "Detecting cycles",
+        },
+        correct: "b",
+      },
+      {
+        id: 13,
+        question:
+          "Which search algorithm examines every element in the list until the target is found or the list ends?",
+        options: {
+          a: "Binary Search",
+          b: "Linear Search",
+          c: "DFS",
+          d: "BFS",
+        },
+        correct: "b",
+      },
+      {
+        id: 14,
+        question: "What is the worst-case time complexity of Merge Sort?",
+        options: {
+          a: "O(n²)",
+          b: "O(n log n)",
+          c: "O(log n)",
+          d: "O(n)",
+        },
+        correct: "b",
+      },
+      {
+        id: 15,
+        question:
+          "Which algorithm is inherently recursive and can also be implemented iteratively with a stack?",
+        options: {
+          a: "BFS",
+          b: "DFS",
+          c: "Binary Search",
+          d: "Prim's Algorithm",
+        },
+        correct: "b",
+      },
+      {
+        id: 16,
+        question:
+          "Which sorting algorithm is adaptive, meaning it performs better when the input is partially sorted?",
+        options: {
+          a: "Insertion Sort",
+          b: "Quick Sort",
+          c: "Merge Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 17,
+        question:
+          "You need to find the shortest path in a weighted graph with no negative weights. Which algorithm is best?",
+        options: {
+          a: "Prim's Algorithm",
+          b: "Dijkstra's Algorithm",
+          c: "BFS",
+          d: "DFS",
+        },
+        correct: "b",
+      },
+      {
+        id: 18,
+        question: "In Bubble Sort, after the k-th pass, what is guaranteed?",
+        options: {
+          a: "First k elements are sorted",
+          b: "Last k elements are sorted",
+          c: "All elements are sorted",
+          d: "Middle elements are sorted",
+        },
+        correct: "b",
+      },
+      {
+        id: 19,
+        question:
+          "Which algorithm works by repeatedly selecting the smallest remaining edge that doesn't form a cycle?",
+        options: {
+          a: "Dijkstra's Algorithm",
+          b: "Prim's Algorithm",
+          c: "Kruskal's Algorithm",
+          d: "DFS",
+        },
+        correct: "c",
+      },
+      {
+        id: 20,
+        question: "What is the space complexity of Merge Sort?",
+        options: {
+          a: "O(1)",
+          b: "O(log n)",
+          c: "O(n)",
+          d: "O(n log n)",
+        },
+        correct: "c",
+      },
+      {
+        id: 21,
+        question: "Which of these algorithms is NOT comparison-based?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Counting Sort",
+          d: "Selection Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 22,
+        question:
+          "A recursive algorithm that splits the array into smaller parts until size 1, then merges them back, is:",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Insertion Sort",
+          d: "Heap Sort",
+        },
+        correct: "b",
+      },
+      {
+        id: 23,
+        question:
+          "Which graph traversal can get stuck in deep paths without reaching closer nodes first?",
+        options: {
+          a: "BFS",
+          b: "DFS",
+          c: "Prim's",
+          d: "Dijkstra's",
+        },
+        correct: "b",
+      },
+      {
+        id: 24,
+        question: "What is the average time complexity of Binary Search?",
+        options: {
+          a: "O(n)",
+          b: "O(log n)",
+          c: "O(n log n)",
+          d: "O(1)",
+        },
+        correct: "b",
+      },
+      {
+        id: 25,
+        question:
+          "If you want to explore all vertices at distance 1 before distance 2 in a graph, you should use:",
+        options: {
+          a: "DFS",
+          b: "BFS",
+          c: "Dijkstra's",
+          d: "Prim's",
+        },
+        correct: "b",
+      },
+      {
+        id: 26,
+        question:
+          "Which sorting algorithm is most affected by choosing a poor pivot?",
+        options: {
+          a: "Quick Sort",
+          b: "Merge Sort",
+          c: "Insertion Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 27,
+        question:
+          "In the worst case, how many comparisons does Linear Search make?",
+        options: {
+          a: "n",
+          b: "log n",
+          c: "n/2",
+          d: "n log n",
+        },
+        correct: "a",
+      },
+      {
+        id: 28,
+        question:
+          "In Dijkstra's algorithm, if you use a simple array instead of a priority queue, what is the complexity?",
+        options: {
+          a: "O(V²)",
+          b: "O(E log V)",
+          c: "O(V log V)",
+          d: "O(E + V)",
+        },
+        correct: "a",
+      },
+      {
+        id: 29,
+        question:
+          "Which algorithm is likely described: 'Select an arbitrary node, grow the MST by adding the smallest edge connecting the tree to a new vertex'?",
+        options: {
+          a: "Prim's Algorithm",
+          b: "Dijkstra's Algorithm",
+          c: "Kruskal's Algorithm",
+          d: "DFS",
+        },
+        correct: "a",
+      },
+      {
+        id: 30,
+        question: "In which case does Quick Sort have O(n log n) performance?",
+        options: {
+          a: "When pivot is always smallest element",
+          b: "When pivot is median or near median",
+          c: "When array is already sorted and pivot is first element",
+          d: "When pivot is always largest element",
+        },
+        correct: "b",
+      },
+      {
+        id: 31,
+        question:
+          "Which sorting algorithm has the same worst-case and average-case complexity?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Bubble Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 32,
+        question: "Which algorithm works well when the graph is dense?",
+        options: {
+          a: "Prim's Algorithm with adjacency matrix",
+          b: "Prim's Algorithm with adjacency list",
+          c: "Dijkstra's Algorithm",
+          d: "DFS",
+        },
+        correct: "a",
+      },
+      {
+        id: 33,
+        question:
+          "Which sorting algorithm compares adjacent elements and swaps them if out of order, repeatedly until sorted?",
+        options: {
+          a: "Bubble Sort",
+          b: "Insertion Sort",
+          c: "Selection Sort",
+          d: "Merge Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 34,
+        question:
+          "In DFS, if we use recursion, what is the implicit data structure managing function calls?",
+        options: {
+          a: "Stack",
+          b: "Queue",
+          c: "Priority Queue",
+          d: "Deque",
+        },
+        correct: "a",
+      },
+      {
+        id: 35,
+        question:
+          "Which algorithm is a greedy method for finding shortest paths?",
+        options: {
+          a: "DFS",
+          b: "BFS",
+          c: "Dijkstra's Algorithm",
+          d: "Merge Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 36,
+        question:
+          "Which sorting algorithm has the best performance on small arrays?",
+        options: {
+          a: "Insertion Sort",
+          b: "Quick Sort",
+          c: "Merge Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 37,
+        question:
+          "If you want to find whether there is a path between two nodes in a graph quickly without considering weights, you can use:",
+        options: {
+          a: "BFS or DFS",
+          b: "Dijkstra's Algorithm",
+          c: "Prim's Algorithm",
+          d: "Merge Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 38,
+        question:
+          "Which algorithm's complexity is O(V²) without optimization and O(E log V) with a min-heap?",
+        options: {
+          a: "Prim's Algorithm",
+          b: "DFS",
+          c: "Merge Sort",
+          d: "Quick Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 39,
+        question:
+          "Which algorithm works best when the graph is sparse and edges have different weights?",
+        options: {
+          a: "Prim's Algorithm",
+          b: "Dijkstra's Algorithm with adjacency list and heap",
+          c: "BFS",
+          d: "DFS",
+        },
+        correct: "b",
+      },
+      {
+        id: 40,
+        question: "Which sorting algorithm is NOT stable?",
+        options: {
+          a: "Bubble Sort",
+          b: "Insertion Sort",
+          c: "Selection Sort",
+          d: "Merge Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 41,
+        question:
+          "In BFS, if the graph is implemented using adjacency matrix, what is the time complexity?",
+        options: {
+          a: "O(V²)",
+          b: "O(E + V)",
+          c: "O(V + E log V)",
+          d: "O(E²)",
+        },
+        correct: "a",
+      },
+      {
+        id: 42,
+        question:
+          "Which algorithm's performance is heavily dependent on the initial order of elements?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Insertion Sort",
+          d: "Counting Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 43,
+        question:
+          "Which algorithm finds a path in a graph by exploring as far as possible before backtracking?",
+        options: {
+          a: "DFS",
+          b: "BFS",
+          c: "Prim's Algorithm",
+          d: "Dijkstra's Algorithm",
+        },
+        correct: "a",
+      },
+      {
+        id: 44,
+        question: "What is the space complexity of BFS?",
+        options: {
+          a: "O(V)",
+          b: "O(E)",
+          c: "O(1)",
+          d: "O(V + E)",
+        },
+        correct: "a",
+      },
+      {
+        id: 45,
+        question:
+          "In Binary Search, if the target is greater than the middle element, which part of the array is searched next?",
+        options: {
+          a: "Left half",
+          b: "Right half",
+          c: "Entire array",
+          d: "Skip to last element",
+        },
+        correct: "b",
+      },
+      {
+        id: 46,
+        question: "Which sorting algorithm is easiest to parallelize?",
+        options: {
+          a: "Merge Sort",
+          b: "Quick Sort",
+          c: "Bubble Sort",
+          d: "Selection Sort",
+        },
+        correct: "a",
+      },
+      {
+        id: 47,
+        question:
+          "Which algorithm uses a greedy approach to build a minimum spanning tree starting from an arbitrary vertex?",
+        options: {
+          a: "Prim's Algorithm",
+          b: "Kruskal's Algorithm",
+          c: "Dijkstra's Algorithm",
+          d: "DFS",
+        },
+        correct: "a",
+      },
+      {
+        id: 48,
+        question:
+          "Which algorithm is typically implemented recursively but can be optimized to avoid stack overflows?",
+        options: {
+          a: "DFS",
+          b: "BFS",
+          c: "Merge Sort",
+          d: "Quick Sort",
+        },
+        correct: "d",
+      },
+      {
+        id: 49,
+        question:
+          "Which sorting algorithm works by inserting each new element into the correct position in a growing sorted list?",
+        options: {
+          a: "Bubble Sort",
+          b: "Selection Sort",
+          c: "Insertion Sort",
+          d: "Merge Sort",
+        },
+        correct: "c",
+      },
+      {
+        id: 50,
+        question:
+          "In an unweighted graph, the shortest path between two nodes can be found by:",
+        options: {
+          a: "DFS",
+          b: "BFS",
+          c: "Dijkstra's Algorithm",
+          d: "Prim's Algorithm",
+        },
+        correct: "b",
       },
     ],
   },

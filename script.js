@@ -7,27 +7,27 @@
 
 // ----------------------------- DOM Elements ------------------------------
 const views = {
-  home: document.getElementById('homeView'),
-  exam: document.getElementById('examView'),
-  result: document.getElementById('resultView'),
+  home: document.getElementById("homeView"),
+  exam: document.getElementById("examView"),
+  result: document.getElementById("resultView"),
 };
 
 const elements = {
-  examList: document.getElementById('examList'),
-  loadError: document.getElementById('loadError'),
-  btnHome: document.getElementById('btnHome'),
-  btnBackHome: document.getElementById('btnBackHome'),
-  btnRetake: document.getElementById('btnRetake'),
-  btnSubmit: document.getElementById('btnSubmit'),
-  timer: document.getElementById('timer'),
-  progressBar: document.getElementById('progressBar'),
-  questionDots: document.getElementById('questionDots'),
-  questionContainer: document.getElementById('questionContainer'),
-  btnNext: document.getElementById('btnNext'),
-  btnPrev: document.getElementById('btnPrev'),
-  resultSummary: document.getElementById('resultSummary'),
-  reviewContainer: document.getElementById('reviewContainer'),
-  examTitle: document.getElementById('examTitle'),
+  examList: document.getElementById("examList"),
+  loadError: document.getElementById("loadError"),
+  btnHome: document.getElementById("btnHome"),
+  btnBackHome: document.getElementById("btnBackHome"),
+  btnRetake: document.getElementById("btnRetake"),
+  btnSubmit: document.getElementById("btnSubmit"),
+  timer: document.getElementById("timer"),
+  progressBar: document.getElementById("progressBar"),
+  questionDots: document.getElementById("questionDots"),
+  questionContainer: document.getElementById("questionContainer"),
+  btnNext: document.getElementById("btnNext"),
+  btnPrev: document.getElementById("btnPrev"),
+  resultSummary: document.getElementById("resultSummary"),
+  reviewContainer: document.getElementById("reviewContainer"),
+  examTitle: document.getElementById("examTitle"),
 };
 
 // ------------------------------- State -----------------------------------
@@ -48,13 +48,17 @@ const state = {
 
 // ------------------------------ Utilities --------------------------------
 function setView(view) {
-  Object.values(views).forEach(v => v.classList.remove('active'));
-  view.classList.add('active');
+  Object.values(views).forEach((v) => v.classList.remove("active"));
+  view.classList.add("active");
 }
 
 function formatTime(totalSeconds) {
-  const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
-  const s = Math.floor(totalSeconds % 60).toString().padStart(2, '0');
+  const m = Math.floor(totalSeconds / 60)
+    .toString()
+    .padStart(2, "0");
+  const s = Math.floor(totalSeconds % 60)
+    .toString()
+    .padStart(2, "0");
   return `${m}:${s}`;
 }
 
@@ -65,10 +69,11 @@ function clamp(value, min, max) {
 // ------------------------------ Load Exam Data ----------------------------
 async function loadExamData() {
   // Check if technicalExams object is available from tech_exams_js.js
-  if (typeof technicalExams === 'undefined') {
-    elements.loadError.classList.remove('hidden');
-    elements.loadError.textContent = 'Failed to load exam data from tech_exams_js.js';
-    throw new Error('technicalExams object not found');
+  if (typeof technicalExams === "undefined") {
+    elements.loadError.classList.remove("hidden");
+    elements.loadError.textContent =
+      "Failed to load exam data from tech_exams_js.js";
+    throw new Error("technicalExams object not found");
   }
 }
 
@@ -80,22 +85,22 @@ function parseExams() {
   Object.keys(technicalExams).forEach((examKey, index) => {
     const examData = technicalExams[examKey];
     const title = examData.title;
-    
+
     /** @type {ParsedQuestion[]} */
     const questions = [];
 
     examData.questions.forEach((q, qIndex) => {
       const options = [
-        { key: 'a', text: q.options.a },
-        { key: 'b', text: q.options.b },
-        { key: 'c', text: q.options.c },
-        { key: 'd', text: q.options.d }
+        { key: "a", text: q.options.a },
+        { key: "b", text: q.options.b },
+        { key: "c", text: q.options.c },
+        { key: "d", text: q.options.d },
       ];
 
       questions.push({
         text: q.question,
         options: options,
-        answerKey: q.correct
+        answerKey: q.correct,
       });
     });
 
@@ -109,10 +114,10 @@ function parseExams() {
 
 // ------------------------------ Render Home ------------------------------
 function renderHome() {
-  elements.examList.innerHTML = '';
+  elements.examList.innerHTML = "";
   state.exams.forEach((exam, idx) => {
-    const card = document.createElement('article');
-    card.className = 'exam-card';
+    const card = document.createElement("article");
+    card.className = "exam-card";
     card.innerHTML = `
       <h3>${exam.title}</h3>
       <p>35 questions • 30 minutes</p>
@@ -121,9 +126,9 @@ function renderHome() {
         <button class="btn btn-ghost">Preview</button>
       </div>
     `;
-    const [btnStart, btnPreview] = card.querySelectorAll('button');
-    btnStart.addEventListener('click', () => startExam(idx));
-    btnPreview.addEventListener('click', () => previewExam(idx));
+    const [btnStart, btnPreview] = card.querySelectorAll("button");
+    btnStart.addEventListener("click", () => startExam(idx));
+    btnPreview.addEventListener("click", () => previewExam(idx));
     elements.examList.appendChild(card);
   });
 }
@@ -139,7 +144,9 @@ function startExam(index, opts = { preview: false }) {
   state.answers = {};
   state.submitted = false;
   state.remainingSeconds = 30 * 60;
-  elements.examTitle.textContent = `${state.exams[index].title}${opts.preview ? ' (Preview)' : ''}`;
+  elements.examTitle.textContent = `${state.exams[index].title}${
+    opts.preview ? " (Preview)" : ""
+  }`;
 
   // Build navigator dots
   renderNavigator();
@@ -162,28 +169,28 @@ function startExam(index, opts = { preview: false }) {
       } else {
         elements.timer.textContent = formatTime(state.remainingSeconds);
         if (state.remainingSeconds <= 60) {
-          elements.timer.style.background = '#2a1620';
-          elements.timer.style.borderColor = '#5b253a';
-          elements.timer.style.color = '#ffd7e0';
+          elements.timer.style.background = "#2a1620";
+          elements.timer.style.borderColor = "#5b253a";
+          elements.timer.style.color = "#ffd7e0";
         }
       }
     }, 1000);
   } else {
-    elements.timer.textContent = 'Preview';
+    elements.timer.textContent = "Preview";
   }
 }
 
 function renderNavigator() {
   const exam = state.exams[state.currentExamIndex];
-  elements.questionDots.innerHTML = '';
+  elements.questionDots.innerHTML = "";
   exam.questions.forEach((_, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'dot';
-    btn.type = 'button';
+    const btn = document.createElement("button");
+    btn.className = "dot";
+    btn.type = "button";
     btn.textContent = String(i + 1);
-    if (i === state.currentQuestionIndex) btn.classList.add('active');
-    if (state.answers[i] != null) btn.classList.add('answered');
-    btn.addEventListener('click', () => {
+    if (i === state.currentQuestionIndex) btn.classList.add("active");
+    if (state.answers[i] != null) btn.classList.add("answered");
+    btn.addEventListener("click", () => {
       state.currentQuestionIndex = i;
       renderQuestion();
       renderNavigator();
@@ -202,8 +209,8 @@ function renderQuestion() {
     .replace(/```([\s\S]*?)```/g, (m, code) => {
       return `<pre><code>${escapeHtml(code)}</code></pre>`;
     })
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\n/g, '<br/>');
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\n/g, "<br/>");
 
   const saved = state.answers[state.currentQuestionIndex];
 
@@ -215,22 +222,26 @@ function renderQuestion() {
         .map(
           (opt) => `
         <label class="choice" data-key="${opt.key}">
-          <input type="radio" name="q${state.currentQuestionIndex}" value="${opt.key}" ${saved === opt.key ? 'checked' : ''} />
+          <input type="radio" name="q${state.currentQuestionIndex}" value="${
+            opt.key
+          }" ${saved === opt.key ? "checked" : ""} />
           <span><strong>${opt.key})</strong> ${escapeHtml(opt.text)}</span>
         </label>`
         )
-        .join('')}
+        .join("")}
     </div>
   `;
 
-  elements.questionContainer.querySelectorAll('input[type="radio"]').forEach((input) => {
-    input.addEventListener('change', (e) => {
-      const value = e.target.value;
-      state.answers[state.currentQuestionIndex] = value;
-      renderNavigator();
-      updateProgress();
+  elements.questionContainer
+    .querySelectorAll('input[type="radio"]')
+    .forEach((input) => {
+      input.addEventListener("change", (e) => {
+        const value = e.target.value;
+        state.answers[state.currentQuestionIndex] = value;
+        renderNavigator();
+        updateProgress();
+      });
     });
-  });
 }
 
 function updateProgress() {
@@ -255,31 +266,46 @@ function submitExam() {
 
   // Show results
   const total = exam.questions.length;
-  elements.resultSummary.innerHTML = `Score: <strong>${correct}/${total}</strong> • ${(correct / total * 100).toFixed(0)}%`;
+  elements.resultSummary.innerHTML = `Score: <strong>${correct}/${total}</strong> • ${(
+    (correct / total) *
+    100
+  ).toFixed(0)}%`;
 
   // Build review UI
-  elements.reviewContainer.innerHTML = '';
+  elements.reviewContainer.innerHTML = "";
   results.forEach((r, idx) => {
-    const item = document.createElement('div');
-    item.className = 'review-item';
+    const item = document.createElement("div");
+    item.className = "review-item";
     const stemHtml = r.question.text
-      .replace(/```([\s\S]*?)```/g, (m, code) => `<pre><code>${escapeHtml(code)}</code></pre>`)
-      .replace(/`([^`]+)`/g, '<code>$1</code>')
-      .replace(/\n/g, '<br/>');
+      .replace(
+        /```([\s\S]*?)```/g,
+        (m, code) => `<pre><code>${escapeHtml(code)}</code></pre>`
+      )
+      .replace(/`([^`]+)`/g, "<code>$1</code>")
+      .replace(/\n/g, "<br/>");
 
     const optionsHtml = r.question.options
       .map((opt) => {
-        const cls = opt.key === r.correctKey ? 'correct' : (opt.key === r.selected ? 'incorrect' : '');
-        return `<div class="choice ${cls}"><span><strong>${opt.key})</strong> ${escapeHtml(opt.text)}</span></div>`;
+        const cls =
+          opt.key === r.correctKey
+            ? "correct"
+            : opt.key === r.selected
+            ? "incorrect"
+            : "";
+        return `<div class="choice ${cls}"><span><strong>${
+          opt.key
+        })</strong> ${escapeHtml(opt.text)}</span></div>`;
       })
-      .join('');
+      .join("");
 
     item.innerHTML = `
       <h4>Q${idx + 1}</h4>
       <div class="stem">${stemHtml}</div>
       <div class="choices" style="margin-top:.5rem">${optionsHtml}</div>
       <div style="margin-top:.5rem; display:flex; gap:.5rem">
-        <span class="answer-pill ${r.isCorrect ? 'correct' : 'wrong'}">Your answer: ${r.selected ?? '—'}</span>
+        <span class="answer-pill ${
+          r.isCorrect ? "correct" : "wrong"
+        }">Your answer: ${r.selected ?? "—"}</span>
         <span class="answer-pill correct">Correct: ${r.correctKey}</span>
       </div>
     `;
@@ -290,26 +316,34 @@ function submitExam() {
 }
 
 // ------------------------------ Events -----------------------------------
-elements.btnHome.addEventListener('click', () => setView(views.home));
-elements.btnBackHome.addEventListener('click', () => {
+elements.btnHome.addEventListener("click", () => setView(views.home));
+elements.btnBackHome.addEventListener("click", () => {
   setView(views.home);
 });
-elements.btnRetake.addEventListener('click', () => {
+elements.btnRetake.addEventListener("click", () => {
   if (state.currentExamIndex >= 0) startExam(state.currentExamIndex);
 });
-elements.btnSubmit.addEventListener('click', () => {
+elements.btnSubmit.addEventListener("click", () => {
   if (!state.submitted) submitExam();
 });
 
-elements.btnNext.addEventListener('click', () => {
+elements.btnNext.addEventListener("click", () => {
   const exam = state.exams[state.currentExamIndex];
-  state.currentQuestionIndex = clamp(state.currentQuestionIndex + 1, 0, exam.questions.length - 1);
+  state.currentQuestionIndex = clamp(
+    state.currentQuestionIndex + 1,
+    0,
+    exam.questions.length - 1
+  );
   renderQuestion();
   renderNavigator();
 });
-elements.btnPrev.addEventListener('click', () => {
+elements.btnPrev.addEventListener("click", () => {
   const exam = state.exams[state.currentExamIndex];
-  state.currentQuestionIndex = clamp(state.currentQuestionIndex - 1, 0, exam.questions.length - 1);
+  state.currentQuestionIndex = clamp(
+    state.currentQuestionIndex - 1,
+    0,
+    exam.questions.length - 1
+  );
   renderQuestion();
   renderNavigator();
 });
@@ -317,9 +351,9 @@ elements.btnPrev.addEventListener('click', () => {
 // ------------------------------ Helpers ----------------------------------
 function escapeHtml(text) {
   return String(text)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
 }
 
 // ------------------------------ Init -------------------------------------
@@ -327,10 +361,25 @@ function escapeHtml(text) {
   await loadExamData();
   state.exams = parseExams();
   if (!state.exams.length) {
-    elements.loadError.classList.remove('hidden');
-    elements.loadError.textContent = 'No exams loaded. Check the tech_exams_js.js file.';
+    elements.loadError.classList.remove("hidden");
+    elements.loadError.textContent =
+      "No exams loaded. Check the tech_exams_js.js file.";
   }
   renderHome();
 })();
 
+function showExam(exam) {
+  // exam.questions is your questions array
+  const questionCount = exam.questions.length;
+  const timerMinutes = exam.timer || 30; // Use exam.timer if available, else default to 30
 
+  document.getElementById(
+    "examMeta"
+  ).textContent = `${questionCount} questions • ${timerMinutes} minutes`;
+
+  // ...existing code to render exam...
+}
+
+// Call showExam when an exam is selected
+// Example:
+// showExam(selectedExam);
