@@ -118,9 +118,12 @@ function renderHome() {
   state.exams.forEach((exam, idx) => {
     const card = document.createElement("article");
     card.className = "exam-card";
+    const questionCount = exam.questions.length;
+    const timerMinutes = 30; // If you have a timer property, use exam.timer || 30
+
     card.innerHTML = `
       <h3>${exam.title}</h3>
-      <p>35 questions • 30 minutes</p>
+      <p>${questionCount} questions • ${timerMinutes} minutes</p>
       <div style="display:flex; gap:.5rem; margin-top:.6rem">
         <button class="btn btn-primary">Start</button>
         <button class="btn btn-ghost">Preview</button>
@@ -371,7 +374,7 @@ function escapeHtml(text) {
 function showExam(exam) {
   // exam.questions is your questions array
   const questionCount = exam.questions.length;
-  const timerMinutes = exam.timer || 30; // Use exam.timer if available, else default to 30
+  const timerMinutes = 30; // Use exam.timer if available, else default to 30
 
   document.getElementById(
     "examMeta"
