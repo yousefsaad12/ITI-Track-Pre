@@ -3272,7 +3272,65 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
     ],
   },
 
+
   exam6: {
+  title: "Algorithms MCQ Exam - Sorting, Searching, and Graph Algorithms",
+  questions: [
+    { id: 1, question: "What is the average time complexity of Quick Sort?", options: { a: "O(n log n)", b: "O(n²)", c: "O(log n)", d: "O(n)" }, answer: "a" },
+    { id: 2, question: "Which sorting algorithm is stable by default?", options: { a: "Quick Sort", b: "Merge Sort", c: "Selection Sort", d: "Heap Sort" }, answer: "b" },
+    { id: 3, question: "What is the worst-case time complexity of Merge Sort?", options: { a: "O(n²)", b: "O(n log n)", c: "O(n)", d: "O(log n)" }, answer: "b" },
+    { id: 4, question: "Which algorithm repeatedly selects the smallest element and moves it to the front?", options: { a: "Bubble Sort", b: "Selection Sort", c: "Insertion Sort", d: "Quick Sort" }, answer: "b" },
+    { id: 5, question: "In Bubble Sort, how many passes are needed in the worst case for n elements?", options: { a: "n", b: "n-1", c: "n log n", d: "n²" }, answer: "b" },
+    { id: 6, question: "Which sorting algorithm works best for nearly sorted data?", options: { a: "Quick Sort", b: "Insertion Sort", c: "Merge Sort", d: "Selection Sort" }, answer: "b" },
+    { id: 7, question: "What is the space complexity of Merge Sort?", options: { a: "O(1)", b: "O(log n)", c: "O(n)", d: "O(n²)" }, answer: "c" },
+    { id: 8, question: "Which search algorithm requires the data to be sorted?", options: { a: "Linear Search", b: "Binary Search", c: "DFS", d: "BFS" }, answer: "b" },
+    { id: 9, question: "What is the time complexity of Binary Search in the worst case?", options: { a: "O(1)", b: "O(n)", c: "O(log n)", d: "O(n log n)" }, answer: "c" },
+    { id: 10, question: "Which search algorithm checks each element until it finds the target?", options: { a: "Linear Search", b: "Binary Search", c: "Jump Search", d: "Interpolation Search" }, answer: "a" },
+    { id: 11, question: "DFS uses which data structure internally?", options: { a: "Queue", b: "Stack", c: "Heap", d: "Priority Queue" }, answer: "b" },
+    { id: 12, question: "BFS uses which data structure internally?", options: { a: "Queue", b: "Stack", c: "Heap", d: "Deque" }, answer: "a" },
+    { id: 13, question: "Which algorithm is best for finding the shortest path in a weighted graph with non-negative weights?", options: { a: "Prim's", b: "Dijkstra's", c: "Kruskal's", d: "DFS" }, answer: "b" },
+    { id: 14, question: "Which algorithm finds a Minimum Spanning Tree?", options: { a: "Prim's", b: "Dijkstra's", c: "BFS", d: "DFS" }, answer: "a" },
+    { id: 15, question: "What is the worst-case time complexity of Quick Sort?", options: { a: "O(n log n)", b: "O(n²)", c: "O(n)", d: "O(log n)" }, answer: "b" },
+    { id: 16, question: "Which algorithm divides the array into halves recursively?", options: { a: "Merge Sort", b: "Selection Sort", c: "Insertion Sort", d: "Bubble Sort" }, answer: "a" },
+    { id: 17, question: "Which sorting algorithm works in-place and is not stable?", options: { a: "Merge Sort", b: "Quick Sort", c: "Insertion Sort", d: "Bubble Sort" }, answer: "b" },
+    { id: 18, question: "Which algorithm’s performance degrades significantly with already sorted input?", options: { a: "Merge Sort", b: "Insertion Sort", c: "Quick Sort (naive pivot)", d: "Binary Search" }, answer: "c" },
+    { id: 19, question: "The BFS traversal of a graph is equivalent to:", options: { a: "Level-order traversal of a tree", b: "In-order traversal", c: "Post-order traversal", d: "Pre-order traversal" }, answer: "a" },
+    { id: 20, question: "Which algorithm is greedy in nature and builds MST by adding the cheapest edge at each step?", options: { a: "Dijkstra's", b: "Prim's", c: "DFS", d: "Kruskal's" }, answer: "b" },
+    { id: 21, question: "Which algorithm uses the 'divide and conquer' strategy?", options: { a: "Merge Sort", b: "Quick Sort", c: "Both A and B", d: "Selection Sort" }, answer: "c" },
+    { id: 22, question: "Which sorting method is the slowest on large datasets?", options: { a: "Bubble Sort", b: "Quick Sort", c: "Merge Sort", d: "Heap Sort" }, answer: "a" },
+    { id: 23, question: "What is the average time complexity of Linear Search?", options: { a: "O(1)", b: "O(n)", c: "O(log n)", d: "O(n log n)" }, answer: "b" },
+    { id: 24, question: "Which algorithm is best suited for dense graphs for shortest paths?", options: { a: "BFS", b: "Dijkstra's with adjacency matrix", c: "DFS", d: "Prim's" }, answer: "b" },
+    { id: 25, question: "Which traversal is used to check graph connectivity?", options: { a: "DFS", b: "BFS", c: "Both A and B", d: "Neither" }, answer: "c" },
+    { id: 26, question: "Which sorting algorithm swaps adjacent elements if they are out of order?", options: { a: "Selection Sort", b: "Bubble Sort", c: "Insertion Sort", d: "Quick Sort" }, answer: "b" },
+    { id: 27, question: "What is the best-case time complexity of Insertion Sort?", options: { a: "O(n²)", b: "O(n log n)", c: "O(n)", d: "O(1)" }, answer: "c" },
+    { id: 28, question: "Which algorithm is optimal for small datasets?", options: { a: "Bubble Sort", b: "Insertion Sort", c: "Merge Sort", d: "Quick Sort" }, answer: "b" },
+    { id: 29, question: "Prim's Algorithm uses which data structure for efficiency?", options: { a: "Stack", b: "Priority Queue", c: "Queue", d: "Linked List" }, answer: "b" },
+    { id: 30, question: "Dijkstra’s Algorithm fails with graphs containing:", options: { a: "Negative weight edges", b: "Positive weight edges", c: "Zero weight edges", d: "Cycles" }, answer: "a" },
+    { id: 31, question: "Which search algorithm can be implemented recursively or iteratively?", options: { a: "DFS", b: "BFS", c: "Both A and B", d: "Neither" }, answer: "c" },
+    { id: 32, question: "Merge Sort’s recursion depth is:", options: { a: "O(1)", b: "O(log n)", c: "O(n)", d: "O(n log n)" }, answer: "b" },
+    { id: 33, question: "Quick Sort’s average recursion depth is:", options: { a: "O(n)", b: "O(log n)", c: "O(1)", d: "O(n log n)" }, answer: "b" },
+    { id: 34, question: "Which algorithm is NOT comparison-based?", options: { a: "Merge Sort", b: "Counting Sort", c: "Quick Sort", d: "Bubble Sort" }, answer: "b" },
+    { id: 35, question: "In BFS, the maximum size of the queue can be:", options: { a: "O(1)", b: "O(V)", c: "O(E)", d: "O(V+E)" }, answer: "b" },
+    { id: 36, question: "In DFS, the maximum size of the stack can be:", options: { a: "O(1)", b: "O(V)", c: "O(E)", d: "O(log V)" }, answer: "b" },
+    { id: 37, question: "Which sorting algorithm has the same complexity for best, average, and worst cases?", options: { a: "Merge Sort", b: "Quick Sort", c: "Insertion Sort", d: "Selection Sort" }, answer: "d" },
+    { id: 38, question: "Which search algorithm works well with linked lists?", options: { a: "Binary Search", b: "Linear Search", c: "DFS", d: "BFS" }, answer: "b" },
+    { id: 39, question: "Which algorithm stops as soon as the target is found?", options: { a: "DFS", b: "BFS", c: "Both A and B", d: "Neither" }, answer: "c" },
+    { id: 40, question: "Which algorithm partitions data into two sets based on a pivot?", options: { a: "Merge Sort", b: "Quick Sort", c: "Selection Sort", d: "Insertion Sort" }, answer: "b" },
+    { id: 41, question: "Which sorting algorithm can be adaptive?", options: { a: "Insertion Sort", b: "Bubble Sort", c: "Both A and B", d: "Selection Sort" }, answer: "c" },
+    { id: 42, question: "Which algorithm is typically implemented using recursion for simplicity?", options: { a: "DFS", b: "BFS", c: "Selection Sort", d: "Bubble Sort" }, answer: "a" },
+    { id: 43, question: "Which is the main advantage of BFS over DFS in pathfinding?", options: { a: "Uses less memory", b: "Finds the shortest path", c: "Faster always", d: "Avoids cycles" }, answer: "b" },
+    { id: 44, question: "Which algorithm can be unstable if implemented poorly?", options: { a: "Merge Sort", b: "Quick Sort", c: "Counting Sort", d: "Bubble Sort" }, answer: "b" },
+    { id: 45, question: "Which sorting algorithm is NOT in-place?", options: { a: "Merge Sort", b: "Quick Sort", c: "Insertion Sort", d: "Selection Sort" }, answer: "a" },
+    { id: 46, question: "What is the worst-case space complexity of DFS using recursion?", options: { a: "O(V)", b: "O(E)", c: "O(1)", d: "O(log V)" }, answer: "a" },
+    { id: 47, question: "Which sorting algorithm is most likely to be used in library sort functions?", options: { a: "Merge Sort", b: "Quick Sort", c: "Hybrid like Timsort", d: "Bubble Sort" }, answer: "c" },
+    { id: 48, question: "Which algorithm is based on selecting a pivot and partitioning?", options: { a: "Merge Sort", b: "Quick Sort", c: "Selection Sort", d: "Heap Sort" }, answer: "b" },
+    { id: 49, question: "Which algorithm is guaranteed to work on disconnected graphs?", options: { a: "Single BFS/DFS", b: "Multiple BFS/DFS from each component", c: "Dijkstra's", d: "Prim's" }, answer: "b" },
+    { id: 50, question: "Which algorithm is the simplest to implement but least efficient for large datasets?", options: { a: "Merge Sort", b: "Quick Sort", c: "Bubble Sort", d: "Heap Sort" }, answer: "c" }
+  ]
+},
+
+
+  exam7: {
     title:
       "Technical Mock Exam - Algorithms (Intermediate to Advanced & Tricky)",
     questions: [
@@ -3867,7 +3925,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
     ],
   },
 
-  exam7: {
+  exam8: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
     questions: [
@@ -4686,7 +4744,7 @@ int main() {
     ],
   },
 
-  exam8: {
+  exam9: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
     questions: [
@@ -5161,7 +5219,7 @@ int main() {
     ],
   },
 
-  exam9: {
+  exam10: {
     title: "C++ Object-Oriented Programming - Comprehensive Exam",
     questions: [
       {
@@ -5753,7 +5811,7 @@ int main() {
     ],
   },
 
-  exam10: {
+  exam11: {
     title: "Object-Oriented Programming (OOP) - Comprehensive Exam",
     questions: [
       {
@@ -6374,7 +6432,7 @@ int main() {
       },
     ],
   },
-  exam11: {
+  exam12: {
     title: "Object-Oriented Programming (OOP) - Extended Comprehensive Exam",
     questions: [
       {
@@ -6964,7 +7022,7 @@ int main() {
     ],
   },
 
-  exam12: {
+  exam13: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
     questions: [
@@ -7551,4 +7609,578 @@ int main() {
       },
     ],
   },
+  exam14: {
+  title: "Technical Mock Exam - Algorithms (Searching, Sorting, Graph & Tree Algorithms)",
+  questions: [
+    {
+      id: 1,
+      question: "In a binary search implementation, what is the worst-case time complexity for searching an element in a balanced BST with n nodes?",
+      options: {
+        a: "O(1)",
+        b: "O(log n)",
+        c: "O(n)",
+        d: "O(n log n)"
+      },
+      correct: "b"
+    },
+    {
+      id: 2,
+      question: "When implementing merge sort, what additional space complexity is required for the merging process?",
+      options: {
+        a: "O(1)",
+        b: "O(log n)",
+        c: "O(n)",
+        d: "O(n²)"
+      },
+      correct: "c"
+    },
+    {
+      id: 3,
+      question: "Which sorting algorithm would be most efficient for a nearly sorted array of 1 million elements where only a few elements are out of place?",
+      options: {
+        a: "Bubble Sort",
+        b: "Selection Sort",
+        c: "Insertion Sort",
+        d: "Quick Sort"
+      },
+      correct: "c"
+    },
+    {
+      id: 4,
+      question: "In Dijkstra's algorithm, why can't it handle graphs with negative weight edges?",
+      options: {
+        a: "It causes infinite loops",
+        b: "The greedy approach fails to guarantee optimality",
+        c: "Priority queues don't work with negative numbers",
+        d: "It violates the triangle inequality"
+      },
+      correct: "b"
+    },
+    {
+      id: 5,
+      question: `Consider this recursive Fibonacci implementation:
+      int fib(int n) {
+        if (n <= 1) return n;
+        return fib(n-1) + fib(n-2);
+      }
+      What is its time complexity?`,
+      options: {
+        a: "O(n)",
+        b: "O(n log n)",
+        c: "O(2^n)",
+        d: "O(n²)"
+      },
+      correct: "c"
+    },
+    {
+      id: 6,
+      question: "In a graph represented with an adjacency matrix, what is the time complexity to check if an edge exists between two vertices?",
+      options: {
+        a: "O(1)",
+        b: "O(log V)",
+        c: "O(V)",
+        d: "O(V²)"
+      },
+      correct: "a"
+    },
+    {
+      id: 7,
+      question: "Which searching algorithm would be most efficient for finding an element in a sorted array that has been rotated at some pivot point?",
+      options: {
+        a: "Linear Search",
+        b: "Binary Search (modified)",
+        c: "Jump Search",
+        d: "Interpolation Search"
+      },
+      correct: "b"
+    },
+    {
+      id: 8,
+      question: "What is the main advantage of using a priority queue in Prim's algorithm compared to a simple array for edge selection?",
+      options: {
+        a: "Reduces space complexity",
+        b: "Improves time complexity from O(V²) to O(E log V)",
+        c: "Makes the algorithm stable",
+        d: "Allows negative edge weights"
+      },
+      correct: "b"
+    },
+    {
+      id: 9,
+      question: `Given this bubble sort optimization:
+      void bubbleSort(int arr[], int n) {
+        bool swapped;
+        for (int i = 0; i < n-1; i++) {
+          swapped = false;
+          for (int j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+              swap(&arr[j], &arr[j+1]);
+              swapped = true;
+            }
+          }
+          if (swapped == false) break;
+        }
+      }
+      What improvement does this provide?`,
+      options: {
+        a: "Reduces best-case time to O(n)",
+        b: "Eliminates need for swaps",
+        c: "Makes it stable",
+        d: "Reduces space complexity"
+      },
+      correct: "a"
+    },
+    {
+      id: 10,
+      question: "In a BFS implementation using an adjacency list, what data structure is essential for proper traversal order?",
+      options: {
+        a: "Stack",
+        b: "Queue",
+        c: "Priority Queue",
+        d: "Heap"
+      },
+      correct: "b"
+    },
+    {
+      id: 11,
+      question: "Which algorithm would be most suitable for finding the shortest path in an unweighted graph?",
+      options: {
+        a: "Dijkstra's",
+        b: "Bellman-Ford",
+        c: "BFS",
+        d: "DFS"
+      },
+      correct: "c"
+    },
+    {
+      id: 12,
+      question: "What is the key difference between Prim's and Kruskal's algorithms for finding MST?",
+      options: {
+        a: "Prim's works on directed graphs",
+        b: "Prim's grows a single tree while Kruskal's merges multiple trees",
+        c: "Kruskal's can't handle negative weights",
+        d: "Prim's has better time complexity"
+      },
+      correct: "b"
+    },
+    {
+      id: 13,
+      question: "In quick sort, what is the worst-case scenario that leads to O(n²) time complexity?",
+      options: {
+        a: "When the array is already sorted",
+        b: "When all elements are equal",
+        c: "When the pivot is always the median",
+        d: "Both a and b"
+      },
+      correct: "d"
+    },
+    {
+      id: 14,
+      question: "Which searching algorithm is most efficient for finding an element in a uniformly distributed, sorted array?",
+      options: {
+        a: "Binary Search",
+        b: "Linear Search",
+        c: "Interpolation Search",
+        d: "Jump Search"
+      },
+      correct: "c"
+    },
+    {
+      id: 15,
+      question: "What is the space complexity of the recursive implementation of DFS on a graph with V vertices and E edges?",
+      options: {
+        a: "O(1)",
+        b: "O(V)",
+        c: "O(E)",
+        d: "O(V + E)"
+      },
+      correct: "b"
+    },
+    {
+      id: 16,
+      question: "Which sorting algorithm maintains the relative order of equal elements (is stable)?",
+      options: {
+        a: "Selection Sort",
+        b: "Quick Sort",
+        c: "Merge Sort",
+        d: "Heap Sort"
+      },
+      correct: "c"
+    },
+    {
+      id: 17,
+      question: "In a hash table with chaining, what is the worst-case time complexity for searching an element?",
+      options: {
+        a: "O(1)",
+        b: "O(log n)",
+        c: "O(n)",
+        d: "O(n log n)"
+      },
+      correct: "c"
+    },
+    {
+      id: 18,
+      question: "What is the key advantage of using an adjacency list over an adjacency matrix for sparse graphs?",
+      options: {
+        a: "Faster edge existence checks",
+        b: "More space efficient",
+        c: "Better cache locality",
+        d: "Simpler implementation"
+      },
+      correct: "b"
+    },
+    {
+      id: 19,
+      question: "Which algorithm would be most efficient for finding all pairs shortest paths in a graph with negative weight edges?",
+      options: {
+        a: "Dijkstra's",
+        b: "Bellman-Ford",
+        c: "Floyd-Warshall",
+        d: "Prim's"
+      },
+      correct: "c"
+    },
+    {
+      id: 20,
+      question: "In a max-heap, where is the second largest element guaranteed to be located?",
+      options: {
+        a: "Root's left child",
+        b: "Root's right child",
+        c: "Either left or right child of root",
+        d: "In the last level"
+      },
+      correct: "c"
+    },
+    {
+      id: 21,
+      question: "What is the time complexity of building a heap from an unsorted array?",
+      options: {
+        a: "O(n)",
+        b: "O(n log n)",
+        c: "O(log n)",
+        d: "O(n²)"
+      },
+      correct: "a"
+    },
+    {
+      id: 22,
+      question: "Which graph algorithm uses the concept of relaxation?",
+      options: {
+        a: "DFS",
+        b: "BFS",
+        c: "Dijkstra's",
+        d: "Prim's"
+      },
+      correct: "c"
+    },
+    {
+      id: 23,
+      question: "What is the main advantage of randomized quick sort over standard quick sort?",
+      options: {
+        a: "Guaranteed O(n log n) time",
+        b: "Lower constant factors",
+        c: "Avoids worst-case O(n²) scenarios with high probability",
+        d: "Uses less memory"
+      },
+      correct: "c"
+    },
+    {
+      id: 24,
+      question: "In a B-tree of order m, what is the maximum number of children a node can have?",
+      options: {
+        a: "m",
+        b: "m-1",
+        c: "2m",
+        d: "m/2"
+      },
+      correct: "a"
+    },
+    {
+      id: 25,
+      question: "Which sorting algorithm works by repeatedly selecting the smallest element from the unsorted portion and swapping it with the first unsorted element?",
+      options: {
+        a: "Bubble Sort",
+        b: "Insertion Sort",
+        c: "Selection Sort",
+        d: "Quick Sort"
+      },
+      correct: "c"
+    },
+    {
+      id: 26,
+      question: "What is the key invariant in a red-black tree?",
+      options: {
+        a: "No two red nodes can be adjacent",
+        b: "Every path from root to leaf has the same number of black nodes",
+        c: "The tree is always perfectly balanced",
+        d: "All leaves must be red"
+      },
+      correct: "b"
+    },
+    {
+      id: 27,
+      question: "Which algorithm is most efficient for detecting cycles in a directed graph?",
+      options: {
+        a: "BFS",
+        b: "DFS",
+        c: "Dijkstra's",
+        d: "Kruskal's"
+      },
+      correct: "b"
+    },
+    {
+      id: 28,
+      question: "In a hash table using open addressing, what happens when a collision occurs?",
+      options: {
+        a: "Elements are stored in a linked list",
+        b: "A new hash function is used",
+        c: "The element is placed in the next available slot",
+        d: "The table size is doubled"
+      },
+      correct: "c"
+    },
+    {
+      id: 29,
+      question: "What is the time complexity of the Floyd-Warshall algorithm for all pairs shortest paths?",
+      options: {
+        a: "O(V)",
+        b: "O(V log V)",
+        c: "O(V²)",
+        d: "O(V³)"
+      },
+      correct: "d"
+    },
+    {
+      id: 30,
+      question: "Which data structure is most efficient for implementing a priority queue in Dijkstra's algorithm?",
+      options: {
+        a: "Array",
+        b: "Linked List",
+        c: "Binary Heap",
+        d: "Hash Table"
+      },
+      correct: "c"
+    },
+    {
+      id: 31,
+      question: "In a binary search tree, what is the worst-case time complexity for finding the predecessor of a node?",
+      options: {
+        a: "O(1)",
+        b: "O(log n)",
+        c: "O(n)",
+        d: "O(n log n)"
+      },
+      correct: "b"
+    },
+    {
+      id: 32,
+      question: "What is the main advantage of counting sort over comparison-based sorts?",
+      options: {
+        a: "Works well with negative numbers",
+        b: "Can sort in O(n) time for small integer ranges",
+        c: "Is stable",
+        d: "Uses minimal space"
+      },
+      correct: "b"
+    },
+    {
+      id: 33,
+      question: "Which graph representation would be most space-efficient for a complete graph?",
+      options: {
+        a: "Adjacency List",
+        b: "Adjacency Matrix",
+        c: "Edge List",
+        d: "Incidence Matrix"
+      },
+      correct: "b"
+    },
+    {
+      id: 34,
+      question: "What is the key property that distinguishes a min-heap from a max-heap?",
+      options: {
+        a: "Parent nodes are smaller than children in min-heap",
+        b: "Min-heap uses arrays while max-heap uses trees",
+        c: "Max-heap has better time complexity",
+        d: "Min-heap can't have duplicate values"
+      },
+      correct: "a"
+    },
+    {
+      id: 35,
+      question: "In a graph with V vertices and E edges, what is the time complexity of Kruskal's algorithm using union-find with path compression?",
+      options: {
+        a: "O(V log V)",
+        b: "O(E log V)",
+        c: "O(V²)",
+        d: "O(E + V)"
+      },
+      correct: "b"
+    },
+    {
+      id: 36,
+      question: "Which sorting algorithm is most cache-efficient for large datasets?",
+      options: {
+        a: "Quick Sort",
+        b: "Merge Sort",
+        c: "Heap Sort",
+        d: "Bubble Sort"
+      },
+      correct: "a"
+    },
+    {
+      id: 37,
+      question: "What is the main disadvantage of using an adjacency matrix for sparse graphs?",
+      options: {
+        a: "Slow edge existence checks",
+        b: "High space complexity (O(V²))",
+        c: "Can't represent directed graphs",
+        d: "Difficult to implement"
+      },
+      correct: "b"
+    },
+    {
+      id: 38,
+      question: "In a B+ tree, where are all the data records stored?",
+      options: {
+        a: "In internal nodes",
+        b: "In leaf nodes",
+        c: "Evenly distributed throughout the tree",
+        d: "In the root node"
+      },
+      correct: "b"
+    },
+    {
+      id: 39,
+      question: "Which algorithm is guaranteed to find the shortest path in a graph with negative weight edges (though may not detect negative cycles)?",
+      options: {
+        a: "Dijkstra's",
+        b: "Bellman-Ford",
+        c: "Floyd-Warshall",
+        d: "Prim's"
+      },
+      correct: "b"
+    },
+    {
+      id: 40,
+      question: "What is the time complexity of the Sieve of Eratosthenes algorithm for finding all primes up to n?",
+      options: {
+        a: "O(n)",
+        b: "O(n log log n)",
+        c: "O(n²)",
+        d: "O(n log n)"
+      },
+      correct: "b"
+    },
+    {
+      id: 41,
+      question: "Which data structure would be most efficient for implementing an LRU cache?",
+      options: {
+        a: "Singly Linked List",
+        b: "Doubly Linked List + Hash Map",
+        c: "Binary Search Tree",
+        d: "Stack"
+      },
+      correct: "b"
+    },
+    {
+      id: 42,
+      question: "In AVL trees, what is the maximum allowed difference in heights between left and right subtrees of any node?",
+      options: {
+        a: "0",
+        b: "1",
+        c: "2",
+        d: "log n"
+      },
+      correct: "b"
+    },
+    {
+      id: 43,
+      question: "Which algorithm uses three nested loops to compute all pairs shortest paths?",
+      options: {
+        a: "Dijkstra's",
+        b: "Bellman-Ford",
+        c: "Floyd-Warshall",
+        d: "Kruskal's"
+      },
+      correct: "c"
+    },
+    {
+      id: 44,
+      question: "What is the main advantage of radix sort over comparison-based sorts?",
+      options: {
+        a: "Can sort in linear time for fixed-length keys",
+        b: "Works well with floating-point numbers",
+        c: "Is stable",
+        d: "Uses minimal space"
+      },
+      correct: "a"
+    },
+    {
+      id: 45,
+      question: "In a trie data structure, what is the time complexity for searching a word of length L?",
+      options: {
+        a: "O(1)",
+        b: "O(L)",
+        c: "O(log L)",
+        d: "O(n)"
+      },
+      correct: "b"
+    },
+    {
+      id: 46,
+      question: "Which algorithm would be most efficient for finding strongly connected components in a directed graph?",
+      options: {
+        a: "Kruskal's",
+        b: "Kosaraju's",
+        c: "Prim's",
+        d: "Dijkstra's"
+      },
+      correct: "b"
+    },
+    {
+      id: 47,
+      question: "What is the key advantage of a skip list over a balanced binary search tree?",
+      options: {
+        a: "Simpler implementation",
+        b: "Better worst-case time complexity",
+        c: "Uses less space",
+        d: "Supports range queries more efficiently"
+      },
+      correct: "a"
+    },
+    {
+      id: 48,
+      question: "In the context of dynamic programming, what does memoization refer to?",
+      options: {
+        a: "Breaking problems into subproblems",
+        b: "Storing results of expensive function calls",
+        c: "Using tables to store intermediate results",
+        d: "Iterative bottom-up approach"
+      },
+      correct: "b"
+    },
+    {
+      id: 49,
+      question: "Which algorithm is most efficient for finding the median of an unsorted array?",
+      options: {
+        a: "Quickselect",
+        b: "Quicksort",
+        c: "Mergesort",
+        d: "Heapsort"
+      },
+      correct: "a"
+    },
+    {
+      id: 50,
+      question: "What is the key property of a stable sorting algorithm?",
+      options: {
+        a: "Maintains relative order of equal elements",
+        b: "Has O(n log n) time complexity",
+        c: "Uses constant extra space",
+        d: "Works in-place"
+      },
+      correct: "a"
+    }
+  ]
+},
 };
