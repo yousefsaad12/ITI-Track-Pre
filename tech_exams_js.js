@@ -6702,7 +6702,7 @@ int main() {
           c: "Classes in the programming languages do not have any size",
           d: "Sum of the size of all the variables within a class",
         },
-        correct: "c",
+        correct: "a",
       },
       {
         id: 29,
@@ -6865,7 +6865,7 @@ int main() {
           c: "Class",
           d: "Interfaces",
         },
-        correct: "b",
+        correct: "c",
       },
       {
         id: 43,
@@ -6876,7 +6876,7 @@ int main() {
           c: "Use abstraction at its minimum",
           d: "is used to remove longer codes",
         },
-        correct: "b",
+        correct: "a",
       },
       {
         id: 44,
