@@ -470,6 +470,42 @@ body {
   width: 100%;
 }
 
+.notice-block {
+  background: radial-gradient(
+      1200px 400px at 20% -20%,
+      rgba(108, 156, 255, 0.15),
+      transparent
+    ),
+    radial-gradient(
+      1200px 400px at 80% -30%,
+      rgba(34, 211, 238, 0.12),
+      transparent
+    );
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin: 1rem auto;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  width: min(1200px, calc(100% - 2rem)); /* Same sizing as .container */
+}
+
+.notice-block strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.tiktok-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tiktok-link:hover {
+  text-decoration: underline;
+}
+
 .search-input-wrapper:focus-within {
   border-color: #1a4ca0;
   box-shadow: 0 0 0 2px #b3d1ff;

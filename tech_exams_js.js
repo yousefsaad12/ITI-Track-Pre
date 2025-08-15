@@ -5765,6 +5765,1217 @@ int main() {
   },
 
   exam10: {
+    title: "Object-Oriented Programming (OOP) - Comprehensive Exam",
+    questions: [
+      {
+        id: 1,
+        question: "Who invented OOP?",
+        options: {
+          a: "Andrea Ferro",
+          b: "Adele Goldberg",
+          c: "Alan Kay",
+          d: "Dennis Ritchie",
+        },
+        correct: "c",
+      },
+      {
+        id: 2,
+        question: "Which is not a feature of OOP in general definitions?",
+        options: {
+          a: "Efficient Code",
+          b: "Code reusability",
+          c: "Modularity",
+          d: "Duplicate/Redundant data",
+        },
+        correct: "d",
+      },
+      {
+        id: 3,
+        question:
+          "Which was the first purely object oriented programming language developed?",
+        options: {
+          a: "Kotlin",
+          b: "SmallTalk",
+          c: "Java",
+          d: "C++",
+        },
+        correct: "b",
+      },
+      {
+        id: 4,
+        question: "When OOP concept did first came into picture?",
+        options: {
+          a: "1980's",
+          b: "1995",
+          c: "1970's",
+          d: "1993",
+        },
+        correct: "c",
+      },
+      {
+        id: 5,
+        question: "Which feature of OOP indicates code reusability?",
+        options: {
+          a: "Abstraction",
+          b: "Polymorphism",
+          c: "Encapsulation",
+          d: "Inheritance",
+        },
+        correct: "d",
+      },
+      {
+        id: 6,
+        question: "Which header file is required in C++ to use OOP?",
+        options: {
+          a: "OOP can be used without using any header file",
+          b: "stdlib.h",
+          c: "iostream.h",
+          d: "stdio.h",
+        },
+        correct: "a",
+      },
+      {
+        id: 7,
+        question: "Why Java is Partially OOP language?",
+        options: {
+          a: "It allows code to be written outside classes",
+          b: "It supports usual declaration of primitive data types",
+          c: "It does not support pointers",
+          d: "It doesn't support all types of inheritance",
+        },
+        correct: "b",
+      },
+      {
+        id: 8,
+        question: "Which among the following doesn't come under OOP concept?",
+        options: {
+          a: "Data hiding",
+          b: "Message passing",
+          c: "Platform independent",
+          d: "Data binding",
+        },
+        correct: "c",
+      },
+      {
+        id: 9,
+        question: "Which is the correct syntax of inheritance?",
+        options: {
+          a: "class base_classname :access derived_classname{/*define class body*/};",
+          b: "class derived_classname: access base_classname{ /*define class body*/};",
+          c: "class derived_classname: base_classname{/*define class body*/ };",
+          d: "class base_classname: derived_classname{ /*define class body*/};",
+        },
+        correct: "b",
+      },
+      {
+        id: 10,
+        question:
+          "Which feature of OOP is indicated by the following code?\nclass student{ int marks; };\nclass topper:public student{ int age; topper(int age){ this.age=age; } };",
+        options: {
+          a: "Encapsulation and Inheritance",
+          b: "Inheritance and polymorphism",
+          c: "Polymorphism",
+          d: "Inheritance",
+        },
+        correct: "a",
+      },
+      {
+        id: 11,
+        question:
+          "The feature by which one object can interact with another object is",
+        options: {
+          a: "Message reading",
+          b: "Message Passing",
+          c: "Data transfer",
+          d: "Data Binding",
+        },
+        correct: "b",
+      },
+      {
+        id: 12,
+        question:
+          "Which among the following, for a pure OOP language, is true?",
+        options: {
+          a: "The language should follow at least 1 feature of OOP",
+          b: "The language must follow only 3 features of OOP",
+          c: "The language must follow all the rules of OOP",
+          d: "The language should follow 3 or more features of OOP",
+        },
+        correct: "c",
+      },
+      {
+        id: 13,
+        question:
+          "How many types of access specifiers are provided in OOP (C++)?",
+        options: {
+          a: "4",
+          b: "3",
+          c: "2",
+          d: "1",
+        },
+        correct: "b",
+      },
+      {
+        id: 14,
+        question:
+          "In multilevel inheritance, which is the most significant feature of OOP used?",
+        options: {
+          a: "Code efficiency",
+          b: "Code readability",
+          c: "Flexibility",
+          d: "Code reusability",
+        },
+        correct: "d",
+      },
+      {
+        id: 15,
+        question: "What is encapsulation in OOP?",
+        options: {
+          a: "It is a way of combining various data members and member functions that operate on those data members into a single unit",
+          b: "It is a way of combining various data members and member functions into a single unit which can operate on any data",
+          c: "It is a way of combining various data members into a single unit",
+          d: "It is a way of combining various member functions into a single unit",
+        },
+        correct: "a",
+      },
+      {
+        id: 16,
+        question: "Which of the following is not true about polymorphism?",
+        options: {
+          a: "Helps in redefining the same functionality",
+          b: "Increases overhead of function definition always",
+          c: "It is feature of OOP",
+          d: "Ease in readability of program",
+        },
+        correct: "b",
+      },
+      {
+        id: 17,
+        question:
+          "Which constructor will be called from the object created in the below C++ code?\nclass A\n{\nint i;\nA()\n{\ni=0; cout<<i;\n}\nA(int x=0)\n{\ni=x; cout<< i;\n}\n};\nA obj1;",
+        options: {
+          a: "Parameterized constructor",
+          b: "Default constructor",
+          c: "Run time error",
+          d: "Compile time error",
+        },
+        correct: "d",
+      },
+      {
+        id: 18,
+        question: "What is an abstraction in object-oriented programming?",
+        options: {
+          a: "Hiding the implementation and showing only the features",
+          b: "Hiding the important data",
+          c: "Hiding the implementation",
+          d: "Showing the important data",
+        },
+        correct: "a",
+      },
+      {
+        id: 19,
+        question: "Which among the following can show polymorphism?",
+        options: {
+          a: "Overloading &&",
+          b: "Overloading <<",
+          c: "Overloading ||",
+          d: "Overloading +=",
+        },
+        correct: "b",
+      },
+      {
+        id: 20,
+        question:
+          "In which access should a constructor be defined, so that object of the class can be created in any function?",
+        options: {
+          a: "Any access specifier will work",
+          b: "Private",
+          c: "Public",
+          d: "Protected",
+        },
+        correct: "c",
+      },
+      {
+        id: 21,
+        question:
+          "Which among the following is correct for the class defined below?\nclass student\n{\nint marks;\npublic: student(){}\nstudent(int x)\n{\nmarks=x;\n}\n};\nmain()\n{\nstudent s1(100);\nstudent s2();\nstudent s3=100;\nreturn 0;\n}",
+        options: {
+          a: "Program will give compile time error",
+          b: "Object s3, syntax error",
+          c: "Only object s1 and s2 will be created",
+          d: "Program runs and all objects are created",
+        },
+        correct: "d",
+      },
+      {
+        id: 22,
+        question: "The copy constructors can be used to",
+        options: {
+          a: "Copy an object so that it can be passed to another primitive type variable",
+          b: "Copy an object for type casting",
+          c: "Copy an object so that it can be passed to a function",
+          d: "Copy an object so that it can be passed to a class",
+        },
+        correct: "c",
+      },
+      {
+        id: 23,
+        question:
+          "Which constructor will be called from the object obj2 in the following C++ program?\nclass A\n{\nint i;\nA()\n{\ni=0;\n}\nA(int x)\n{\ni=x+1;\n}\nA(int y, int x)\n{\ni=x+y;\n}\n};\nA obj1(10);\nA obj2(10,20);\nA obj3;",
+        options: {
+          a: "A(int y, int x)",
+          b: "A(int y; int x)",
+          c: "A(int y)",
+          d: "A(int x)",
+        },
+        correct: "a",
+      },
+      {
+        id: 24,
+        question: "Which among the following represents correct constructor?",
+        options: {
+          a: "-classname()",
+          b: "classname()",
+          c: "()classname",
+          d: "~classname()",
+        },
+        correct: "b",
+      },
+      {
+        id: 25,
+        question: "What happens when an object is passed by reference?",
+        options: {
+          a: "Destructor is called at end of function",
+          b: "Destructor is called when called explicitly",
+          c: "Destructor is not called",
+          d: "Destructor is called when function is out of scope",
+        },
+        correct: "c",
+      },
+      {
+        id: 26,
+        question:
+          "Which access specifier is usually used for data members of a class?",
+        options: {
+          a: "Protected",
+          b: "Private",
+          c: "Public",
+          d: "Default",
+        },
+        correct: "b",
+      },
+      {
+        id: 27,
+        question: "How to access data members of a class?",
+        options: {
+          a: "Dot, arrow or direct call",
+          b: "Dot operator",
+          c: "Arrow operator",
+          d: "Dot or arrow as required",
+        },
+        correct: "d",
+      },
+      {
+        id: 28,
+        question: "Which feature of OOP reduces the use of nested classes?",
+        options: {
+          a: "Inheritance",
+          b: "Binding",
+          c: "Abstraction",
+          d: "Encapsulation",
+        },
+        correct: "a",
+      },
+      {
+        id: 29,
+        question:
+          "Which keyword among the following can be used to declare an array of objects in java?",
+        options: {
+          a: "allocate",
+          b: "arr",
+          c: "new",
+          d: "create",
+        },
+        correct: "c",
+      },
+      {
+        id: 30,
+        question:
+          "Which operator can be used to free the memory allocated for an object in C++?",
+        options: {
+          a: "Unallocate",
+          b: "Free()",
+          c: "Collect",
+          d: "delete",
+        },
+        correct: "d",
+      },
+      {
+        id: 31,
+        question: "Which of the following is not a property of an object?",
+        options: {
+          a: "Properties",
+          b: "Names",
+          c: "Identity",
+          d: "Attributes",
+        },
+        correct: "b",
+      },
+      {
+        id: 32,
+        question:
+          "Which type of members can't be accessed in derived classes of a base class?",
+        options: {
+          a: "All can be accessed",
+          b: "Protected",
+          c: "Private",
+          d: "Public",
+        },
+        correct: "c",
+      },
+      {
+        id: 33,
+        question: "Which among the following best describes the Inheritance?",
+        options: {
+          a: "Using the data and functions into derived segment",
+          b: "Using already defined functions in a programming language",
+          c: "Using the code already written once",
+          d: "Copying the code already written",
+        },
+        correct: "a",
+      },
+      {
+        id: 34,
+        question: "Single level inheritance supports",
+        options: {
+          a: "Language independency",
+          b: "Multiple inheritance",
+          c: "Compile time",
+          d: "Runtime",
+        },
+        correct: "d",
+      },
+      {
+        id: 35,
+        question: "How to overcome diamond problem?",
+        options: {
+          a: "Using separate derived class",
+          b: "Using virtual keyword with same name function",
+          c: "Can't be done",
+          d: "Using alias name",
+        },
+        correct: "b",
+      },
+      {
+        id: 36,
+        question: "Which keyword is used to declare virtual functions?",
+        options: {
+          a: "virt",
+          b: "virtually",
+          c: "virtual",
+          d: "anonymous",
+        },
+        correct: "c",
+      },
+      {
+        id: 37,
+        question:
+          "What happens if non static members are used in static member function?",
+        options: {
+          a: "Executes fine",
+          b: "Compile time error",
+          c: "Executes if that member function is not used",
+          d: "Runtime error",
+        },
+        correct: "b",
+      },
+      {
+        id: 38,
+        question: "What is friend member functions in C++?",
+        options: {
+          a: "Non-member functions which have access to all the members (including private) of a class",
+          b: "Member function which doesn't have access to private members",
+          c: "Member function which can modify any data of a class",
+          d: "Member function which can access all the members of a class",
+        },
+        correct: "a",
+      },
+      {
+        id: 39,
+        question: "Where is the memory allocated for the objects?",
+        options: {
+          a: "Cache",
+          b: "ROM",
+          c: "HDD",
+          d: "RAM",
+        },
+        correct: "d",
+      },
+      {
+        id: 40,
+        question:
+          "Which of the following best describes member function overriding?",
+        options: {
+          a: "Member functions having the same name in derived class only",
+          b: "Member functions having the same name and different signature inside main function",
+          c: "Member functions having the same name in base and derived classes",
+          d: "Member functions having the same name in base class only",
+        },
+        correct: "c",
+      },
+      {
+        id: 41,
+        question: "Encapsulation and abstraction differ as",
+        options: {
+          a: "Hiding and hiding respectively",
+          b: "Binding and Hiding respectively",
+          c: "Hiding and Binding respectively",
+          d: "Can be used any way",
+        },
+        correct: "b",
+      },
+      {
+        id: 42,
+        question:
+          "Which feature of OOP is exhibited by the function overriding?",
+        options: {
+          a: "Polymorphism",
+          b: "Encapsulation",
+          c: "Abstraction",
+          d: "Inheritance",
+        },
+        correct: "a",
+      },
+      {
+        id: 43,
+        question: "How to access the private member function of a class?",
+        options: {
+          a: "Using class address",
+          b: "Using object of class",
+          c: "Using object pointer",
+          d: "Using address of member function",
+        },
+        correct: "d",
+      },
+      {
+        id: 44,
+        question: "Which keyword should be used to declare static variables?",
+        options: {
+          a: "const",
+          b: "common",
+          c: "static",
+          d: "stat",
+        },
+        correct: "c",
+      },
+      {
+        id: 45,
+        question: "Which is correct syntax for declaring pointer to object?",
+        options: {
+          a: "*className objectName;",
+          b: "className* objectName;",
+          c: "className objectName();",
+          d: "className objectName;",
+        },
+        correct: "b",
+      },
+      {
+        id: 46,
+        question:
+          "Which class/set of classes can illustrate polymorphism in the following C++ code?\nabstract class student\n{\npublic: int marks;\ncalc_grade();\n}\nclass topper: public student\n{\npublic: calc_grade()\n{\nreturn 10;\n}\n};\nclass average:public student\n{\npublic: calc_grade()\n{\nreturn 20;\n}\n};\nclass failed{ int marks; };",
+        options: {
+          a: "Only class student and topper together can show polymorphism",
+          b: "Only class student can show polymorphism",
+          c: "Class failed should also inherit class student for this code to work for polymorphism",
+          d: "All class student, topper and average together can show polymorphism",
+        },
+        correct: "d",
+      },
+      {
+        id: 47,
+        question:
+          "If data members are private, what can we do to access them from the class object?",
+        options: {
+          a: "Private data members can never be accessed from outside the class",
+          b: "Create public member functions to access those data members",
+          c: "Create private member functions to access those data members",
+          d: "Create protected member functions to access those data members",
+        },
+        correct: "b",
+      },
+      {
+        id: 48,
+        question:
+          "Which among the following is not a necessary condition for constructors?",
+        options: {
+          a: "Its name must be same as that of class",
+          b: "It must not have any return type",
+          c: "It must contain a definition body",
+          d: "It can contain arguments",
+        },
+        correct: "c",
+      },
+      {
+        id: 49,
+        question: "Object being passed to a copy constructor",
+        options: {
+          a: "Must not be mentioned in parameter list",
+          b: "Must be passed with integer type",
+          c: "Must be passed by value",
+          d: "Must be passed by reference",
+        },
+        correct: "d",
+      },
+      {
+        id: 50,
+        question:
+          "If in multiple inheritance, class C inherits class B, and Class B inherits class A. In which sequence are their destructors called if an object of class C was declared?",
+        options: {
+          a: "~A() then ~B() then ~C()",
+          b: "~C() then ~A() then ~B()",
+          c: "~C() then ~B() then ~A()",
+          d: "~B() then ~C() then ~A()",
+        },
+        correct: "c",
+      },
+      {
+        id: 51,
+        question: "Instance of which type of class can't be created?",
+        options: {
+          a: "Parent class",
+          b: "Abstract class",
+          c: "Anonymous class",
+          d: "Nested class",
+        },
+        correct: "b",
+      },
+      {
+        id: 52,
+        question: "_______ underlines the feature of Polymorphism in a class.",
+        options: {
+          a: "Virtual Function",
+          b: "Inline function",
+          c: "Enclosing class",
+          d: "Nested class",
+        },
+        correct: "a",
+      },
+      {
+        id: 53,
+        question:
+          "Which feature in OOP is used to allocate additional functions to a predefined operator in any language?",
+        options: {
+          a: "Function Overloading",
+          b: "Function Overriding",
+          c: "Operator Overloading",
+          d: "Operator Overriding",
+        },
+        correct: "c",
+      },
+      {
+        id: 54,
+        question: "Which feature can be implemented using encapsulation?",
+        options: {
+          a: "Polymorphism",
+          b: "Overloading",
+          c: "Inheritance",
+          d: "Abstraction",
+        },
+        correct: "d",
+      },
+    ],
+  },
+  exam11: {
+    title: "Object-Oriented Programming (OOP) - Extended Comprehensive Exam",
+    questions: [
+      {
+        id: 1,
+        question:
+          "Which of the following language was developed as the first purely object programming language?",
+        options: {
+          a: "SmallTalk",
+          b: "C++",
+          c: "Kotlin",
+          d: "Java",
+        },
+        correct: "a",
+      },
+      {
+        id: 2,
+        question: "Who developed object-oriented programming?",
+        options: {
+          a: "Adele Goldberg",
+          b: "Dennis Ritchie",
+          c: "Alan Kay",
+          d: "Andrea Ferro",
+        },
+        correct: "c",
+      },
+      {
+        id: 3,
+        question: "Which of the following is not an OOPS concept?",
+        options: {
+          a: "Encapsulation",
+          b: "Polymorphism",
+          c: "Exception",
+          d: "Abstraction",
+        },
+        correct: "c",
+      },
+      {
+        id: 4,
+        question: "Which feature of OOPS described the reusability of code?",
+        options: {
+          a: "Abstraction",
+          b: "Encapsulation",
+          c: "Polymorphism",
+          d: "Inheritance",
+        },
+        correct: "d",
+      },
+      {
+        id: 5,
+        question:
+          "Which of the following language supports polymorphism but not the classes?",
+        options: {
+          a: "C++ programming language",
+          b: "Java programming language",
+          c: "Ada programming language",
+          d: "C# programming language",
+        },
+        correct: "c",
+      },
+      {
+        id: 6,
+        question:
+          "Which among the following feature is not in the general definition of OOPS?",
+        options: {
+          a: "Modularity",
+          b: "Efficient Code",
+          c: "Code reusability",
+          d: "Duplicate or Redundant Data",
+        },
+        correct: "d",
+      },
+      {
+        id: 7,
+        question: "Which feature of OOPS derives the class from another class?",
+        options: {
+          a: "Inheritance",
+          b: "Data hiding",
+          c: "Encapsulation",
+          d: "Polymorphism",
+        },
+        correct: "a",
+      },
+      {
+        id: 8,
+        question:
+          "Define the programming language, which does not support all four types of inheritance?",
+        options: {
+          a: "Smalltalk",
+          b: "Kotlin",
+          c: "Java",
+          d: "C++",
+        },
+        correct: "c",
+      },
+      {
+        id: 9,
+        question: "A single program of OOPS contains classes?",
+        options: {
+          a: "Only 1",
+          b: "Only 999",
+          c: "Only 100",
+          d: "Any number",
+        },
+        correct: "d",
+      },
+      {
+        id: 10,
+        question:
+          "Which operator from the following can be used to illustrate the feature of polymorphism?",
+        options: {
+          a: "Overloading << of",
+          b: "Overloading &&",
+          c: "Overloading ||",
+          d: "Overloading +=",
+        },
+        correct: "a",
+      },
+      {
+        id: 11,
+        question:
+          "Which two features of object-oriented programming are the same?",
+        options: {
+          a: "Abstraction and Polymorphism features are the same",
+          b: "Inheritance and Encapsulation features are the same",
+          c: "Encapsulation and Polymorphism features are the same",
+          d: "Encapsulation and Abstraction",
+        },
+        correct: "d",
+      },
+      {
+        id: 12,
+        question:
+          "Which header file is required by the C++ programming language to use the OOPS concept?",
+        options: {
+          a: "stdio.h",
+          b: "iostream.h",
+          c: "stdlib.h",
+          d: "We can easily use the OOPS concepts in c++ programs without using any header file",
+        },
+        correct: "d",
+      },
+      {
+        id: 13,
+        question:
+          "Which of the following definition is incorrect for polymorphism?",
+        options: {
+          a: "Polymorphism helps in redefining the same functionality",
+          b: "Polymorphism concept is the feature of object-oriented programming (OOP)",
+          c: "It always increases the overhead of function definition",
+          d: "Ease in the readability of the program",
+        },
+        correct: "c",
+      },
+      {
+        id: 14,
+        question:
+          "Which among the following cannot be used for the concept of polymorphism?",
+        options: {
+          a: "Static member function",
+          b: "Constructor Overloading",
+          c: "Member function overloading",
+          d: "Global member function",
+        },
+        correct: "a",
+      },
+      {
+        id: 15,
+        question:
+          "Which function best describe the concept of polymorphism in programming languages?",
+        options: {
+          a: "Class member function",
+          b: "Virtual function",
+          c: "Inline function",
+          d: "Undefined function",
+        },
+        correct: "b",
+      },
+      {
+        id: 16,
+        question:
+          "Which member function is assumed to call first when there is a case of using function overloading or abstract class?",
+        options: {
+          a: "Global function",
+          b: "Local function",
+          c: "Function with lowest priority",
+          d: "Function with the highest priority",
+        },
+        correct: "d",
+      },
+      {
+        id: 17,
+        question:
+          "Is it true to use polymorphism in the C programming language?",
+        options: {
+          a: "True",
+          b: "False",
+          c: "Only with structures",
+          d: "Only with pointers",
+        },
+        correct: "a",
+      },
+      {
+        id: 18,
+        question:
+          "Which of the following language uses the classes but not the polymorphism concept?",
+        options: {
+          a: "Procedure Oriented language",
+          b: "Object-based language",
+          c: "Class-based language",
+          d: "If classes are used, then the polymorphism concept will always be used in the programming languages",
+        },
+        correct: "b",
+      },
+      {
+        id: 19,
+        question:
+          "Which of the following OOP concept is not true for the C++ programming language?",
+        options: {
+          a: "A class must have member functions",
+          b: "C++ Program can be easily written without the use of classes",
+          c: "At least one instance should be declared within the C++ program",
+          d: "C++ Program must contain at least one class",
+        },
+        correct: "d",
+      },
+      {
+        id: 20,
+        question:
+          "What is the extra feature in classes which was not in the structures?",
+        options: {
+          a: "Member functions",
+          b: "Data members",
+          c: "Public access specifier",
+          d: "Static Data allowed",
+        },
+        correct: "a",
+      },
+      {
+        id: 21,
+        question:
+          "How many types of polymorphism in the C++ programming language?",
+        options: {
+          a: "Three types of polymorphism",
+          b: "Two types of polymorphism",
+          c: "Five types of polymorphism",
+          d: "Four types of polymorphism",
+        },
+        correct: "b",
+      },
+      {
+        id: 22,
+        question:
+          "Which of the following feature is also known as run-time binding or late binding?",
+        options: {
+          a: "Dynamic typing",
+          b: "Dynamic loading",
+          c: "Dynamic binding",
+          d: "Data hiding",
+        },
+        correct: "c",
+      },
+      {
+        id: 23,
+        question: "Which among the following is not a member of the class?",
+        options: {
+          a: "Virtual function",
+          b: "const function",
+          c: "Static function",
+          d: "Friend function",
+        },
+        correct: "d",
+      },
+      {
+        id: 24,
+        question: "Which of the following class is known as the generic class?",
+        options: {
+          a: "Final class",
+          b: "Template class",
+          c: "Abstract class",
+          d: "Efficient code",
+        },
+        correct: "b",
+      },
+      {
+        id: 25,
+        question: "Which operator overloads using the friend function?",
+        options: {
+          a: "*",
+          b: "()",
+          c: "->",
+          d: "=",
+        },
+        correct: "a",
+      },
+      {
+        id: 26,
+        question:
+          "Which of the following OOP concept binds the code and data together and keeps them secure from the outside world?",
+        options: {
+          a: "Polymorphism",
+          b: "Inheritance",
+          c: "Abstraction",
+          d: "Encapsulation",
+        },
+        correct: "d",
+      },
+      {
+        id: 27,
+        question:
+          "Which member of the superclass is never accessible to the subclass?",
+        options: {
+          a: "Public member",
+          b: "Protected member",
+          c: "Private member",
+          d: "All of the mentioned",
+        },
+        correct: "c",
+      },
+      {
+        id: 28,
+        question: "What is the size of a class?",
+        options: {
+          a: "Sum of the size of all inherited variables along with the variables of the same class",
+          b: "The size of the class is the largest size of the variable of the same class",
+          c: "Classes in the programming languages do not have any size",
+          d: "Sum of the size of all the variables within a class",
+        },
+        correct: "c",
+      },
+      {
+        id: 29,
+        question: "Which class cannot create its instance?",
+        options: {
+          a: "Parent class",
+          b: "Nested class",
+          c: "Anonymous class",
+          d: "Abstract class",
+        },
+        correct: "d",
+      },
+      {
+        id: 30,
+        question:
+          "Encapsulation adds the function in a user-defined structure.",
+        options: {
+          a: "True",
+          b: "False",
+          c: "Only in C++",
+          d: "Only in Java",
+        },
+        correct: "b",
+      },
+      {
+        id: 31,
+        question:
+          "Which of the following variable violates the definition of encapsulation?",
+        options: {
+          a: "Array variables",
+          b: "Local variables",
+          c: "Global variables",
+          d: "Public variables",
+        },
+        correct: "c",
+      },
+      {
+        id: 32,
+        question:
+          "How can the concept of encapsulation be achieved in the program?",
+        options: {
+          a: "By using the Access specifiers",
+          b: "By using the concept of Abstraction",
+          c: "By using only private members",
+          d: "By using the concept of Inheritance",
+        },
+        correct: "a",
+      },
+      {
+        id: 33,
+        question:
+          "The concept of encapsulation helps in writing which type of classes in the Java programming language?",
+        options: {
+          a: "Abstract classes",
+          b: "Wrapper classes",
+          c: "Mutable classes",
+          d: "Immutable classes",
+        },
+        correct: "d",
+      },
+      {
+        id: 34,
+        question: "Encapsulation is?",
+        options: {
+          a: "technique of combining more than one member functions into a single unit",
+          b: "mechanism of combining more than one data member into a single unit",
+          c: "mechanism of combining more than one data members and member functions that implement on those data members into a single unit",
+          d: "technique of combining more than one data members and member functions into a single unit, which can manipulate any data",
+        },
+        correct: "c",
+      },
+      {
+        id: 35,
+        question: "Which of the following statement of a program is not right?",
+        options: {
+          a: "class teacher{}; teacher s[5];",
+          b: "class teacher{}s;",
+          c: "class teacher{}; teacher s;",
+          d: "class teacher{}s[];",
+        },
+        correct: "d",
+      },
+      {
+        id: 36,
+        question:
+          "Which of the following syntax is incorrect for the class definition?",
+        options: {
+          a: "student class{}",
+          b: "class student{ student(int a){}}:",
+          c: "class teacher{ public: teacher(int a){} }",
+          d: "None of the mentioned",
+        },
+        correct: "a",
+      },
+      {
+        id: 37,
+        question: "The object cannot be ?",
+        options: {
+          a: "passed by copy",
+          b: "passed as function",
+          c: "passed by value",
+          d: "passed by reference",
+        },
+        correct: "b",
+      },
+      {
+        id: 38,
+        question:
+          "Which among the following feature does not come under the concept of OOPS?",
+        options: {
+          a: "Data binding",
+          b: "Data hiding",
+          c: "Platform independent",
+          d: "Message passing",
+        },
+        correct: "c",
+      },
+      {
+        id: 39,
+        question:
+          "Which of the following feature may be breaked if the user does not use the classes in the code?",
+        options: {
+          a: "Object must be used violated",
+          b: "Only the encapsulation concept is violated",
+          c: "Inheritance cannot be implemented",
+          d: "Basically, all the features of OOPS get violated",
+        },
+        correct: "d",
+      },
+      {
+        id: 40,
+        question:
+          "Which of the following feature interacts one object with another object?",
+        options: {
+          a: "Message reading",
+          b: "Message passing",
+          c: "Data transfer",
+          d: "Data binding",
+        },
+        correct: "b",
+      },
+      {
+        id: 41,
+        question: "Which definition best defines the concept of abstraction?",
+        options: {
+          a: "Hides the important data",
+          b: "Hides the implementation and showing only the features",
+          c: "Hiding the implementation",
+          d: "Showing the important data",
+        },
+        correct: "b",
+      },
+      {
+        id: 42,
+        question:
+          "The combination of abstraction of the data and code is viewed in_",
+        options: {
+          a: "Inheritance",
+          b: "Object",
+          c: "Class",
+          d: "Interfaces",
+        },
+        correct: "b",
+      },
+      {
+        id: 43,
+        question: "The principle of abstraction",
+        options: {
+          a: "is used to achieve OOPS",
+          b: "is used to avoid duplication",
+          c: "Use abstraction at its minimum",
+          d: "is used to remove longer codes",
+        },
+        correct: "b",
+      },
+      {
+        id: 44,
+        question:
+          "Which among the following concept is correct if a user using the concept of encapsulation in a code?",
+        options: {
+          a: "The modification of the code can be additional overhead",
+          b: "Member functions can be used for modifying the data type of data members",
+          c: "The data type of data member cannot be modified",
+          d: "The data type of the data member can be easily modified without modifying any other code",
+        },
+        correct: "d",
+      },
+      {
+        id: 45,
+        question: "Using the concept of encapsulation security of the data is",
+        options: {
+          a: "Ensured to some extent",
+          b: "Purely ensured",
+          c: "Not ensured",
+          d: "Very low",
+        },
+        correct: "a",
+      },
+      {
+        id: 46,
+        question:
+          "Consider the following Java program and select the right option from the given options.\nclass marksofstudent\n{\nint subjectmarks;\npublic: int* fun()\n{\nreturn &subjectmarks;\n}\n};\nmain()\n{\nmarksofstudent s;\nint *ptr = c.fun();\nreturn 0;\n}",
+        options: {
+          a: "The above program violates the feature of encapsulation",
+          b: "The above program may result in undesirable conditions",
+          c: "The above program will generate an error",
+          d: "The above program is good to go",
+        },
+        correct: "a",
+      },
+      {
+        id: 47,
+        question:
+          "The name of the default access specifier for the member functions or data members in the C++ programming language is",
+        options: {
+          a: "Private access specifier",
+          b: "Public access specifier",
+          c: "Protected access specifier",
+          d: "Depends on compiler",
+        },
+        correct: "a",
+      },
+      {
+        id: 48,
+        question:
+          "Which of the following option best illustrates a friend class?",
+        options: {
+          a: "This class can access and manipulate all the private members of that class which connects to friend",
+          b: "Friend class can only access and manipulate the protected data members of that class that connects to a friend",
+          c: "Friend class can't access any data member of another class but can use its methods",
+          d: "Friend class don't have any implementation",
+        },
+        correct: "a",
+      },
+      {
+        id: 49,
+        question:
+          "Which of the following definition best describes the concept of polymorphism?",
+        options: {
+          a: "It is the ability to process the many messages and data in one way",
+          b: "It is the ability to process the undefined messages or data in at least one way",
+          c: "It is the ability to process the message or data in more than one form",
+          d: "It is the ability to process the message or data in only one form",
+        },
+        correct: "c",
+      },
+      {
+        id: 50,
+        question:
+          "Which class/ or set of classes can describe the concept of polymorphism in the following code?\nabstract class student_details\n{\npublic: int marksofstudent;\ncalculate_grade();\n}\nclass topper:public student_details\n{\npublic: calculate_grade()\n{\nreturn 15;\n}\n};\nclass average:public student_details\n{\npublic: calculate_grade()\n{\nreturn 30;\n}\n};\nclass failed{ int marksofstudent; };",
+        options: {
+          a: "Only the student_details class can show the concept of polymorphism",
+          b: "The class which is 'failed' should also inherit class student for this code to work for polymorphism",
+          c: "The student_details, topper and average classes together can show the concept of polymorphism",
+          d: "Only the student_details and topper class together can show the concept of polymorphism",
+        },
+        correct: "c",
+      },
+    ],
+  },
+
+  exam12: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
     questions: [
