@@ -38,6 +38,8 @@ const elements = {
 
 const state = {
   exams: /** @type {Exam[]} */ ([]),
+  filteredExams: /** @type {Exam[]} */ ([]),
+  currentFilter: "all",
   currentExamIndex: -1,
   currentQuestionIndex: 0,
   answers: /** @type {Record<number, string>} */ ({}),
@@ -85,6 +87,7 @@ function parseExams() {
   Object.keys(technicalExams).forEach((examKey, index) => {
     const examData = technicalExams[examKey];
     const title = examData.title;
+    const category = examData.cat || "Uncategorized";
 
     /** @type {ParsedQuestion[]} */
     const questions = [];
@@ -105,33 +108,66 @@ function parseExams() {
     });
 
     if (questions.length) {
-      exams.push({ title, questions });
+      exams.push({ title, questions, category });
     }
   });
 
   return exams;
 }
 
+// ------------------------------ Category Filtering -----------------------
+function filterExams(category) {
+  state.currentFilter = category;
+  if (category === "all") {
+    state.filteredExams = [...state.exams];
+  } else {
+    state.filteredExams = state.exams.filter(exam => exam.category === category);
+  }
+  renderHome();
+  
+  // Update filter button states
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.category === category) {
+      btn.classList.add('active');
+    }
+  });
+}
+
+function initializeFilters() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterExams(btn.dataset.category);
+    });
+  });
+}
+
 // ------------------------------ Render Home ------------------------------
 function renderHome() {
   elements.examList.innerHTML = "";
-  state.exams.forEach((exam, idx) => {
+  const examsToShow = state.filteredExams.length > 0 ? state.filteredExams : state.exams;
+  
+  examsToShow.forEach((exam, idx) => {
     const card = document.createElement("article");
     card.className = "exam-card";
+    card.dataset.category = exam.category;
     const questionCount = exam.questions.length;
     const timerMinutes = 30; // If you have a timer property, use exam.timer || 30
 
     card.innerHTML = `
       <h3>${exam.title}</h3>
       <p>${questionCount} questions • ${timerMinutes} minutes</p>
+      <div class="category-tag">${exam.category}</div>
       <div style="display:flex; gap:.5rem; margin-top:.6rem">
         <button class="btn btn-primary">Start</button>
         <button class="btn btn-ghost">Preview</button>
       </div>
     `;
     const [btnStart, btnPreview] = card.querySelectorAll("button");
-    btnStart.addEventListener("click", () => startExam(idx));
-    btnPreview.addEventListener("click", () => previewExam(idx));
+    // Find the original exam index in the full exams array
+    const originalIndex = state.exams.findIndex(e => e.title === exam.title);
+    btnStart.addEventListener("click", () => startExam(originalIndex));
+    btnPreview.addEventListener("click", () => previewExam(originalIndex));
     elements.examList.appendChild(card);
   });
 }
@@ -363,12 +399,14 @@ function escapeHtml(text) {
 (async function init() {
   await loadExamData();
   state.exams = parseExams();
+  state.filteredExams = [...state.exams]; // Initialize filtered exams
   if (!state.exams.length) {
     elements.loadError.classList.remove("hidden");
     elements.loadError.textContent =
       "No exams loaded. Check the tech_exams_js.js file.";
   }
   renderHome();
+  initializeFilters(); // Initialize filter buttons
 })();
 
 function showExam(exam) {

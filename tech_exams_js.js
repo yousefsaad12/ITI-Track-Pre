@@ -1,7 +1,8 @@
 const technicalExams = {
   exam1: {
-    title:
-      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+    title: "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+    cat : "Technical Mock Exam",
+     
     questions: [
       // ----------------- C/C++ (12 questions) -----------------
       // --- Code-based (6) ---
@@ -517,6 +518,7 @@ const technicalExams = {
   exam2: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      cat : "Technical Mock Exam",
     questions: [
       // C/C++ Questions (12 total: 6 code-based, 6 theory)
       {
@@ -1324,6 +1326,7 @@ Initial array: [5, 2, 8, 1, 9, 3]`,
   exam3: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      cat : "Technical Mock Exam",
     questions: [
       // C/C++ Questions (12 total: 6 code-based, 6 syntax-oriented theory)
       {
@@ -2147,6 +2150,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
   exam4: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      cat : "Technical Mock Exam",
     questions: [
       // ==== C/C++ (12) ====
       {
@@ -2753,6 +2757,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
   exam5: {
     title:
       "Technical Mock Exam - Algorithms (Sorting & Searching) - Intermediate to Advanced",
+      cat : "Algorithms",
     questions: [
       {
         id: 1,
@@ -3275,6 +3280,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
 
   exam6: {
   title: "Algorithms MCQ Exam - Sorting, Searching, and Graph Algorithms",
+  cat:"Algorithms",
   questions: [
     { id: 1, question: "What is the average time complexity of Quick Sort?", options: { a: "O(n log n)", b: "O(n²)", c: "O(log n)", d: "O(n)" }, answer: "a" },
     { id: 2, question: "Which sorting algorithm is stable by default?", options: { a: "Quick Sort", b: "Merge Sort", c: "Selection Sort", d: "Heap Sort" }, answer: "b" },
@@ -3333,6 +3339,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
   exam7: {
     title:
       "Technical Mock Exam - Algorithms (Intermediate to Advanced & Tricky)",
+      cat:"Algorithms",
     questions: [
       {
         id: 1,
@@ -3928,6 +3935,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
   exam8: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      cat:"Technical Mock Exam",
     questions: [
       // C/C++ Code-based Questions (6)
       {
@@ -4747,6 +4755,7 @@ int main() {
   exam9: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+     cat: "Technical Mock Exam",
     questions: [
       // ======== C/C++ (12 questions) ========
       {
@@ -5221,6 +5230,7 @@ int main() {
 
   exam10: {
     title: "C++ Object-Oriented Programming - Comprehensive Exam",
+    cat: "OOP",
     questions: [
       {
         id: 1,
@@ -5813,6 +5823,7 @@ int main() {
 
   exam11: {
     title: "Object-Oriented Programming (OOP) - Comprehensive Exam",
+    cat: "OOP",
     questions: [
       {
         id: 1,
@@ -6434,6 +6445,7 @@ int main() {
   },
   exam12: {
     title: "Object-Oriented Programming (OOP) - Extended Comprehensive Exam",
+    cat: "OOP",
     questions: [
       {
         id: 1,
@@ -7025,6 +7037,7 @@ int main() {
   exam13: {
     title:
       "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      cat: "Technical Mock Exam",
     questions: [
       {
         id: 1,
@@ -7611,6 +7624,7 @@ int main() {
   },
   exam14: {
   title: "Technical Mock Exam - Algorithms (Searching, Sorting, Graph & Tree Algorithms)",
+  cat: "Algorithms",
   questions: [
     {
       id: 1,
