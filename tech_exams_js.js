@@ -45,7 +45,7 @@ const technicalExams = {
         question:
           "What will this print?\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n    int x = 1;\n    while (x < 5) x += x++;\n    cout << x;\n}\n```",
         options: { a: "5", b: "6", c: "7", d: "8" },
-        correct: "b",
+        correct: "c",
       },
 
       // --- Theory (6) ---
@@ -118,14 +118,14 @@ const technicalExams = {
         question:
           "Pseudocode:\n```\ncount ← 0\nfor i ← 1 to 4\n  for j ← 1 to i\n    count ← count + 1\nprint count\n```\nOutput?",
         options: { a: "4", b: "6", c: "8", d: "10" },
-        correct: "b",
+        correct: "d",
       },
       {
         id: 14,
         question:
           "Pseudocode:\n```\nx ← 5\ny ← 0\nwhile x > 0\ny ← y + x\nx ← x - 2\nprint y\n```\nOutput?",
         options: { a: "5", b: "9", c: "12", d: "15" },
-        correct: "c",
+        correct: "b",
       },
       {
         id: 15,
@@ -348,7 +348,7 @@ const technicalExams = {
         question:
           'What is printed?\n```cpp\n#include <iostream>\nusing namespace std;\nclass A {\npublic: A(){ cout<<"A"; } ~A(){ cout<<"a"; }\n};\nclass B: public A {\npublic: B(){ cout<<"B"; } ~B(){ cout<<"b"; }\n};\nint main(){ B obj; }\n```',
         options: { a: "ABab", b: "BAab", c: "ABba", d: "BAba" },
-        correct: "a",
+        correct: "c",
       },
       {
         id: 36,
@@ -386,7 +386,7 @@ const technicalExams = {
           c: "Allowing multiple forms",
           d: "Inheritance",
         },
-        correct: "b",
+        correct: "a",
       },
       {
         id: 40,
