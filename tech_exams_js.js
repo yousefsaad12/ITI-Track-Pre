@@ -5692,20 +5692,9 @@ int main() {
         },
         correct: "a",
       },
+     
       {
         id: 47,
-        question:
-          "Which type of inheritance is implemented in the following code below? (Note: Code not provided in original)",
-        options: {
-          a: "Single inheritance",
-          b: "Multilevel inheritance",
-          c: "Hybrid inheritance",
-          d: "Multiple inheritances",
-        },
-        correct: "a",
-      },
-      {
-        id: 48,
         question:
           "Choose the option below which is used to implement late binding.",
         options: {
@@ -5717,7 +5706,7 @@ int main() {
         correct: "c",
       },
       {
-        id: 49,
+        id: 48,
         question: "What is cout?",
         options: {
           a: "Operator",
@@ -5728,7 +5717,7 @@ int main() {
         correct: "b",
       },
       {
-        id: 50,
+        id: 49,
         question:
           "Choose the option below which describes the overloading of functions.",
         options: {
@@ -5740,7 +5729,7 @@ int main() {
         correct: "a",
       },
       {
-        id: 51,
+        id: 50,
         question: "Who developed object-oriented programming?",
         options: {
           a: "Dennis Ritchie",
@@ -5751,7 +5740,7 @@ int main() {
         correct: "c",
       },
       {
-        id: 52,
+        id: 51,
         question: "Which of the following is not an OOPS concept?",
         options: {
           a: "Inheritance",
