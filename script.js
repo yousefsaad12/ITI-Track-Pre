@@ -108,7 +108,7 @@ function parseExams() {
     });
 
     if (questions.length) {
-      exams.push({ title, questions, category });
+      exams.push({ title, questions, category, examKey });
     }
   });
 
@@ -164,8 +164,8 @@ function renderHome() {
       </div>
     `;
     const [btnStart, btnPreview] = card.querySelectorAll("button");
-    // Find the original exam index in the full exams array
-    const originalIndex = state.exams.findIndex(e => e.title === exam.title);
+    // Find the original exam index in the full exams array using examKey for uniqueness
+    const originalIndex = state.exams.findIndex(e => e.examKey === exam.examKey);
     btnStart.addEventListener("click", () => startExam(originalIndex));
     btnPreview.addEventListener("click", () => previewExam(originalIndex));
     elements.examList.appendChild(card);
