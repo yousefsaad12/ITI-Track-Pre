@@ -612,7 +612,7 @@ cout << result << endl;
           c: "9",
           d: "10",
         },
-        correct: "b",
+        correct: "a",
       },
       {
         id: 6,
@@ -1421,7 +1421,7 @@ cout << result << endl;
           c: "15",
           d: "16",
         },
-        correct: "b",
+        correct: "a",
       },
       {
         id: 6,
