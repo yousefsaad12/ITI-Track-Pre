@@ -7097,7 +7097,7 @@ int main() {
           c: "49",
           d: "25",
         },
-        correct: "c",
+        correct: "a",
       },
       {
         id: 6,
@@ -7178,7 +7178,7 @@ int main() {
           c: "At the top of the file, before any code",
           d: "After includes, before main",
         },
-        correct: "c",
+        correct: "b",
       },
       {
         id: 13,
