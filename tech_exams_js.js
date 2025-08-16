@@ -3934,7 +3934,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
 
   exam8: {
     title:
-      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      "Technical Mock Exam 5 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
       cat:"Technical Mock Exam",
     questions: [
       // C/C++ Code-based Questions (6)
@@ -4754,7 +4754,7 @@ int main() {
 
   exam9: {
     title:
-      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      "Technical Mock Exam 6 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
      cat: "Technical Mock Exam",
     questions: [
       // ======== C/C++ (12 questions) ========
@@ -4883,7 +4883,7 @@ int main() {
         id: 14,
         question:
           "Pseudocode:\n```\nx ← 2\ny ← 0\nwhile x < 5 do\n   y ← y + x\n   x ← x + 1\nprint y\n```\nOutput?",
-        options: { a: "5", b: "6", c: "7", d: "8" },
+        options: { a: "5", b: "6", c: "9", d: "8" },
         correct: "c",
       },
       {
@@ -4950,7 +4950,7 @@ int main() {
       {
         id: 21,
         question:
-          "Which SQL command removes all rows from a table but keeps the structure?",
+          "Which SQL command removes all rows from a table quickly, without using a WHERE clause while keeping the structure?",
         options: { a: "DELETE", b: "TRUNCATE", c: "DROP", d: "REMOVE" },
         correct: "b",
       },
@@ -5008,8 +5008,8 @@ int main() {
       {
         id: 27,
         question: "What is the output?\n```sql\nSELECT 10/4;\n```",
-        options: { a: "2", b: "2.5", c: "Depends on SQL mode", d: "Error" },
-        correct: "c",
+        options: { a: "2", b: "2.5", c: "3", d: "Error" },
+        correct: "b",
       },
       {
         id: 28,
@@ -7036,7 +7036,7 @@ int main() {
 
   exam13: {
     title:
-      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      "Technical Mock Exam 7 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
       cat: "Technical Mock Exam",
     questions: [
       {
@@ -8199,7 +8199,7 @@ int main() {
 },
 
 exam15 : {
-  title: "Technical Mock Exam 7 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+  title: "Technical Mock Exam 8 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
   cat: "Technical Mock Exam",
   questions: [
     { id: 1, question: "Which OOP feature restricts direct access to class data?", options: {a: "Inheritance", b: "Encapsulation", c: "Polymorphism", d: "Abstraction"}, correct: "b" },
@@ -8256,78 +8256,56 @@ exam15 : {
 },
 
 exam16: {
-  title: "Technical Mock Exam  - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+  title: "Technical Mock Exam 9 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
   cat: "Technical Mock Exam",
   questions: [
     {
       id: 1,
-      question: "What does the `.*` operator do in C++?",
+      question: "In C++, what is the output of the following code?\n```cpp\nint x = 5;\nint &ref = x;\nref = 10;\nstd::cout << x;\n```",
       options: {
-        a: "Pointer to member dereference",
-        b: "Multiplication with pointer arithmetic",
-        c: "Bitwise AND followed by multiplication",
-        d: "Exponentiation operator"
-      },
-      correct: "a"
-    },
-    {
-      id: 2,
-      question: "What will be the output of the following SQL query?\n```sql\nSELECT COUNT(*) FROM (\n  SELECT 1 AS num UNION SELECT 2 UNION SELECT 2\n) t GROUP BY num HAVING COUNT(num) > 1;\n```",
-      options: {
-        a: "0",
-        b: "1",
-        c: "2",
-        d: "3"
+        a: "5",
+        b: "10",
+        c: "Compiler error",
+        d: "Undefined behavior"
       },
       correct: "b"
     },
     {
-      id: 3,
-      question: "In C++, what is the order of constructor calls for this inheritance: `class D : public B, virtual public C { ... };` when creating an instance of D?",
+      id: 2,
+      question: "Which SQL clause is used to filter groups after aggregation?",
       options: {
-        a: "B, C, D",
-        b: "C, B, D",
-        c: "D, B, C",
-        d: "B, D, C"
+        a: "WHERE",
+        b: "GROUP BY",
+        c: "HAVING",
+        d: "ORDER BY"
+      },
+      correct: "c"
+    },
+    {
+      id: 3,
+      question: "What does the `::` operator represent in C++?",
+      options: {
+        a: "Pointer dereference",
+        b: "Scope resolution",
+        c: "Bitwise OR",
+        d: "Ternary operation"
       },
       correct: "b"
     },
     {
       id: 4,
-      question: "Which CSS selector has the highest specificity?",
+      question: "Given the following pseudocode, what is the final value of x?\n```\nx = 5\ny = 2\nfor i from 1 to 3\n  x = x + y * i\nend for\n```",
       options: {
-        a: "div#main .sidebar:hover",
-        b: "#main > .sidebar",
-        c: "div.sidebar a[href]",
-        d: "style attribute"
+        a: "11",
+        b: "17",
+        c: "23",
+        d: "29"
       },
-      correct: "d"
+      correct: "b"
     },
     {
       id: 5,
-      question: "What is the time complexity of Dijkstra's algorithm using a Fibonacci heap?",
-      options: {
-        a: "O(V^2)",
-        b: "O(E + V log V)",
-        c: "O(E log V)",
-        d: "O(V log E)"
-      },
-      correct: "b"
-    },
-    {
-      id: 6,
-      question: "What does this C++ code output?\n```cpp\n#include <iostream>\nint main() {\n  int x = 5;\n  int &y = x;\n  int *z = &y;\n  *z = 10;\n  std::cout << x;\n  return 0;\n}\n```",
-      options: {
-        a: "5",
-        b: "10",
-        c: "Memory address",
-        d: "Compilation error"
-      },
-      correct: "b"
-    },
-    {
-      id: 7,
-      question: "Which flowchart symbol represents a decision point?",
+      question: "Which flowchart symbol is used exclusively for decision points?",
       options: {
         a: "Rectangle",
         b: "Diamond",
@@ -8337,73 +8315,51 @@ exam16: {
       correct: "b"
     },
     {
-      id: 8,
-      question: "What is the output of this pseudocode?\n```\na = 5\nb = 10\nif a > b then\n  a = a - b\nelse if b > a then\n  b = b - a\nend if\nprint a + b\n```",
+      id: 6,
+      question: "In CSS, which selector has the highest specificity?",
       options: {
-        a: "5",
-        b: "10",
-        c: "15",
-        d: "0"
+        a: ".class",
+        b: "#id",
+        c: "element",
+        d: "::pseudo-element"
       },
-      correct: "a"
+      correct: "b"
+    },
+    {
+      id: 7,
+      question: "What is the output of the following SQL query?\n```sql\nSELECT COUNT(*) FROM (\n  SELECT 1 AS num UNION ALL SELECT 2 UNION ALL SELECT 2\n) t WHERE num = 2;\n```",
+      options: {
+        a: "0",
+        b: "1",
+        c: "2",
+        d: "3"
+      },
+      correct: "c"
+    },
+    {
+      id: 8,
+      question: "Which C++ operator is used for pointer-to-member access?",
+      options: {
+        a: "->",
+        b: ".*",
+        c: "::",
+        d: "?:"
+      },
+      correct: "b"
     },
     {
       id: 9,
-      question: "In SQL, what is the difference between WHERE and HAVING clauses?",
+      question: "What will this HTML/CSS code render?\n```html\n<div style='width: 100px; height: 100px; border: 1px solid;'>\n  <p style='margin: 20px; padding: 10px;'>Test</p>\n</div>\n```",
       options: {
-        a: "WHERE filters rows before grouping, HAVING filters after",
-        b: "HAVING is used only with JOINs",
-        c: "WHERE can't use aggregate functions",
-        d: "Both a and c"
+        a: "100x100 box with centered text",
+        b: "100x100 box with text touching borders",
+        c: "Larger than 100x100 due to margin/padding",
+        d: "Text overflowing the container"
       },
-      correct: "d"
+      correct: "c"
     },
     {
       id: 10,
-      question: "Which HTML5 element should be used for the main content of a document?",
-      options: {
-        a: "<div class=\"main\">",
-        b: "<main>",
-        c: "<section>",
-        d: "<content>"
-      },
-      correct: "b"
-    },
-    {
-      id: 11,
-      question: "What is the output of this C++ code?\n```cpp\n#include <iostream>\nusing namespace std;\n\nint foo(int &x) { return x *= 2; }\nint bar(int x) { return x += 3; }\n\nint main() {\n  int x = 5;\n  cout << foo(x) << bar(x);\n  return 0;\n}\n```",
-      options: {
-        a: "1013",
-        b: "108",
-        c: "1310",
-        d: "810"
-      },
-      correct: "a"
-    },
-    {
-      id: 12,
-      question: "Which SQL operation would be most efficient to find all employees who have no assigned projects?",
-      options: {
-        a: "LEFT JOIN with IS NULL check",
-        b: "NOT IN subquery",
-        c: "NOT EXISTS subquery",
-        d: "All are equally efficient"
-      },
-      correct: "a"
-    },
-    {
-      id: 13,
-      question: "What is the primary purpose of the virtual keyword in C++?",
-      options: {
-        a: "To prevent function overriding",
-        b: "To enable dynamic polymorphism",
-        c: "To improve performance",
-        d: "To make functions inline"
-      },
-      correct: "b"
-    },
-    {
-      id: 14,
       question: "Which algorithm uses a divide-and-conquer approach?",
       options: {
         a: "Bubble Sort",
@@ -8414,217 +8370,1100 @@ exam16: {
       correct: "b"
     },
     {
-      id: 15,
-      question: "What does this CSS code output?\n```css\ndiv { width: 300px; padding: 20px; border: 10px solid; box-sizing: border-box; }\n```",
+      id: 11,
+      question: "In C++, what is the difference between `struct` and `class` default access specifiers?",
       options: {
-        a: "Total width 300px (content 240px)",
-        b: "Total width 360px (content 300px)",
-        c: "Total width 300px (content 300px)",
-        d: "Total width 340px (content 300px)"
-      },
-      correct: "c"
-    },
-    {
-      id: 16,
-      question: "What is the output of this recursive C++ function when called as f(5)?\n```cpp\nint f(int n) {\n  return (n <= 1) ? 1 : n * f(n - 2);\n}\n```",
-      options: {
-        a: "15",
-        b: "120",
-        c: "30",
-        d: "Stack overflow"
-      },
-      correct: "a"
-    },
-    {
-      id: 17,
-      question: "Which SQL statement creates a transaction that will roll back if any error occurs?",
-      options: {
-        a: "BEGIN TRANSACTION; ... COMMIT;",
-        b: "BEGIN TRY ... COMMIT END TRY BEGIN CATCH ... ROLLBACK END CATCH",
-        c: "SET XACT_ABORT ON; BEGIN TRANSACTION; ... COMMIT;",
-        d: "Both b and c"
-      },
-      correct: "d"
-    },
-    {
-      id: 18,
-      question: "In OOP, what principle is violated when a class has too many responsibilities?",
-      options: {
-        a: "Encapsulation",
-        b: "Single Responsibility Principle",
-        c: "Open/Closed Principle",
-        d: "Liskov Substitution Principle"
+        a: "struct: private, class: public",
+        b: "struct: public, class: private",
+        c: "Both are public by default",
+        d: "Both are private by default"
       },
       correct: "b"
     },
     {
-      id: 19,
-      question: "Which C++ operator cannot be overloaded?",
+      id: 12,
+      question: "What does this SQL query return?\n```sql\nSELECT COALESCE(NULL, NULL, 'third', 'fourth');\n```",
       options: {
-        a: ":: (scope resolution)",
-        b: "+ (addition)",
-        c: "= (assignment)",
-        d: "[] (subscript)"
+        a: "NULL",
+        b: "third",
+        c: "fourth",
+        d: "An error"
       },
-      correct: "a"
+      correct: "b"
     },
     {
-      id: 20,
-      question: "What is the output of this SQL query?\n```sql\nWITH RECURSIVE seq(n) AS (\n  SELECT 1 UNION ALL SELECT n+1 FROM seq WHERE n < 5\n) SELECT SUM(n) FROM seq;\n```",
+      id: 13,
+      question: "Which OOP principle is demonstrated when hiding implementation details?",
       options: {
-        a: "5",
-        b: "10",
-        c: "15",
-        d: "21"
+        a: "Inheritance",
+        b: "Polymorphism",
+        c: "Encapsulation",
+        d: "Abstraction"
       },
       correct: "c"
     },
     {
-      id: 21,
-      question: "Which HTML attribute is essential for screen readers to understand table relationships?",
+      id: 14,
+      question: "What is the time complexity of Dijkstra's algorithm with a binary heap?",
       options: {
-        a: "alt",
-        b: "headers",
-        c: "summary",
-        d: "Both b and c"
+        a: "O(V)",
+        b: "O(V log V)",
+        c: "O(V^2)",
+        d: "O(E log V)"
       },
       correct: "d"
     },
     {
-      id: 22,
-      question: "What is the output of this C++ code?\n```cpp\n#include <iostream>\nusing namespace std;\n\n#define SQUARE(x) x * x\n\nint main() {\n  cout << SQUARE(2 + 3);\n  return 0;\n}\n```",
+      id: 15,
+      question: "In C++, what does this code output?\n```cpp\nint arr[] = {1,2,3};\nstd::cout << *(arr + 1);\n```",
       options: {
-        a: "25",
-        b: "11",
-        c: "Compilation error",
-        d: "Undefined behavior"
+        a: "1",
+        b: "2",
+        c: "Address of arr[1]",
+        d: "Compile error"
+      },
+      correct: "b"
+    },
+    {
+      id: 16,
+      question: "Which HTML5 tag should be used for main content?",
+      options: {
+        a: "<div>",
+        b: "<span>",
+        c: "<main>",
+        d: "<section>"
+      },
+      correct: "c"
+    },
+    {
+      id: 17,
+      question: "What is the output of this recursive function call?\n```cpp\nint foo(int n) {\n  return (n <= 1) ? 1 : n * foo(n - 1);\n}\nstd::cout << foo(4);\n```",
+      options: {
+        a: "4",
+        b: "10",
+        c: "24",
+        d: "Infinite recursion"
+      },
+      correct: "c"
+    },
+    {
+      id: 18,
+      question: "Which SQL operation is NOT DML?",
+      options: {
+        a: "INSERT",
+        b: "UPDATE",
+        c: "CREATE TABLE",
+        d: "DELETE"
+      },
+      correct: "c"
+    },
+    {
+      id: 19,
+      question: "What does the `?:` operator do in C++?",
+      options: {
+        a: "Bitwise OR",
+        b: "Ternary conditional",
+        c: "Scope resolution",
+        d: "Pointer dereference"
+      },
+      correct: "b"
+    },
+    {
+      id: 20,
+      question: "Which algorithm is both stable and adaptive?",
+      options: {
+        a: "Quick Sort",
+        b: "Merge Sort",
+        c: "Insertion Sort",
+        d: "Heap Sort"
+      },
+      correct: "c"
+    },
+    // Continued with 30 more questions...
+    {
+      id: 21,
+      question: "What is the purpose of the `#pragma once` directive in C++?",
+      options: {
+        a: "Include a header once",
+        b: "Define a macro",
+        c: "Enable optimizations",
+        d: "Suppress warnings"
+      },
+      correct: "a"
+    },
+    {
+      id: 22,
+      question: "Which CSS property enables Flexbox layout?",
+      options: {
+        a: "display: grid",
+        b: "display: flex",
+        c: "position: flex",
+        d: "layout: flex"
       },
       correct: "b"
     },
     {
       id: 23,
-      question: "Which sorting algorithm is both stable and O(n log n) in the worst case?",
+      question: "What does this SQL query find?\n```sql\nSELECT name FROM employees WHERE salary > ALL (\n  SELECT salary FROM employees WHERE dept = 'IT'\n);\n```",
       options: {
-        a: "QuickSort",
-        b: "HeapSort",
-        c: "MergeSort",
-        d: "InsertionSort"
+        a: "Employees earning more than any IT employee",
+        b: "Employees earning more than all IT employees combined",
+        c: "IT employees with highest salary",
+        d: "Syntax error"
       },
-      correct: "c"
+      correct: "a"
     },
     {
       id: 24,
-      question: "What does this SQL query return?\n```sql\nSELECT CASE WHEN NULL = NULL THEN 'True' ELSE 'False' END;\n```",
+      question: "In OOP, what is method overriding?",
       options: {
-        a: "True",
-        b: "False",
-        c: "NULL",
-        d: "Error"
+        a: "Changing method parameters",
+        b: "Providing a new implementation in a subclass",
+        c: "Making a method private",
+        d: "Overloading a method"
       },
       correct: "b"
     },
     {
       id: 25,
-      question: "Which CSS property enables Flexbox layout?",
+      question: "What is the output?\n```cpp\nint x = 5;\nint *p = &x;\nint **pp = &p;\n**pp = 10;\nstd::cout << x;\n```",
       options: {
-        a: "display: flex-container;",
-        b: "display: flex;",
-        c: "display: flexbox;",
-        d: "layout: flex;"
+        a: "5",
+        b: "10",
+        c: "Address of x",
+        d: "Compiler error"
       },
       correct: "b"
     },
     {
       id: 26,
-      question: "In C++, what is the difference between `struct` and `class`?",
+      question: "Which algorithm is best for finding shortest paths in a graph with negative weights?",
       options: {
-        a: "struct members are public by default, class are private",
-        b: "struct can't have methods",
-        c: "class supports inheritance, struct doesn't",
-        d: "No difference"
-      },
-      correct: "a"
-    },
-    {
-      id: 27,
-      question: "What does this pseudocode output?\n```\nfunction f(n)\n  if n <= 1 then return 1\n  else return n + f(n-1) + f(n-2)\nend\nprint f(4)\n```",
-      options: {
-        a: "9",
-        b: "12",
-        c: "14",
-        d: "17"
+        a: "Dijkstra's",
+        b: "Bellman-Ford",
+        c: "Floyd-Warshall",
+        d: "Prim's"
       },
       correct: "b"
     },
     {
-      id: 28,
-      question: "Which SQL index type is most efficient for full-text search?",
+      id: 27,
+      question: "What does this CSS media query target?\n```css\n@media (min-width: 768px) and (max-width: 1024px)\n```",
       options: {
-        a: "B-tree",
-        b: "Hash",
-        c: "Bitmap",
-        d: "Inverted"
+        a: "Mobile devices",
+        b: "Tablets in landscape",
+        c: "Devices between 768px and 1024px wide",
+        d: "Print media"
       },
-      correct: "d"
+      correct: "c"
+    },
+    {
+      id: 28,
+      question: "Which is NOT a valid C++ variable declaration?",
+      options: {
+        a: "int _var;",
+        b: "double 2var;",
+        c: "char *ptr;",
+        d: "bool flag;"
+      },
+      correct: "b"
     },
     {
       id: 29,
-      question: "What is the output of this C++ code?\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass Base {\npublic:\n  virtual void show() { cout << \"Base\"; }\n};\n\nclass Derived : public Base {\npublic:\n  void show() override { cout << \"Derived\"; }\n};\n\nint main() {\n  Base* b = new Derived();\n  b->show();\n  delete b;\n  return 0;\n}\n```",
+      question: "What is the purpose of a SQL cursor?",
       options: {
-        a: "Base",
-        b: "Derived",
-        c: "Compilation error",
-        d: "Runtime error"
+        a: "Define primary key",
+        b: "Iterate through result sets",
+        c: "Create temporary tables",
+        d: "Enforce constraints"
       },
       correct: "b"
     },
     {
       id: 30,
-      question: "Which algorithm is guaranteed to find the shortest path in a weighted graph with negative edges but no negative cycles?",
+      question: "Which sorting algorithm has worst-case O(n log n) time complexity?",
       options: {
-        a: "Dijkstra's",
-        b: "Bellman-Ford",
-        c: "A*",
-        d: "Floyd-Warshall"
+        a: "Quick Sort",
+        b: "Merge Sort",
+        c: "Bubble Sort",
+        d: "Insertion Sort"
       },
       correct: "b"
     },
     {
       id: 31,
-      question: "What does this SQL query return?\n```sql\nSELECT 1/2 FROM dual WHERE 1=0 UNION ALL SELECT 3/4 FROM dual;\n```",
+      question: "What does the `->` operator do in C++?",
       options: {
-        a: "0.5",
-        b: "0.75",
-        c: "No rows",
-        d: "0.5 and 0.75"
+        a: "Member access via pointer",
+        b: "Bitwise shift",
+        c: "Reference assignment",
+        d: "Ternary operation"
+      },
+      correct: "a"
+    },
+    {
+      id: 32,
+      question: "Which HTML attribute improves accessibility for screen readers?",
+      options: {
+        a: "alt",
+        b: "style",
+        c: "class",
+        d: "src"
+      },
+      correct: "a"
+    },
+    {
+      id: 33,
+      question: "What is the output?\n```cpp\nint x = 0;\nstd::cout << x++ + ++x;\n```",
+      options: {
+        a: "0",
+        b: "1",
+        c: "2",
+        d: "Undefined behavior"
+      },
+      correct: "d"
+    },
+    {
+      id: 34,
+      question: "Which SQL statement creates an index?",
+      options: {
+        a: "CREATE INDEX",
+        b: "ADD INDEX",
+        c: "DEFINE INDEX",
+        d: "MAKE INDEX"
+      },
+      correct: "a"
+    },
+    {
+      id: 35,
+      question: "Which is a greedy algorithm?",
+      options: {
+        a: "Merge Sort",
+        b: "Quick Sort",
+        c: "Dijkstra's",
+        d: "Binary Search"
+      },
+      correct: "c"
+    },
+    {
+      id: 36,
+      question: "In C++, what is `sizeof('a')`?",
+      options: {
+        a: "1",
+        b: "2",
+        c: "4",
+        d: "Compiler dependent"
+      },
+      correct: "d"
+    },
+    {
+      id: 37,
+      question: "Which CSS selector matches direct children only?",
+      options: {
+        a: "A B",
+        b: "A > B",
+        c: "A + B",
+        d: "A ~ B"
+      },
+      correct: "b"
+    },
+    {
+      id: 38,
+      question: "What does ACID stand for in database transactions?",
+      options: {
+        a: "Atomicity, Consistency, Isolation, Durability",
+        b: "Accuracy, Consistency, Integrity, Durability",
+        c: "Atomicity, Concurrency, Integrity, Durability",
+        d: "Automation, Consistency, Isolation, Durability"
+      },
+      correct: "a"
+    },
+    {
+      id: 39,
+      question: "Which is NOT an OOP principle?",
+      options: {
+        a: "Encapsulation",
+        b: "Inheritance",
+        c: "Polymorphism",
+        d: "Iteration"
+      },
+      correct: "d"
+    },
+    {
+      id: 40,
+      question: "What is the output?\n```cpp\nint a = 1, b = 2, c = 3;\nint *p[] = {&a, &b, &c};\nstd::cout << *p[1];\n```",
+      options: {
+        a: "1",
+        b: "2",
+        c: "Address of b",
+        d: "3"
+      },
+      correct: "b"
+    },
+    {
+      id: 41,
+      question: "Which flowchart symbol represents input/output?",
+      options: {
+        a: "Rectangle",
+        b: "Diamond",
+        c: "Parallelogram",
+        d: "Oval"
+      },
+      correct: "c"
+    },
+    {
+      id: 42,
+      question: "What is the purpose of a SQL trigger?",
+      options: {
+        a: "Automate actions on table events",
+        b: "Join tables temporarily",
+        c: "Create backup copies",
+        d: "Optimize query execution"
+      },
+      correct: "a"
+    },
+    {
+      id: 43,
+      question: "Which C++ feature allows runtime polymorphism?",
+      options: {
+        a: "Templates",
+        b: "Virtual functions",
+        c: "Function overloading",
+        d: "Operator overloading"
+      },
+      correct: "b"
+    },
+    {
+      id: 44,
+      question: "What is the output?\n```sql\nSELECT 5 / 2 FROM dual;\n``` (In most SQL implementations)",
+      options: {
+        a: "2.5",
+        b: "2",
+        c: "3",
+        d: "2.0"
+      },
+      correct: "b"
+    },
+    {
+      id: 45,
+      question: "Which algorithm has O(1) best-case time complexity?",
+      options: {
+        a: "Quick Sort",
+        b: "Bubble Sort",
+        c: "Merge Sort",
+        d: "Insertion Sort"
+      },
+      correct: "d"
+    },
+    {
+      id: 46,
+      question: "What does this CSS do?\n```css\ndiv:not(.special) { color: red; }\n```",
+      options: {
+        a: "Colors all divs red",
+        b: "Colors divs without 'special' class red",
+        c: "Colors 'special' divs red",
+        d: "Syntax error"
+      },
+      correct: "b"
+    },
+    {
+      id: 47,
+      question: "Which is true about C++ references?",
+      options: {
+        a: "Can be NULL",
+        b: "Can be reassigned",
+        c: "Must be initialized",
+        d: "Are same as pointers"
+      },
+      correct: "c"
+    },
+    {
+      id: 48,
+      question: "What is a SQL view?",
+      options: {
+        a: "Virtual table based on result set",
+        b: "Graphical representation of schema",
+        c: "Stored query execution plan",
+        d: "Index visualization tool"
+      },
+      correct: "a"
+    },
+    {
+      id: 49,
+      question: "Which pseudocode correctly implements binary search?",
+      options: {
+        a: "Divide array, search both halves recursively",
+        b: "Compare middle element, search left or right half",
+        c: "Compare each element sequentially",
+        d: "Sort first, then linear search"
+      },
+      correct: "b"
+    },
+    {
+      id: 50,
+      question: "What is the purpose of the `final` keyword in C++?",
+      options: {
+        a: "Prevent inheritance/overriding",
+        b: "Mark last element in array",
+        c: "Terminate program",
+        d: "Optimize loop unrolling"
+      },
+      correct: "a"
+    }
+  ]
+},
+exam17: {
+  title: "Technical Mock Exam 10 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+  cat: "Technical Mock Exam",
+  questions: [
+    {
+      id: 1,
+      question: "What will be the output of the following SQL query?\n```sql\nSELECT COUNT(*) \nFROM employees \nWHERE salary > 50000 AND department_id IN (10, 20) \nOR city = 'New York';\n```\nAssuming: 5 employees with salary > 50000 in dept 10/20, 3 employees in 'New York' (regardless of salary/dept), 2 overlap.",
+      options: {
+        a: "5",
+        b: "6", 
+        c: "8",
+        d: "3"
+      },
+      correct: "b"
+    },
+    {
+      id: 2,
+      question: "In flowchart symbols, which shape is used to represent a decision or conditional statement?",
+      options: {
+        a: "Rectangle",
+        b: "Oval",
+        c: "Diamond",
+        d: "Parallelogram"
+      },
+      correct: "c"
+    },
+    {
+      id: 3,
+      question: "What does the `::` operator represent in C++?",
+      options: {
+        a: "Pointer to member operator",
+        b: "Scope resolution operator",
+        c: "Conditional operator",
+        d: "Bitwise XOR operator"
+      },
+      correct: "b"
+    },
+    {
+      id: 4,
+      question: "Which CSS selector has the highest specificity?\n```css\n#header .nav ul li { color: red; }\n.container #header ul li { color: blue; }\nul li.active { color: green; }\n#header ul li { color: yellow; }\n```",
+      options: {
+        a: "#header .nav ul li",
+        b: ".container #header ul li", 
+        c: "ul li.active",
+        d: "#header ul li"
+      },
+      correct: "b"
+    },
+    {
+      id: 5,
+      question: "What is the time complexity of the Quick Sort algorithm in the worst case?",
+      options: {
+        a: "O(n)",
+        b: "O(n log n)",
+        c: "O(n²)",
+        d: "O(log n)"
+      },
+      correct: "c"
+    },
+    {
+      id: 6,
+      question: "What will be the output?\n```cpp\nint arr[] = {1, 2, 3, 4, 5};\nint *p = arr + 2;\nint *q = &arr[1];\ncout << p - q;\n```",
+      options: {
+        a: "1",
+        b: "2",
+        c: "4",
+        d: "8"
+      },
+      correct: "a"
+    },
+    {
+      id: 7,
+      question: "In OOP, which principle ensures that internal implementation details are hidden from the outside world?",
+      options: {
+        a: "Inheritance",
+        b: "Polymorphism",
+        c: "Encapsulation",
+        d: "Abstraction"
+      },
+      correct: "c"
+    },
+    {
+      id: 8,
+      question: "What will this pseudocode output?\n```\nSET x = 10\nSET y = 0\nWHILE x > 0 DO\n    IF x MOD 2 = 0 THEN\n        y = y + x\n    END IF\n    x = x - 2\nEND WHILE\nPRINT y\n```",
+      options: {
+        a: "20",
+        b: "30", 
+        c: "25",
+        d: "15"
+      },
+      correct: "b"
+    },
+    {
+      id: 9,
+      question: "Which SQL statement is used to remove all rows from a table but keep the table structure?",
+      options: {
+        a: "DELETE FROM table_name;",
+        b: "DROP TABLE table_name;",
+        c: "TRUNCATE TABLE table_name;",
+        d: "Both A and C"
+      },
+      correct: "d"
+    },
+    {
+      id: 10,
+      question: "What will be the output?\n```cpp\nclass Base {\npublic:\n    virtual void show() { cout << \"Base\"; }\n};\nclass Derived : public Base {\npublic:\n    void show() override { cout << \"Derived\"; }\n};\nBase* ptr = new Derived();\nptr->show();\n```",
+      options: {
+        a: "Base",
+        b: "Derived",
+        c: "Compilation Error",
+        d: "Runtime Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 11,
+      question: "Which HTML5 semantic element is most appropriate for a sidebar containing related links?",
+      options: {
+        a: "<div>",
+        b: "<section>",
+        c: "<aside>",
+        d: "<nav>"
+      },
+      correct: "c"
+    },
+    {
+      id: 12,
+      question: "What is the main difference between `WHERE` and `HAVING` clauses in SQL?",
+      options: {
+        a: "WHERE is used with SELECT, HAVING with UPDATE",
+        b: "WHERE filters rows before grouping, HAVING filters groups after grouping",
+        c: "WHERE is faster than HAVING",
+        d: "No difference, they are interchangeable"
+      },
+      correct: "b"
+    },
+    {
+      id: 13,
+      question: "Which algorithm type does Dijkstra's shortest path algorithm belong to?",
+      options: {
+        a: "Divide and Conquer",
+        b: "Dynamic Programming",
+        c: "Greedy Algorithm",
+        d: "Backtracking"
+      },
+      correct: "c"
+    },
+    {
+      id: 14,
+      question: "What will be the output?\n```cpp\nint x = 5;\nint y = ++x * 2;\ncout << x << \" \" << y;\n```",
+      options: {
+        a: "5 10",
+        b: "6 12",
+        c: "6 10",
+        d: "5 12"
+      },
+      correct: "b"
+    },
+    {
+      id: 15,
+      question: "In multiple inheritance, what problem does the 'Diamond Problem' refer to?",
+      options: {
+        a: "Memory allocation issues",
+        b: "Ambiguity when multiple base classes have the same method",
+        c: "Performance degradation",
+        d: "Circular dependencies"
+      },
+      correct: "b"
+    },
+    {
+      id: 16,
+      question: "What will this SQL query return?\n```sql\nSELECT d.name, COUNT(e.id) as emp_count\nFROM departments d\nLEFT JOIN employees e ON d.id = e.dept_id\nWHERE e.salary > 60000\nGROUP BY d.name\nHAVING COUNT(e.id) > 2;\n```",
+      options: {
+        a: "All departments with their employee counts",
+        b: "Departments with more than 2 employees earning > 60000",
+        c: "All departments with employees earning > 60000", 
+        d: "Only departments with exactly 2 high-earning employees"
+      },
+      correct: "b"
+    },
+    {
+      id: 17,
+      question: "Which flowchart shape represents input/output operations?",
+      options: {
+        a: "Rectangle",
+        b: "Diamond", 
+        c: "Parallelogram",
+        d: "Circle"
+      },
+      correct: "c"
+    },
+    {
+      id: 18,
+      question: "What is the primary difference between `struct` and `class` in C++?",
+      options: {
+        a: "struct cannot have methods, class can",
+        b: "struct members are public by default, class members are private by default",
+        c: "struct is for C compatibility, class is C++ only",
+        d: "struct cannot inherit, class can"
+      },
+      correct: "b"
+    },
+    {
+      id: 19,
+      question: "What will be displayed?\n```html\n<div class=\"container\">\n  <p>Paragraph 1</p>\n  <p>Paragraph 2</p>\n</div>\n```\n```css\n.container p:first-child { color: red; }\n.container p:last-child { color: blue; }\np { color: green !important; }\n```",
+      options: {
+        a: "Both paragraphs green",
+        b: "First red, second blue",
+        c: "Both paragraphs black",
+        d: "First green, second green"
+      },
+      correct: "a"
+    },
+    {
+      id: 20,
+      question: "Which sorting algorithm is NOT stable?",
+      options: {
+        a: "Merge Sort",
+        b: "Bubble Sort",
+        c: "Quick Sort",
+        d: "Insertion Sort"
+      },
+      correct: "c"
+    },
+    {
+      id: 21,
+      question: "What will be the output?\n```cpp\nvoid func(int& x) {\n    x = x + 10;\n}\nint main() {\n    int a = 5;\n    func(a);\n    cout << a;\n    return 0;\n}\n```",
+      options: {
+        a: "5",
+        b: "15",
+        c: "10",
+        d: "Compilation Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 22,
+      question: "In OOP, what does polymorphism allow?",
+      options: {
+        a: "Creating multiple classes from one base class",
+        b: "Hiding implementation details",
+        c: "Same interface to work with different data types",
+        d: "Preventing unauthorized access to data"
+      },
+      correct: "c"
+    },
+    {
+      id: 23,
+      question: "What will this pseudocode output?\n```\nSET sum = 0\nFOR i = 1 TO 5 DO\n    IF i MOD 2 = 1 THEN\n        sum = sum + i * 2\n    ELSE\n        sum = sum + i\n    END IF\nEND FOR\nPRINT sum\n```",
+      options: {
+        a: "21",
+        b: "18",
+        c: "24", 
+        d: "15"
+      },
+      correct: "c"
+    },
+    {
+      id: 24,
+      question: "Which SQL constraint ensures that a column cannot contain NULL values?",
+      options: {
+        a: "UNIQUE",
+        b: "CHECK",
+        c: "NOT NULL",
+        d: "PRIMARY KEY"
+      },
+      correct: "c"
+    },
+    {
+      id: 25,
+      question: "What is the space complexity of the merge sort algorithm?",
+      options: {
+        a: "O(1)",
+        b: "O(log n)",
+        c: "O(n)",
+        d: "O(n log n)"
+      },
+      correct: "c"
+    },
+    {
+      id: 26,
+      question: "What will be the output?\n```cpp\nint arr[3][3] = {{1,2,3}, {4,5,6}, {7,8,9}};\nint *p = &arr[1][1];\ncout << *(p+1) << \" \" << *(p-1);\n```",
+      options: {
+        a: "6 4",
+        b: "5 3",
+        c: "8 2",
+        d: "6 5"
+      },
+      correct: "a"
+    },
+    {
+      id: 27,
+      question: "Which CSS property is used to create a responsive design that adapts to different screen sizes?",
+      options: {
+        a: "display: flex",
+        b: "@media queries",
+        c: "position: relative",
+        d: "overflow: hidden"
+      },
+      correct: "b"
+    },
+    {
+      id: 28,
+      question: "In object-oriented design, what is the 'IS-A' relationship?",
+      options: {
+        a: "Composition",
+        b: "Aggregation", 
+        c: "Inheritance",
+        d: "Association"
+      },
+      correct: "c"
+    },
+    {
+      id: 29,
+      question: "What does this SQL query return?\n```sql\nSELECT name FROM employees \nWHERE name LIKE '%John%' \nAND salary BETWEEN 40000 AND 80000\nORDER BY salary DESC;\n```",
+      options: {
+        a: "All employees named John",
+        b: "Employees with 'John' in their name, earning 40k-80k, sorted by salary descending",
+        c: "Only employees named exactly 'John'",
+        d: "All employees earning between 40k-80k"
+      },
+      correct: "b"
+    },
+    {
+      id: 30,
+      question: "Which graph algorithm is best suited for finding strongly connected components?",
+      options: {
+        a: "Breadth-First Search (BFS)",
+        b: "Depth-First Search (DFS)",
+        c: "Dijkstra's Algorithm", 
+        d: "Prim's Algorithm"
+      },
+      correct: "b"
+    },
+    {
+      id: 31,
+      question: "What will be the result?\n```cpp\nint factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\ncout << factorial(4);\n```",
+      options: {
+        a: "12",
+        b: "24",
+        c: "16",
+        d: "10"
       },
       correct: "b"
     },
     {
       id: 32,
-      question: "Which C++ operator has the highest precedence?",
+      question: "What is the purpose of the `->` operator in C++?",
       options: {
-        a: "==",
-        b: "=",
-        c: "::",
-        d: "&&"
+        a: "Scope resolution",
+        b: "Member access through pointer",
+        c: "Bitwise right shift",
+        d: "Conditional operator"
       },
-      correct: "c"
+      correct: "b"
     },
     {
       id: 33,
-      question: "What is the purpose of the CSS `will-change` property?",
+      question: "Which HTML element provides the best semantic meaning for a navigation menu?",
       options: {
-        a: "To animate property changes",
-        b: "To optimize performance by hinting at future changes",
-        c: "To force layout recalculation",
-        d: "To override important declarations"
+        a: "<menu>",
+        b: "<nav>",
+        c: "<ul>",
+        d: "<div>"
       },
       correct: "b"
     },
     {
       id: 34,
-      question: "Which OOP concept is demonstrated by method overriding?",
+      question: "What is a stored procedure in SQL?",
+      options: {
+        a: "A saved SELECT query",
+        b: "A precompiled collection of SQL statements",
+        c: "A temporary table",
+        d: "A database backup file"
+      },
+      correct: "b"
+    },
+    {
+      id: 35,
+      question: "Which algorithm characteristic describes maintaining the relative order of equal elements?",
+      options: {
+        a: "Adaptive",
+        b: "In-place",
+        c: "Stable",
+        d: "Recursive"
+      },
+      correct: "c"
+    },
+    {
+      id: 36,
+      question: "What will be the output?\n```cpp\nint x = 10;\nint y = 5;\nint z = (x > y) ? x++ : y++;\ncout << x << \" \" << y << \" \" << z;\n```",
+      options: {
+        a: "11 5 10",
+        b: "10 6 5",
+        c: "11 5 11",
+        d: "10 5 10"
+      },
+      correct: "a"
+    },
+    {
+      id: 37,
+      question: "In OOP, what is method overriding?",
+      options: {
+        a: "Creating multiple methods with the same name but different parameters",
+        b: "Redefining a parent class method in a child class",
+        c: "Calling a method multiple times",
+        d: "Preventing a method from being inherited"
+      },
+      correct: "b"
+    },
+    {
+      id: 38,
+      question: "What will this pseudocode output?\n```\nSET count = 0\nSET i = 1\nWHILE i <= 20 DO\n    IF i MOD 3 = 0 AND i MOD 5 = 0 THEN\n        count = count + 1\n    END IF\n    i = i + 1\nEND WHILE\nPRINT count\n```",
+      options: {
+        a: "1",
+        b: "2",
+        c: "3",
+        d: "4"
+      },
+      correct: "a"
+    },
+    {
+      id: 39,
+      question: "Which SQL JOIN returns all rows from both tables, matching where possible?",
+      options: {
+        a: "INNER JOIN",
+        b: "LEFT JOIN",
+        c: "RIGHT JOIN",
+        d: "FULL OUTER JOIN"
+      },
+      correct: "d"
+    },
+    {
+      id: 40,
+      question: "When is Breadth-First Search (BFS) preferred over Depth-First Search (DFS)?",
+      options: {
+        a: "When finding any path",
+        b: "When finding the shortest path in unweighted graphs",
+        c: "When memory is limited",
+        d: "When the graph is very deep"
+      },
+      correct: "b"
+    },
+    {
+      id: 41,
+      question: "What will be the output?\n```cpp\nchar str[] = \"Hello\";\nchar *p = str;\nwhile(*p) {\n    if(*p == 'l') *p = 'x';\n    p++;\n}\ncout << str;\n```",
+      options: {
+        a: "Hello",
+        b: "Hexxo",
+        c: "Helxo",
+        d: "Hexlo"
+      },
+      correct: "b"
+    },
+    {
+      id: 42,
+      question: "What does the `sizeof` operator return in C++?",
+      options: {
+        a: "The address of a variable",
+        b: "The value stored in a variable",
+        c: "The size in bytes of a data type or variable",
+        d: "The number of elements in an array"
+      },
+      correct: "c"
+    },
+    {
+      id: 43,
+      question: "What will be displayed with this CSS?\n```html\n<div class=\"box\">Content</div>\n```\n```css\n@media (max-width: 600px) {\n  .box { background: red; }\n}\n@media (min-width: 601px) {\n  .box { background: blue; }\n}\n```\nWhen viewport width is 500px?",
+      options: {
+        a: "Red background",
+        b: "Blue background",
+        c: "No background",
+        d: "Both red and blue"
+      },
+      correct: "a"
+    },
+    {
+      id: 44,
+      question: "What is abstraction in OOP?",
+      options: {
+        a: "Creating objects from classes",
+        b: "Hiding unnecessary implementation details while showing essential features",
+        c: "Copying properties from parent to child class",
+        d: "Restricting access to class members"
+      },
+      correct: "b"
+    },
+    {
+      id: 45,
+      question: "What is the result of this SQL query?\n```sql\nSELECT COUNT(DISTINCT department_id)\nFROM employees\nWHERE salary > (SELECT AVG(salary) FROM employees);\n```",
+      options: {
+        a: "Total number of employees above average salary",
+        b: "Number of unique departments with employees above average salary",
+        c: "Average salary of all employees",
+        d: "Total number of departments"
+      },
+      correct: "b"
+    },
+    {
+      id: 46,
+      question: "Which search algorithm has a time complexity of O(log n) for sorted arrays?",
+      options: {
+        a: "Linear Search",
+        b: "Binary Search",
+        c: "Interpolation Search",
+        d: "Both B and C"
+      },
+      correct: "d"
+    },
+    {
+      id: 47,
+      question: "What will be the output?\n```cpp\nclass A {\npublic:\n    A() { cout << \"A\"; }\n    ~A() { cout << \"~A\"; }\n};\nclass B : public A {\npublic:\n    B() { cout << \"B\"; }\n    ~B() { cout << \"~B\"; }\n};\nB obj;\n// When obj goes out of scope\n```",
+      options: {
+        a: "AB~A~B",
+        b: "AB~B~A",
+        c: "BA~A~B",
+        d: "BA~B~A"
+      },
+      correct: "b"
+    },
+    {
+      id: 48,
+      question: "What does DDL stand for in SQL?",
+      options: {
+        a: "Data Definition Language",
+        b: "Data Description Language",
+        c: "Database Definition Language",
+        d: "Dynamic Data Language"
+      },
+      correct: "a"
+    },
+    {
+      id: 49,
+      question: "What is the purpose of the `.*` operator in C++?",
+      options: {
+        a: "Multiplication and assignment",
+        b: "Pointer to member operator",
+        c: "Wildcard pattern matching",
+        d: "Array dereferencing"
+      },
+      correct: "b"
+    },
+    {
+      id: 50,
+      question: "Which CSS property ensures content doesn't overflow its container?",
+      options: {
+        a: "display: block",
+        b: "position: relative", 
+        c: "overflow: hidden",
+        d: "float: left"
+      },
+      correct: "c"
+    }
+  ]
+},
+
+exam18 : {
+  title: "Technical Mock Exam 11 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+  cat: "Technical Mock Exam",
+  questions: [
+    {
+      id: 1,
+      question: "In C++, what is the primary use of the scope resolution operator `::`?",
+      options: {
+        a: "Access class members",
+        b: "Define/Access global variables or methods",
+        c: "Resolve operator overloading",
+        d: "Access private data directly"
+      },
+      correct: "b"
+    },
+    {
+      id: 2,
+      question: "What does the following SQL query return?\n```sql\nSELECT COUNT(*), DepartmentID FROM Employees GROUP BY DepartmentID HAVING COUNT(*) > 5;\n```",
+      options: {
+        a: "All employees grouped by department",
+        b: "Departments with more than 5 employees",
+        c: "All departments regardless of size",
+        d: "Error: HAVING cannot be used with COUNT"
+      },
+      correct: "b"
+    },
+    {
+      id: 3,
+      question: "In a flowchart, which shape is used for a decision (true/false branching)?",
+      options: {
+        a: "Oval",
+        b: "Rectangle",
+        c: "Diamond",
+        d: "Parallelogram"
+      },
+      correct: "c"
+    },
+    {
+      id: 4,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n  int x = 10;\n  int *p = &x;\n  cout << *p + 5;\n}\n```\nOutput?",
+      options: {
+        a: "15",
+        b: "10",
+        c: "Address of x",
+        d: "Compilation error"
+      },
+      correct: "a"
+    },
+    {
+      id: 5,
+      question: "Which algorithm is both stable and adaptive under certain conditions?",
+      options: {
+        a: "Merge Sort",
+        b: "Quick Sort",
+        c: "Insertion Sort",
+        d: "Heap Sort"
+      },
+      correct: "c"
+    },
+    {
+      id: 6,
+      question: "SQL Theory: Which statement is true about `ROLLBACK`?",
+      options: {
+        a: "Saves all current changes",
+        b: "Undoes changes since the last COMMIT",
+        c: "Deletes a table permanently",
+        d: "Ends the transaction"
+      },
+      correct: "b"
+    },
+    {
+      id: 7,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nvoid f(int &a){ a += 10; }\nint main(){ int x=5; f(x); cout<<x; }\n```\nOutput?",
+      options: {
+        a: "5",
+        b: "10",
+        c: "15",
+        d: "Error"
+      },
+      correct: "c"
+    },
+    {
+      id: 8,
+      question: "HTML Code:\n```html\n<p style='color: red; color: blue;'>Test</p>\n```\nHow will the text appear?",
+      options: {
+        a: "Red",
+        b: "Blue",
+        c: "Black",
+        d: "Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 9,
+      question: "OOP: Which principle allows multiple forms of a function depending on arguments?",
       options: {
         a: "Encapsulation",
         b: "Abstraction",
@@ -8634,182 +9473,460 @@ exam16: {
       correct: "c"
     },
     {
-      id: 35,
-      question: "What is the output of this C++ code?\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n  int a[] = {1,2,3};\n  int *p = a + 1;\n  cout << p[-1] << *p << p[1];\n  return 0;\n}\n```",
+      id: 10,
+      question: "Pseudocode: What is the output?\n```\ncount = 0\nfor i = 1 to 5:\n   if i % 2 == 0:\n      count = count + i\nprint count\n```\n",
       options: {
-        a: "123",
-        b: "223",
-        c: "Undefined behavior",
-        d: "Compilation error"
+        a: "6",
+        b: "4",
+        c: "10",
+        d: "15"
       },
       correct: "a"
     },
     {
-      id: 36,
-      question: "Which SQL statement creates a view that updates when its base tables change?",
+      id: 11,
+      question: "Which HTML tag is semantic and improves accessibility?",
       options: {
-        a: "CREATE MATERIALIZED VIEW",
-        b: "CREATE VIEW",
-        c: "CREATE LIVE VIEW",
-        d: "CREATE DYNAMIC VIEW"
-      },
-      correct: "b"
-    },
-    {
-      id: 37,
-      question: "What does this flowchart symbol represent? ⬢",
-      options: {
-        a: "Start/End",
-        b: "Process",
-        c: "Decision",
-        d: "Input/Output"
-      },
-      correct: "d"
-    },
-    {
-      id: 38,
-      question: "Which HTML element provides machine-readable metadata about the document?",
-      options: {
-        a: "<meta>",
-        b: "<data>",
-        c: "<script type=\"application/ld+json\">",
-        d: "All of the above"
-      },
-      correct: "d"
-    },
-    {
-      id: 39,
-      question: "What is the output of this C++ code?\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n  int x = 0;\n  cout << (x++ + ++x) << x;\n  return 0;\n}\n```",
-      options: {
-        a: "2 2",
-        b: "1 2",
-        c: "3 2",
-        d: "Undefined behavior"
-      },
-      correct: "a"
-    },
-    {
-      id: 40,
-      question: "Which SQL window function returns a rank with gaps?",
-      options: {
-        a: "ROW_NUMBER()",
-        b: "RANK()",
-        c: "DENSE_RANK()",
-        d: "NTILE()"
-      },
-      correct: "b"
-    },
-    {
-      id: 41,
-      question: "Which algorithm would be most efficient to find the shortest path in an unweighted graph?",
-      options: {
-        a: "Dijkstra's",
-        b: "A*",
-        c: "BFS",
-        d: "DFS"
+        a: "<b>",
+        b: "<i>",
+        c: "<article>",
+        d: "<font>"
       },
       correct: "c"
     },
     {
-      id: 42,
-      question: "What does this CSS code do?\n```css\n@media (hover: hover) {\n  button:hover { background: blue; }\n}\n```",
+      id: 12,
+      question: "C++: Which declaration is invalid?",
       options: {
-        a: "Applies hover only on touch devices",
-        b: "Applies hover only when device supports hovering",
-        c: "Forces hover state on all devices",
-        d: "Disables hover effects"
+        a: "int *ptr;",
+        b: "int &ref;",
+        c: "int arr[10];",
+        d: "int &ref = 5;"
+      },
+      correct: "d"
+    },
+    {
+      id: 13,
+      question: "SQL Code:\n```sql\nSELECT Name FROM Employees WHERE Salary BETWEEN 5000 AND 10000;\n```\nWhat does this return?",
+      options: {
+        a: "Employees with salary outside 5000-10000",
+        b: "Employees with salary exactly 5000 or 10000",
+        c: "Employees with salary in range [5000,10000]",
+        d: "Error"
+      },
+      correct: "c"
+    },
+    {
+      id: 14,
+      question: "Algorithm: Which algorithm uses divide-and-conquer strategy?",
+      options: {
+        a: "Prim’s",
+        b: "Quick Sort",
+        c: "Dijkstra",
+        d: "Kruskal’s"
       },
       correct: "b"
     },
     {
-      id: 43,
-      question: "What is the output of this SQL query?\n```sql\nSELECT COALESCE(NULLIF(NULL, NULL), 'Hello');\n```",
+      id: 15,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nint f(int n){ if(n==0) return 1; return n*f(n-1); }\nint main(){ cout<<f(4); }\n```\nOutput?",
       options: {
-        a: "NULL",
-        b: "Hello",
-        c: "Empty string",
+        a: "10",
+        b: "24",
+        c: "120",
         d: "Error"
       },
       correct: "b"
     },
     {
-      id: 44,
-      question: "Which C++ storage class preserves variable value between function calls?",
+      id: 16,
+      question: "OOP Theory: Which of the following violates encapsulation?",
       options: {
-        a: "auto",
-        b: "register",
-        c: "static",
-        d: "extern"
+        a: "All members private",
+        b: "Using getters/setters",
+        c: "All members public",
+        d: "Declaring friend functions"
       },
       correct: "c"
     },
     {
-      id: 45,
-      question: "What is the main advantage of a stored procedure over inline SQL?",
+      id: 17,
+      question: "SQL Theory: Which is a DML command?",
       options: {
-        a: "Better performance due to precompilation",
-        b: "Reduced network traffic",
-        c: "Improved security through parameterization",
-        d: "All of the above"
+        a: "CREATE",
+        b: "DROP",
+        c: "UPDATE",
+        d: "ALTER"
+      },
+      correct: "c"
+    },
+    {
+      id: 18,
+      question: "C++ Operator Precedence: Result of `2 + 3 * 4`?",
+      options: {
+        a: "20",
+        b: "14",
+        c: "24",
+        d: "Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 19,
+      question: "Flowchart: Which shape represents input/output operations?",
+      options: {
+        a: "Oval",
+        b: "Diamond",
+        c: "Rectangle",
+        d: "Parallelogram"
       },
       correct: "d"
     },
     {
-      id: 46,
-      question: "Which algorithm is NOT typically used for weighted graph shortest path problems?",
+      id: 20,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nclass A { public: A(){cout<<\"A\";} ~A(){cout<<\"a\";} };\nclass B: public A { public: B(){cout<<\"B\";} ~B(){cout<<\"b\";} };\nint main(){ B b; }\n```\nOutput?",
       options: {
-        a: "Prim's",
-        b: "Dijkstra's",
-        c: "Bellman-Ford",
-        d: "Floyd-Warshall"
+        a: "ABba",
+        b: "ABab",
+        c: "BAba",
+        d: "Error"
       },
       correct: "a"
+    },
+    {
+      id: 21,
+      question: "Which SQL object allows saving a reusable query result?",
+      options: {
+        a: "Trigger",
+        b: "View",
+        c: "Stored Procedure",
+        d: "Cursor"
+      },
+      correct: "b"
+    },
+    {
+      id: 22,
+      question: "Algorithm: BFS is particularly suitable for?",
+      options: {
+        a: "Finding shortest path in unweighted graphs",
+        b: "Finding strongly connected components",
+        c: "Topological sorting",
+        d: "Detecting negative cycles"
+      },
+      correct: "a"
+    },
+    {
+      id: 23,
+      question: "CSS Specificity: Which selector has highest precedence?",
+      options: {
+        a: "p",
+        b: ".class",
+        c: "#id",
+        d: "p span"
+      },
+      correct: "c"
+    },
+    {
+      id: 24,
+      question: "C++: Which preprocessor directive includes files?",
+      options: {
+        a: "#define",
+        b: "#include",
+        c: "#ifdef",
+        d: "#pragma"
+      },
+      correct: "b"
+    },
+    {
+      id: 25,
+      question: "SQL Code:\n```sql\nSELECT Name FROM Employees WHERE Name LIKE 'A%';\n```\nWhich employees are returned?",
+      options: {
+        a: "Names ending with A",
+        b: "Names containing A anywhere",
+        c: "Names starting with A",
+        d: "All names"
+      },
+      correct: "c"
+    },
+    {
+      id: 26,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){ int arr[3] = {1,2,3}; cout<<*(arr+1); }\n```\nOutput?",
+      options: {
+        a: "1",
+        b: "2",
+        c: "3",
+        d: "Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 27,
+      question: "Algorithm: Which is a greedy algorithm?",
+      options: {
+        a: "Merge Sort",
+        b: "Dijkstra",
+        c: "Prim’s",
+        d: "Both b and c"
+      },
+      correct: "d"
+    },
+    {
+      id: 28,
+      question: "OOP Theory: Which best describes abstraction?",
+      options: {
+        a: "Hiding internal details and showing functionality",
+        b: "Bundling data and methods",
+        c: "Many forms of same method",
+        d: "Inheriting properties"
+      },
+      correct: "a"
+    },
+    {
+      id: 29,
+      question: "SQL Theory: Indexes primarily improve?",
+      options: {
+        a: "Insert speed",
+        b: "Delete speed",
+        c: "Select query performance",
+        d: "Disk space usage"
+      },
+      correct: "c"
+    },
+    {
+      id: 30,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){ int a=5; cout<<(a++ + ++a); }\n```\nPossible output?",
+      options: {
+        a: "11",
+        b: "12",
+        c: "Undefined behavior",
+        d: "Error"
+      },
+      correct: "c"
+    },
+    {
+      id: 31,
+      question: "Which algorithm is not comparison-based?",
+      options: {
+        a: "Merge Sort",
+        b: "Quick Sort",
+        c: "Counting Sort",
+        d: "Heap Sort"
+      },
+      correct: "c"
+    },
+    {
+      id: 32,
+      question: "OOP Code:\n```cpp\n#include <iostream>\nusing namespace std;\nclass A { public: virtual void f(){cout<<\"A\";} };\nclass B: public A { public: void f(){cout<<\"B\";} };\nint main(){ A *p=new B; p->f(); }\n```\nOutput?",
+      options: {
+        a: "A",
+        b: "B",
+        c: "AB",
+        d: "Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 33,
+      question: "CSS Media Query:\n```css\n@media (max-width: 600px) { p { color: red; } }\n```\nWhat happens?",
+      options: {
+        a: "All <p> are red always",
+        b: "Red only when viewport ≤ 600px",
+        c: "No effect",
+        d: "Syntax error"
+      },
+      correct: "b"
+    },
+    {
+      id: 34,
+      question: "C++: Which operator is overloaded to access a pointer to class members?",
+      options: {
+        a: ".*",
+        b: "->*",
+        c: "::",
+        d: "new"
+      },
+      correct: "b"
+    },
+    {
+      id: 35,
+      question: "Algorithm: Which sorting is stable?",
+      options: {
+        a: "Heap Sort",
+        b: "Quick Sort",
+        c: "Merge Sort",
+        d: "Selection Sort"
+      },
+      correct: "c"
+    },
+    {
+      id: 36,
+      question: "SQL Code:\n```sql\nSELECT DepartmentID, AVG(Salary) FROM Employees GROUP BY DepartmentID;\n```\nWhat does it return?",
+      options: {
+        a: "Average salary across company",
+        b: "Average salary per department",
+        c: "Highest salary per department",
+        d: "Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 37,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){ char *p = \"hello\"; cout<<p[1]; }\n```\nOutput?",
+      options: {
+        a: "h",
+        b: "e",
+        c: "o",
+        d: "Error"
+      },
+      correct: "b"
+    },
+    {
+      id: 38,
+      question: "Algorithm: Which is best for finding MST in sparse graphs?",
+      options: {
+        a: "Prim’s",
+        b: "Kruskal’s",
+        c: "Dijkstra",
+        d: "Floyd-Warshall"
+      },
+      correct: "b"
+    },
+    {
+      id: 39,
+      question: "OOP Theory: Which describes inheritance?",
+      options: {
+        a: "Reusing code from another class",
+        b: "Many forms of a method",
+        c: "Data hiding",
+        d: "Interface only"
+      },
+      correct: "a"
+    },
+    {
+      id: 40,
+      question: "SQL Code:\n```sql\nDELETE FROM Employees WHERE 1=1;\n```\nEffect?",
+      options: {
+        a: "Deletes nothing",
+        b: "Deletes all rows",
+        c: "Deletes only first row",
+        d: "Syntax error"
+      },
+      correct: "b"
+    },
+    {
+      id: 41,
+      question: "C++: Which is true about struct vs class?",
+      options: {
+        a: "Struct members are private by default",
+        b: "Class members are public by default",
+        c: "Struct members are public by default",
+        d: "Both default private"
+      },
+      correct: "c"
+    },
+    {
+      id: 42,
+      question: "Algorithm: Time complexity of binary search?",
+      options: {
+        a: "O(n)",
+        b: "O(log n)",
+        c: "O(n log n)",
+        d: "O(1)"
+      },
+      correct: "b"
+    },
+    {
+      id: 43,
+      question: "HTML: Which tag is used for emphasized text?",
+      options: {
+        a: "<strong>",
+        b: "<em>",
+        c: "<mark>",
+        d: "<i>"
+      },
+      correct: "b"
+    },
+    {
+      id: 44,
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){ int a=3; int b=2; cout<<(a/b);\n}\n```\nOutput?",
+      options: {
+        a: "1",
+        b: "1.5",
+        c: "Error",
+        d: "0"
+      },
+      correct: "a"
+    },
+    {
+      id: 45,
+      question: "SQL Theory: Which statement about WHERE vs HAVING is correct?",
+      options: {
+        a: "WHERE filters rows before grouping, HAVING filters groups",
+        b: "HAVING filters rows, WHERE filters groups",
+        c: "Both are identical",
+        d: "HAVING works only with SELECT *"
+      },
+      correct: "a"
+    },
+    {
+      id: 46,
+      question: "Algorithm: DFS is preferred when?",
+      options: {
+        a: "Finding shortest paths",
+        b: "Pathfinding in maze",
+        c: "Checking bipartite graphs",
+        d: "Cycle detection"
+      },
+      correct: "d"
     },
     {
       id: 47,
-      question: "What does this C++ code output?\n```cpp\n#include <iostream>\nusing namespace std;\n\nnamespace A { int x = 1; }\nnamespace B { int x = 2; }\n\nusing namespace A;\nusing namespace B;\n\nint main() {\n  cout << A::x << B::x;\n  return 0;\n}\n```",
+      question: "C++ Code:\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){ const int x=10; int *p=&x; *p=20; cout<<x; }\n```\nBehavior?",
       options: {
-        a: "12",
-        b: "Compilation error",
-        c: "11",
-        d: "22"
+        a: "Prints 20",
+        b: "Prints 10",
+        c: "Undefined behavior",
+        d: "Compile-time error"
       },
-      correct: "a"
+      correct: "c"
     },
     {
       id: 48,
-      question: "Which HTML element is most semantic for a standalone piece of content that could be syndicated?",
+      question: "OOP Code:\n```cpp\n#include <iostream>\nusing namespace std;\nclass A { public: void show(){cout<<\"A\";} };\nclass B: public A { public: void show(){cout<<\"B\";} };\nint main(){ B obj; obj.show(); }\n```\nOutput?",
       options: {
-        a: "<div class=\"article\">",
-        b: "<section>",
-        c: "<article>",
-        d: "<content>"
+        a: "A",
+        b: "B",
+        c: "AB",
+        d: "Error"
       },
-      correct: "c"
+      correct: "b"
     },
     {
       id: 49,
-      question: "What is the output of this pseudocode?\n```\nx = [1,2,3,4]\nfor i from 0 to length(x)-1\n  x[i] = x[length(x)-1-i]\nend\nprint x\n```",
+      question: "SQL Code:\n```sql\nSELECT DISTINCT DepartmentID FROM Employees;\n```\nWhat does this return?",
       options: {
-        a: "[1,2,3,4]",
-        b: "[4,3,2,1]",
-        c: "[4,3,3,4]",
-        d: "[4,4,4,4]"
+        a: "All DepartmentIDs with duplicates",
+        b: "Unique DepartmentIDs only",
+        c: "Only the maximum DepartmentID",
+        d: "Error"
       },
-      correct: "c"
+      correct: "b"
     },
     {
       id: 50,
-      question: "Which CSS Grid property defines the size of implicit grid tracks?",
+      question: "Algorithm: Which is NOT dynamic programming?",
       options: {
-        a: "grid-auto-rows",
-        b: "grid-template-rows",
-        c: "grid-row-gap",
-        d: "grid-implicit"
+        a: "Fibonacci with memoization",
+        b: "Longest Common Subsequence",
+        c: "Dijkstra",
+        d: "Matrix Chain Multiplication"
       },
-      correct: "a"
+      correct: "c"
     }
   ]
-},
+}
+
+
+
 
 };
