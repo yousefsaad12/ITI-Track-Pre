@@ -333,12 +333,12 @@ const technicalExams = {
         id: 34,
         question: "CSS specificity order (highest to lowest):",
         options: {
-          a: "Element < Class < ID",
-          b: "ID < Class < Element",
-          c: "Class < ID < Element",
-          d: "None",
+          a: "ID > Class > Element",  // Correct order
+          b: "Class > ID > Element",
+          c: "Element > Class > ID",
+          d: "None of the above",
         },
-        correct: "a",
+        correct: "a",  // ID (highest) > Class > Element (lowest)
       },
 
       // ----------------- OOP (8 questions) -----------------
