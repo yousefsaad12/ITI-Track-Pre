@@ -1,6 +1,6 @@
 const technicalExams = {
   exam1: {
-    title: "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+    title: "Technical Mock Exam 1  - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
     cat : "Technical Mock Exam",
      
     questions: [
@@ -517,7 +517,7 @@ const technicalExams = {
   },
   exam2: {
     title:
-      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      "Technical Mock Exam 2 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
       cat : "Technical Mock Exam",
     questions: [
       // C/C++ Questions (12 total: 6 code-based, 6 theory)
@@ -1325,7 +1325,7 @@ Initial array: [5, 2, 8, 1, 9, 3]`,
   },
   exam3: {
     title:
-      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      "Technical Mock Exam 3 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
       cat : "Technical Mock Exam",
     questions: [
       // C/C++ Questions (12 total: 6 code-based, 6 syntax-oriented theory)
@@ -2149,7 +2149,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
 
   exam4: {
     title:
-      "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+      "Technical Mock Exam 4 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
       cat : "Technical Mock Exam",
     questions: [
       // ==== C/C++ (12) ====
@@ -2756,7 +2756,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
 
   exam5: {
     title:
-      "Technical Mock Exam - Algorithms (Sorting & Searching) - Intermediate to Advanced",
+      "Algorithms 1 (Sorting & Searching) - Intermediate to Advanced",
       cat : "Algorithms",
     questions: [
       {
@@ -3279,7 +3279,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
 
 
   exam6: {
-  title: "Algorithms MCQ Exam - Sorting, Searching, and Graph Algorithms",
+  title: "Algorithms 2 MCQ Exam - Sorting, Searching, and Graph Algorithms",
   cat:"Algorithms",
   questions: [
     { id: 1, question: "What is the average time complexity of Quick Sort?", options: { a: "O(n log n)", b: "O(n²)", c: "O(log n)", d: "O(n)" }, answer: "a" },
@@ -8199,7 +8199,7 @@ int main() {
 },
 
 exam15 : {
-  title: "Technical Mock Exam - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
+  title: "Technical Mock Exam 7 - C/C++, SQL, HTML, CSS, OOP, Algorithms (Intermediate to Advanced & Tricky)",
   cat: "Technical Mock Exam",
   questions: [
     { id: 1, question: "Which OOP feature restricts direct access to class data?", options: {a: "Inheritance", b: "Encapsulation", c: "Polymorphism", d: "Abstraction"}, correct: "b" },
