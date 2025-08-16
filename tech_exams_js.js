@@ -281,10 +281,9 @@ const technicalExams = {
           a: "Atomicity",
           b: "Consistency",
           c: "Isolation",
-          d: "Durability",
-          e: "Concurrency",
+          d: "Concurrency",
         },
-        correct: "e",
+        correct: "d",
       },
       {
         id: 29,
