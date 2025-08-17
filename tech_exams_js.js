@@ -4013,7 +4013,7 @@ for (int i = 0; i < 3; ++i) {
 }
 \`\`\``,
         options: {
-          a: "0\n2 1\n4 3 2",
+          a: "0\n2 1\n4 2 3",
           b: "0\n1 2\n2 3 4",
           c: "0\n2 1\n4 3 2\n",
           d: "Infinite loop",
@@ -4034,7 +4034,7 @@ cout << result;
           c: "11",
           d: "1",
         },
-        correct: "b",
+        correct: "a",
       },
       {
         id: 6,
@@ -9923,9 +9923,956 @@ exam18 : {
       correct: "c"
     }
   ]
+},
+
+
+exam19 : {
+  title: "C/C++ Junior Developer Technical Exam",
+  cat : "OOP/ c/c++",
+  questions: [
+    {
+      id: 1,
+      question: `#include <iostream>
+using namespace std;
+int main() {
+    int x = 5;
+    int y = ++x;
+    cout << x << " " << y << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5 6",
+        b: "Output: 6 6",
+        c: "Compile-time error",
+        d: "Output: 6 5"
+      },
+      answer: "b"
+    },
+    {
+      id: 2,
+      question: `class Base {
+public:
+    virtual void show() { cout << "Base" << endl; }
+};
+class Derived : public Base {
+public:
+    void show() { cout << "Derived" << endl; }
+};
+int main() {
+    Base* p = new Derived();
+    p->show();
+    delete p;
+    return 0;
+}`,
+      options: {
+        a: "Output: Base",
+        b: "Output: Derived",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "b"
+    },
+    {
+      id: 3,
+      question: `int main() {
+    int arr[3] = {1, 2, 3};
+    cout << arr[3] << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 0",
+        b: "Compile-time error",
+        c: "Runtime error",
+        d: "Undefined behavior"
+      },
+      answer: "d"
+    },
+    {
+      id: 4,
+      question: `void func(int& x) {
+    x = 20;
 }
-
-
-///ss adadsda
+int main() {
+    int a = 10;
+    func(a);
+    cout << a << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 10",
+        b: "Output: 20",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "b"
+    },
+    {
+      id: 5,
+      question: `int main() {
+    int* p = new int(5);
+    delete p;
+    cout << *p << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5",
+        b: "Output: 0",
+        c: "Runtime error",
+        d: "Undefined behavior"
+      },
+      answer: "d"
+    },
+    {
+      id: 6,
+      question: `class Test {
+public:
+    Test() { cout << "Constructor" << endl; }
+    ~Test() { cout << "Destructor" << endl; }
+};
+int main() {
+    Test t;
+    return 0;
+}`,
+      options: {
+        a: "Output: Constructor",
+        b: "Output: Constructor Destructor",
+        c: "Output: Destructor",
+        d: "No output"
+      },
+      answer: "b"
+    },
+    {
+      id: 7,
+      question: `int main() {
+    const int x = 5;
+    x = 10;
+    cout << x << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5",
+        b: "Output: 10",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "c"
+    },
+    {
+      id: 8,
+      question: `int x = 20;
+int main() {
+    int x = 10;
+    cout << ::x << " " << x << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 10 20",
+        b: "Output: 20 10",
+        c: "Output: 10 10",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 9,
+      question: `void func(int arr[]) {
+    cout << sizeof(arr) << endl;
+}
+int main() {
+    int a[5] = {1,2,3,4,5};
+    func(a);
+    return 0;
+}`,
+      options: {
+        a: "Output: 20",
+        b: "Output: 8",
+        c: "Output: 4",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 10,
+      question: `class Base {
+public:
+    Base() { cout << "Base" << endl; }
+};
+class Derived : public Base {
+public:
+    Derived() { cout << "Derived" << endl; }
+};
+int main() {
+    Derived d;
+    return 0;
+}`,
+      options: {
+        a: "Output: Derived Base",
+        b: "Output: Base Derived",
+        c: "Output: Derived",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 11,
+      question: `int main() {
+    int a = 10;
+    int b = a++;
+    cout << a << " " << b << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 10 11",
+        b: "Output: 11 10",
+        c: "Output: 11 11",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 12,
+      question: `void func(int x, int y = 20) {
+    cout << x + y << endl;
+}
+int main() {
+    func(10);
+    return 0;
+}`,
+      options: {
+        a: "Output: 10",
+        b: "Output: 20",
+        c: "Output: 30",
+        d: "Compile-time error"
+      },
+      answer: "c"
+    },
+    {
+      id: 13,
+      question: `int main() {
+    int arr[] = {1, 2, 3, 4};
+    cout << sizeof(arr)/sizeof(int) << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 4",
+        b: "Output: 16",
+        c: "Compile-time error",
+        d: "Output: 8"
+      },
+      answer: "a"
+    },
+    {
+      id: 14,
+      question: `class Test {
+public:
+    Test() { cout << "Default" << endl; }
+    Test(const Test& t) { cout << "Copy" << endl; }
+};
+int main() {
+    Test t1;
+    Test t2 = t1;
+    return 0;
+}`,
+      options: {
+        a: "Output: Default Copy",
+        b: "Output: Default Default",
+        c: "Output: Copy Copy",
+        d: "Compile-time error"
+      },
+      answer: "a"
+    },
+    {
+      id: 15,
+      question: `int main() {
+    int x = 5;
+    int* p = &x;
+    cout << *p++ << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5",
+        b: "Output: 6",
+        c: "Undefined behavior",
+        d: "Compile-time error"
+      },
+      answer: "a"
+    },
+    {
+      id: 16,
+      question: `void func(int x) {
+    cout << "int version" << endl;
+}
+void func(double x) {
+    cout << "double version" << endl;
+}
+int main() {
+    func(5);
+    func(5.0);
+    return 0;
+}`,
+      options: {
+        a: "Output: int version\\ndouble version",
+        b: "Output: double version\\ndouble version",
+        c: "Compile-time error",
+        d: "Output: int version\\nint version"
+      },
+      answer: "a"
+    },
+    {
+      id: 17,
+      question: `int main() {
+    static int x = 0;
+    x++;
+    cout << x << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 0",
+        b: "Output: 1",
+        c: "Compile-time error",
+        d: "Undefined behavior"
+      },
+      answer: "b"
+    },
+    {
+      id: 18,
+      question: `class Test {
+    int value;
+public:
+    Test(int v) : value(v) {}
+    int getValue() const { return value; }
+    void setValue(int v) { value = v; }
+};
+int main() {
+    const Test t(10);
+    cout << t.getValue() << endl;
+    t.setValue(20);
+    return 0;
+}`,
+      options: {
+        a: "Output: 10",
+        b: "Output: 20",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "c"
+    },
+    {
+      id: 19,
+      question: `int main() {
+    char str[] = "Hello";
+    char* str2 = "World";
+    str[0] = 'h';
+    cout << str << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: Hello",
+        b: "Output: hello",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "b"
+    },
+    {
+      id: 20,
+      question: `class Base {
+public:
+    void show() { cout << "Base" << endl; }
+};
+class Derived : public Base {
+public:
+    void show() { cout << "Derived" << endl; }
+};
+int main() {
+    Base* p = new Derived();
+    p->show();
+    delete p;
+    return 0;
+}`,
+      options: {
+        a: "Output: Base",
+        b: "Output: Derived",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "a"
+    },
+    {
+      id: 21,
+      question: `int main() {
+    int x = 10, y = 20;
+    int* p = &x;
+    p = &y;
+    (*p)++;
+    cout << x << " " << y << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 10 20",
+        b: "Output: 11 20",
+        c: "Output: 10 21",
+        d: "Output: 11 21"
+      },
+      answer: "c"
+    },
+    {
+      id: 22,
+      question: `class Rectangle {
+    int width, height;
+public:
+    Rectangle(int w, int h) : width(w), height(h) {}
+    int area() { return width * height; }
+};
+int main() {
+    Rectangle r(5, 4);
+    cout << r.area() << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 9",
+        b: "Output: 20",
+        c: "Output: 54",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 23,
+      question: `extern int x;
+int main() {
+    cout << x << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 0",
+        b: "Compile-time error",
+        c: "Linker error",
+        d: "Runtime error"
+      },
+      answer: "c"
+    },
+    {
+      id: 24,
+      question: `int main() {
+    int* arr = new int[3]{1, 2, 3};
+    cout << arr[1] << endl;
+    delete[] arr;
+    return 0;
+}`,
+      options: {
+        a: "Output: 1",
+        b: "Output: 2",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "b"
+    },
+    {
+      id: 25,
+      question: `void func() {
+    static int count = 0;
+    count++;
+    cout << count << " ";
+}
+int main() {
+    func();
+    func();
+    func();
+    return 0;
+}`,
+      options: {
+        a: "Output: 1 1 1",
+        b: "Output: 1 2 3",
+        c: "Output: 0 1 2",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 26,
+      question: `int main() {
+    int arr[2][3] = {{1,2,3}, {4,5,6}};
+    cout << arr[1][2] << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5",
+        b: "Output: 6",
+        c: "Output: 3",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 27,
+      question: `class Test {
+public:
+    Test(int x) { cout << "Param constructor" << endl; }
+    Test() { cout << "Default constructor" << endl; }
+};
+int main() {
+    Test t1;
+    Test t2(10);
+    return 0;
+}`,
+      options: {
+        a: "Output: Default constructor\\nParam constructor",
+        b: "Output: Param constructor\\nDefault constructor",
+        c: "Compile-time error",
+        d: "No output"
+      },
+      answer: "a"
+    },
+    {
+      id: 28,
+      question: `int main() {
+    int x = 5;
+    int& ref = x;
+    ref = 10;
+    cout << x << " " << ref << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5 10",
+        b: "Output: 10 10",
+        c: "Output: 5 5",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 29,
+      question: `int main() {
+    int* p = new int(42);
+    delete p;
+    delete p;
+    return 0;
+}`,
+      options: {
+        a: "No error",
+        b: "Compile-time error",
+        c: "Runtime error",
+        d: "Undefined behavior"
+      },
+      answer: "d"
+    },
+    {
+      id: 30,
+      question: `class Animal {
+public:
+    virtual void sound() = 0;
+};
+class Dog : public Animal {
+public:
+    void sound() { cout << "Woof!" << endl; }
+};
+int main() {
+    Dog d;
+    d.sound();
+    return 0;
+}`,
+      options: {
+        a: "Output: Woof!",
+        b: "Compile-time error",
+        c: "Runtime error",
+        d: "No output"
+      },
+      answer: "a"
+    },
+    {
+      id: 31,
+      question: `int main() {
+    int x = 10;
+    int* const p = &x;
+    *p = 20;
+    cout << *p << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 10",
+        b: "Output: 20",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "b"
+    },
+    {
+      id: 32,
+      question: `int main() {
+    char str[] = "Hello";
+    char* p = str;
+    while(*p) {
+        cout << *p++;
+    }
+    cout << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: Hello",
+        b: "Output: H",
+        c: "Infinite loop",
+        d: "Compile-time error"
+      },
+      answer: "a"
+    },
+    {
+      id: 33,
+      question: `class Counter {
+    static int count;
+public:
+    Counter() { count++; }
+    static int getCount() { return count; }
+};
+int Counter::count = 0;
+int main() {
+    Counter c1, c2;
+    cout << Counter::getCount() << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 0",
+        b: "Output: 1",
+        c: "Output: 2",
+        d: "Compile-time error"
+      },
+      answer: "c"
+    },
+    {
+      id: 34,
+      question: `int main() {
+    int x = 10, y = 5;
+    int* p1 = &x;
+    int* p2 = &y;
+    *p1 = *p2;
+    cout << x << " " << y << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 10 5",
+        b: "Output: 5 5",
+        c: "Output: 10 10",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 35,
+      question: `class Base {
+private:
+    int x;
+public:
+    Base(int val) : x(val) {}
+};
+class Derived : public Base {
+public:
+    Derived(int val) : Base(val) {
+        cout << x << endl;
+    }
+};
+int main() {
+    Derived d(10);
+    return 0;
+}`,
+      options: {
+        a: "Output: 10",
+        b: "Output: 0",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "c"
+    },
+    {
+      id: 36,
+      question: `int main() {
+    int arr[3] = {10, 20, 30};
+    int* p = arr;
+    cout << *(p + 2) << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 10",
+        b: "Output: 20",
+        c: "Output: 30",
+        d: "Compile-time error"
+      },
+      answer: "c"
+    },
+    {
+      id: 37,
+      question: `void func(int* x) {
+    *x = 100;
+}
+int main() {
+    int a = 50;
+    func(&a);
+    cout << a << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 50",
+        b: "Output: 100",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "b"
+    },
+    {
+      id: 38,
+      question: `class Test {
+public:
+    Test() { cout << "Default" << endl; }
+    Test(int x) { cout << "Param " << x << endl; }
+};
+int main() {
+    Test t = 5;
+    return 0;
+}`,
+      options: {
+        a: "Output: Default",
+        b: "Output: Param 5",
+        c: "Compile-time error",
+        d: "Output: Default Param 5"
+      },
+      answer: "b"
+    },
+    {
+      id: 39,
+      question: `int main() {
+    const int size = 5;
+    int arr[size] = {1, 2, 3};
+    cout << arr[3] << " " << arr[4] << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 0 0",
+        b: "Output: 3 4",
+        c: "Compile-time error",
+        d: "Undefined behavior"
+      },
+      answer: "a"
+    },
+    {
+      id: 40,
+      question: `class Test {
+    int* ptr;
+public:
+    Test(int x) : ptr(new int(x)) {}
+    ~Test() { delete ptr; }
+    void show() { cout << *ptr << endl; }
+};
+int main() {
+    Test t1(10);
+    Test t2 = t1;
+    t1.show();
+    return 0;
+}`,
+      options: {
+        a: "Output: 10",
+        b: "Compile-time error",
+        c: "Runtime error",
+        d: "Undefined behavior"
+      },
+      answer: "d"
+    },
+    {
+      id: 41,
+      question: `int main() {
+    int x = 5;
+    int y = 10;
+    int* p = &x;
+    p++;
+    cout << *p << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5",
+        b: "Output: 10",
+        c: "Output: 6",
+        d: "Undefined behavior"
+      },
+      answer: "d"
+    },
+    {
+      id: 42,
+      question: `void func(int arr[], int size) {
+    for(int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+}
+int main() {
+    int a[] = {1, 2, 3};
+    func(a, 3);
+    return 0;
+}`,
+      options: {
+        a: "Output: 1 2 3",
+        b: "Output: 1 2 3 garbage",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "a"
+    },
+    {
+      id: 43,
+      question: `class Base {
+public:
+    virtual ~Base() { cout << "~Base" << endl; }
+};
+class Derived : public Base {
+public:
+    ~Derived() { cout << "~Derived" << endl; }
+};
+int main() {
+    Base* p = new Derived();
+    delete p;
+    return 0;
+}`,
+      options: {
+        a: "Output: ~Base",
+        b: "Output: ~Derived",
+        c: "Output: ~Derived ~Base",
+        d: "Output: ~Base ~Derived"
+      },
+      answer: "c"
+    },
+    {
+      id: 44,
+      question: `int main() {
+    int x = 5;
+    int* p = &x;
+    int** pp = &p;
+    cout << **pp << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5",
+        b: "Output: address of x",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "a"
+    },
+    {
+      id: 45,
+      question: `int main() {
+    int a = 5, b = 10;
+    int result = (a > b) ? a : b;
+    cout << result << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 5",
+        b: "Output: 10",
+        c: "Output: 1",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 46,
+      question: `void func(int x = 5, int y = 10) {
+    cout << x + y << endl;
+}
+int main() {
+    func();
+    func(20);
+    func(20, 30);
+    return 0;
+}`,
+      options: {
+        a: "Output: 15 30 50",
+        b: "Output: 15 25 50",
+        c: "Output: 15 20 30",
+        d: "Compile-time error"
+      },
+      answer: "a"
+    },
+    {
+      id: 47,
+      question: `int main() {
+    int x = 10;
+    int y = ++x + x++;
+    cout << y << endl;
+    return 0;
+}`,
+      options: {
+        a: "Output: 22",
+        b: "Output: 23",
+        c: "Output: 21",
+        d: "Undefined behavior"
+      },
+      answer: "d"
+    },
+    {
+      id: 48,
+      question: `class Test {
+public:
+    Test() { cout << "Constructor" << endl; }
+    Test(const Test& t) { cout << "Copy Constructor" << endl; }
+    Test& operator=(const Test& t) {
+        cout << "Assignment" << endl;
+        return *this;
+    }
+};
+int main() {
+    Test t1;
+    Test t2;
+    t2 = t1;
+    return 0;
+}`,
+      options: {
+        a: "Output: Constructor Constructor Copy Constructor",
+        b: "Output: Constructor Constructor Assignment",
+        c: "Output: Constructor Copy Constructor",
+        d: "Compile-time error"
+      },
+      answer: "b"
+    },
+    {
+      id: 49,
+      question: `int main() {
+    int* p = nullptr;
+    if(p == NULL) {
+        cout << "Null pointer" << endl;
+    }
+    return 0;
+}`,
+      options: {
+        a: "Output: Null pointer",
+        b: "No output",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "a"
+    },
+    {
+      id: 50,
+      question: `class Base {
+protected:
+    int x;
+public:
+    Base(int val) : x(val) {}
+};
+class Derived : public Base {
+public:
+    Derived(int val) : Base(val) {}
+    void show() { cout << x << endl; }
+};
+int main() {
+    Derived d(25);
+    d.show();
+    return 0;
+}`,
+      options: {
+        a: "Output: 25",
+        b: "Output: 0",
+        c: "Compile-time error",
+        d: "Runtime error"
+      },
+      answer: "a"
+    }
+  ]
+},
 
 };
