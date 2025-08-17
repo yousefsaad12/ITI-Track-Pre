@@ -2572,7 +2572,7 @@ Initial array: [38, 27, 43, 3, 9, 82, 10]
           c: "DBdb",
           d: "BDdbd",
         },
-        correct: "b",
+        correct: "a",
       },
       {
         id: 36,
