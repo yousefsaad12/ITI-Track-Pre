@@ -12002,138 +12002,209 @@ exam21: {
 },
 
 exam22: {
-  title: "Sorting Algorithms, Graphs, and Complexity Exam",
+  title: "Algorithms",
   cat: "Algorithms",
   questions: [
     {
       id: 1,
       question: "The maximum number of nodes at level h in a binary tree is:",
-      options: ["h", "2^h", "h^2", "2*h"],
-      answer: "2^h"
+      options: {
+        a: "h",
+        b: "2^h",
+        c: "h^2",
+        d: "2*h"
+      },
+      correct: "b"
     },
     {
       id: 2,
       question: "Which sorting algorithm is stable by default?",
-      options: ["Quick Sort", "Merge Sort", "Selection Sort", "Heap Sort"],
-      answer: "Merge Sort"
+      options: {
+        a: "Quick Sort",
+        b: "Merge Sort",
+        c: "Selection Sort",
+        d: "Heap Sort"
+      },
+      correct: "b"
     },
     {
       id: 3,
       question: "In Quick Sort, the choice of pivot affects:",
-      options: ["Stability", "Time complexity", "Number of swaps only", "Space complexity"],
-      answer: "Time complexity"
+      options: {
+        a: "Stability",
+        b: "Time complexity",
+        c: "Number of swaps only",
+        d: "Space complexity"
+      },
+      correct: "b"
     },
     {
       id: 4,
       question: "Which sorting algorithm is in-place but not stable?",
-      options: ["Selection Sort", "Merge Sort", "Insertion Sort", "Bubble Sort"],
-      answer: "Selection Sort"
+      options: {
+        a: "Selection Sort",
+        b: "Merge Sort",
+        c: "Insertion Sort",
+        d: "Bubble Sort"
+      },
+      correct: "a"
     },
     {
       id: 5,
       question: "Which algorithm compares each element with all other elements to find its correct position?",
-      options: ["Insertion Sort", "Selection Sort", "Bubble Sort", "Quick Sort"],
-      answer: "Selection Sort"
+      options: {
+        a: "Insertion Sort",
+        b: "Selection Sort",
+        c: "Bubble Sort",
+        d: "Quick Sort"
+      },
+      correct: "b"
     },
     {
       id: 6,
       question: "Which sorting algorithm divides the array into sorted and unsorted regions?",
-      options: ["Merge Sort", "Heap Sort", "Insertion Sort", "Quick Sort"],
-      answer: "Insertion Sort"
+      options: {
+        a: "Merge Sort",
+        b: "Heap Sort",
+        c: "Insertion Sort",
+        d: "Quick Sort"
+      },
+      correct: "c"
     },
     {
       id: 7,
       question: "Which algorithm performs best for small datasets?",
-      options: ["Selection Sort", "Merge Sort", "Insertion Sort", "Heap Sort"],
-      answer: "Insertion Sort"
+      options: {
+        a: "Selection Sort",
+        b: "Merge Sort",
+        c: "Insertion Sort",
+        d: "Heap Sort"
+      },
+      correct: "c"
     },
     {
       id: 8,
       question: "Which sorting algorithm is adaptive by nature?",
-      options: ["Quick Sort", "Merge Sort", "Insertion Sort", "Selection Sort"],
-      answer: "Insertion Sort"
+      options: {
+        a: "Quick Sort",
+        b: "Merge Sort",
+        c: "Insertion Sort",
+        d: "Selection Sort"
+      },
+      correct: "c"
     },
     {
       id: 9,
       question: "Which sorting algorithm has the lowest number of swaps in the worst case?",
-      options: ["Selection Sort", "Bubble Sort", "Insertion Sort", "Quick Sort"],
-      answer: "Selection Sort"
+      options: {
+        a: "Selection Sort",
+        b: "Bubble Sort",
+        c: "Insertion Sort",
+        d: "Quick Sort"
+      },
+      correct: "a"
     },
     {
       id: 10,
       question: "Which algorithm is easiest to parallelize?",
-      options: ["Merge Sort", "Quick Sort", "Heap Sort", "Bubble Sort"],
-      answer: "Merge Sort"
+      options: {
+        a: "Merge Sort",
+        b: "Quick Sort",
+        c: "Heap Sort",
+        d: "Bubble Sort"
+      },
+      correct: "a"
     },
     {
       id: 11,
       question: "Which algorithm is often the fastest in practice for most inputs?",
-      options: ["Selection Sort", "Quick Sort", "Merge Sort", "Insertion Sort"],
-      answer: "Quick Sort"
+      options: {
+        a: "Selection Sort",
+        b: "Quick Sort",
+        c: "Merge Sort",
+        d: "Insertion Sort"
+      },
+      correct: "b"
     },
     {
       id: 12,
       question: "You have a large dataset that doesn't fit entirely into memory. Which sorting algorithm is most suitable?",
-      options: ["Bubble Sort", "Merge Sort (External)", "Quick Sort", "Heap Sort"],
-      answer: "Merge Sort (External)"
+      options: {
+        a: "Bubble Sort",
+        b: "Merge Sort (External)",
+        c: "Quick Sort",
+        d: "Heap Sort"
+      },
+      correct: "b"
     },
     {
       id: 13,
       question: "In Bubble Sort, after the k-th pass, what is guaranteed?",
-      options: [
-        "First k elements are sorted",
-        "Last k elements are sorted",
-        "The array is fully sorted",
-        "Middle k elements are sorted"
-      ],
-      answer: "Last k elements are sorted"
+      options: {
+        a: "First k elements are sorted",
+        b: "Last k elements are sorted",
+        c: "The array is fully sorted",
+        d: "Middle k elements are sorted"
+      },
+      correct: "b"
     },
     {
       id: 14,
       question: "For a nearly sorted array, which algorithm performs best?",
-      options: ["Selection Sort", "Insertion Sort", "Merge Sort", "Quick Sort"],
-      answer: "Insertion Sort"
+      options: {
+        a: "Selection Sort",
+        b: "Insertion Sort",
+        c: "Merge Sort",
+        d: "Quick Sort"
+      },
+      correct: "b"
     },
     {
       id: 15,
       question: "A graph is called dense if:",
-      options: [
-        "It has very few edges",
-        "It has a large number of edges close to the maximum possible",
-        "It is connected",
-        "It is directed"
-      ],
-      answer: "It has a large number of edges close to the maximum possible"
+      options: {
+        a: "It has very few edges",
+        b: "It has a large number of edges close to the maximum possible",
+        c: "It is connected",
+        d: "It is directed"
+      },
+      correct: "b"
     },
     {
       id: 16,
       question: "A graph is called sparse if:",
-      options: [
-        "It has a large number of edges",
-        "It has few edges compared to the maximum possible",
-        "It is always disconnected",
-        "It contains no cycles"
-      ],
-      answer: "It has few edges compared to the maximum possible"
+      options: {
+        a: "It has a large number of edges",
+        b: "It has few edges compared to the maximum possible",
+        c: "It is always disconnected",
+        d: "It contains no cycles"
+      },
+      correct: "b"
     },
     {
       id: 17,
       question: "For Minimum Spanning Tree (MST), which algorithm handles disconnected graphs better?",
-      options: ["Prim's", "Kruskal's", "Dijkstra's", "Bellman-Ford"],
-      answer: "Kruskal's"
+      options: {
+        a: "Prim's",
+        b: "Kruskal's",
+        c: "Dijkstra's",
+        d: "Bellman-Ford"
+      },
+      correct: "b"
     },
     {
       id: 18,
       question: "What does Big O notation represent?",
-      options: [
-        "Best case complexity",
-        "Average case complexity",
-        "Worst case complexity",
-        "Exact number of operations"
-      ],
-      answer: "Worst case complexity"
+      options: {
+        a: "Best case complexity",
+        b: "Average case complexity",
+        c: "Worst case complexity",
+        d: "Exact number of operations"
+      },
+      correct: "c"
     }
   ]
 }
+
 
 };
