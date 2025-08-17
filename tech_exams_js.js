@@ -10922,7 +10922,7 @@ exam20: {
         c: "BAD",
         d: "ABD"
       },
-      correct: "c",
+      correct: "d",
       question: "```cpp\n#include <iostream>\nusing namespace std;\nstruct A{ A(){cout<<\"A\";} ~A(){cout<<\"a\";}};\nstruct B: A{ B(){cout<<\"B\";} ~B(){cout<<\"b\";}};\nstruct D: B{ D(){cout<<\"D\";} ~D(){cout<<\"d\";}};\nint main(){ D d; }\n```"
     },
     {
@@ -10946,7 +10946,7 @@ exam20: {
         c: "Depends on SQL mode",
         d: "Error"
       },
-      correct: "c"
+      correct: "b"
     },
     {
       id: 7,
